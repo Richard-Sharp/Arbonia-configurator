@@ -1,12 +1,38 @@
 import React from 'react';
-import style from './ParamInfo.module.css';
+import style from './Specifications.module.css';
 
 
-
-const Specifications = () => {
+const Specifications = (props) => {
 	return (
-			<div className = {style.container}>
+			<div className={style.container}>
 				<p>Технические характеристики</p>
+				<div>
+					<span>Высота прибора: </span>
+					<span>
+						{props.height}
+					</span>
+				</div>
+
+				<div>
+					<span>Тип прибора: </span>
+					<span>
+						{props.type}
+					</span>
+				</div>
+
+				<div>
+					<span>Количество секций: </span>
+					<span>
+						{props.quantitySections}
+					</span>
+				</div>
+
+	<div>
+					<span>Длина прибора: </span>
+					<span>
+						{props.quantitySections*45 + 24}
+					</span>
+				</div>
 
 
 			</div>
