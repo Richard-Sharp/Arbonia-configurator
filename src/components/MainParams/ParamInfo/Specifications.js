@@ -9,28 +9,28 @@ const Specifications = (props) => {
 				<div>
 					<span>Высота прибора: </span>
 					<span>
-						{props.height}
+						{props.height} мм
 					</span>
 				</div>
 
 				<div>
 					<span>Тип прибора: </span>
 					<span>
-						{props.type}
+						{props.type} мм
 					</span>
 				</div>
 
 				<div>
 					<span>Количество секций: </span>
 					<span>
-						{props.quantitySections}
+						{props.quantitySections} шт.
 					</span>
 				</div>
 
 	<div>
 					<span>Длина прибора: </span>
 					<span>
-						{props.quantitySections*45 + 24}
+						{props.quantitySections*45 + 24} мм
 					</span>
 				</div>
 
