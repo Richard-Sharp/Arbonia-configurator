@@ -3,9 +3,10 @@ import style from './Specifications.module.css';
 
 
 const Specifications = (props) => {
+debugger
 	return (
 			<div className={style.container}>
-				<p>Технические характеристики</p>
+				<h4>Технические характеристики</h4>
 				<div>
 					<span>Высота прибора: </span>
 					<span>
@@ -14,7 +15,7 @@ const Specifications = (props) => {
 				</div>
 
 				<div>
-					<span>Тип прибора: </span>
+					<span>Глубина прибора: </span>
 					<span>
 						{props.type} мм
 					</span>

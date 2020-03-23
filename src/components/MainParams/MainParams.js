@@ -1,14 +1,14 @@
 import React from 'react';
 import style from './Main.module.css';
-import Params from "./Params/Params";
-import SpecificationsContainer from "./ParamInfo/SpecificationsContainer";
+import SpecificationsContainer from "./Specifications/SpecificationsContainer";
+import ParamsContainer from "./Params/ParamsContainer";
 
 
 
 const MainParams = () => {
 	return (
 			<div className = {style.main}>
-				<Params />
+				<ParamsContainer />
 				<SpecificationsContainer />
 
 			</div>
