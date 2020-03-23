@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Params.module.css';
-import {setRadiatorsType} from "../../../Redux/Reducers/MainParamsReducer";
+import {setQuantitySections, setRadiatorsType} from "../../../Redux/Reducers/MainParamsReducer";
 
 const Params = (props) => {
 	let heightRef = React.createRef();
@@ -11,6 +11,9 @@ const Params = (props) => {
 	}
 	let onChangeParamType = (e) => {
 			props.setRadiatorsType(e.currentTarget.value);
+	}
+	let onChangeQuantitySections = () => {
+			props.setQuantitySections(quantityRef.current.value);
 	}
 
 
@@ -46,7 +49,7 @@ const Params = (props) => {
 
 				<div className={style.quantity}>
 					<p>Количество секций:</p>
-					<input defaultValue='4' type="number" name="sectionQuantity" min="4" max="60" step="1"/>
+					<input onChange={onChangeQuantitySections} ref={quantityRef} defaultValue={props.quantitySections} type="number" name="sectionQuantity" min="4" max="60" step="1"/>
 				</div>
 			</div>
 	);

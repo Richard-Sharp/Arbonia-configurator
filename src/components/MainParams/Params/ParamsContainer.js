@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import React from "react";
 import Params from "./Params";
-import {setRadiatorsHeight, setRadiatorsType} from "../../../Redux/Reducers/MainParamsReducer";
+import {setQuantitySections, setRadiatorsHeight, setRadiatorsType} from "../../../Redux/Reducers/MainParamsReducer";
 
 
 class ParamsContainer extends React.Component {
@@ -23,6 +23,8 @@ class ParamsContainer extends React.Component {
 	}
 }
 
-let mapState = (state) => ({})
+let mapState = (state) => ({
+	quantitySections: state.mainParams.quantitySections
+})
 
-export default connect(mapState, {setRadiatorsHeight, setRadiatorsType})(ParamsContainer);
+export default connect(mapState, {setRadiatorsHeight, setRadiatorsType, setQuantitySections})(ParamsContainer);

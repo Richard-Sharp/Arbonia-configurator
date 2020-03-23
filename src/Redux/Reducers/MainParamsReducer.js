@@ -1,13 +1,14 @@
 const SET_RADIATORS_HEIGHT = 'MainParams/Params/SET_RADIATORS_HEIGHT';
 const SET_RADIATORS_TYPE = 'MainParams/Params/SET_RADIATORS_TYPE';
+const SET_QUANTITY_SECTIONS = 'MainParams/Params/SET_QUANTITY_SECTIONS';
 
 let initialState = {
 	params: {
-		height: 300,
-		typeParam: 65,
+		height: 0,
+		typeParam: 0,
 	},
 	specifications: {},
-	quantitySections: 10
+	quantitySections: 4
 };
 
 
@@ -30,6 +31,11 @@ export const MainParamsReducer = (state = initialState, action) => {
 					typeParam: action.typeParam
 				}
 			}
+		case SET_QUANTITY_SECTIONS:
+			return {
+				...state,
+				quantitySections: action.number
+			}
 
 		default:
 			return state;
@@ -39,5 +45,6 @@ export const MainParamsReducer = (state = initialState, action) => {
 //Action creators:
 export const setRadiatorsHeight = (height) => ({type: SET_RADIATORS_HEIGHT, height});
 export const setRadiatorsType = (typeParam) => ({type: SET_RADIATORS_TYPE, typeParam});
+export const setQuantitySections = (number) => ({type: SET_QUANTITY_SECTIONS, number});
 
 export default MainParamsReducer;
