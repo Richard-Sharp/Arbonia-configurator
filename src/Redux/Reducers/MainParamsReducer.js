@@ -13,7 +13,6 @@ let initialState = {
 
 
 export const MainParamsReducer = (state = initialState, action) => {
-	debugger
 	switch (action.type) {
 		case SET_RADIATORS_HEIGHT:
 			return {

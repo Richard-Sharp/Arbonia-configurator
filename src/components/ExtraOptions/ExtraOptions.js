@@ -19,8 +19,8 @@ const ExtraOptions = (props) => {
 		</div>
 
 		<div>
-			<Route path='/withoutVentil' render={() => <ArboniaRRN/>}/>
-			<Route path='/withVentil' render={() => <ArboniaRRV/>}/>
+			<Route exact path='/withoutVentil' render={() => <ArboniaRRN/>}/>
+			<Route exact path='/withVentil' render={() => <ArboniaRRV/>}/>
 
 		</div>
 
