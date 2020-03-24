@@ -4,3 +4,22 @@
     text-align: center;
     margin: 0 auto;
 }
+
+.sideBar a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+a.active {
+    color: lawngreen;
+    font-weight: bold;
+}
+
+.button {
+    margin: 15px;
+    background-color: grey;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px 20px 5px 20px;
+}
