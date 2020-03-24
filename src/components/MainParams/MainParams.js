@@ -10,7 +10,6 @@ const MainParams = () => {
 			<div className = {style.main}>
 				<ParamsContainer />
 				<SpecificationsContainer />
-
 			</div>
 	);
 }

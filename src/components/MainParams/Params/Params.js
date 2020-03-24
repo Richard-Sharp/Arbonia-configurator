@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './Params.module.css';
-import {setQuantitySections, setRadiatorsType} from "../../../Redux/Reducers/MainParamsReducer";
 
 const Params = (props) => {
 	let heightRef = React.createRef();
