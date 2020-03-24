@@ -35,7 +35,7 @@ const ArboniaRRN = (props) => {
 		}
 		// alert(drain.current.checked);
 		// alert(drain.current.value);
-		alert(d);
+		// alert(d);
 	}
 	return <div className={style.container}>
 		<h4>Безвентильное исполнение (RRN):</h4>
