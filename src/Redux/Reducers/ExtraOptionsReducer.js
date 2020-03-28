@@ -73,12 +73,12 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 				...state,
 				airCoolerSize: {...state.airCoolerSize, ...action.payload}
 			}
-			case SET_PRESSURE:
+			case SET_DRAIN:
 			return {
 				...state,
 				drain: {...state.drain, ...action.payload}
 			}
-			case SET_DRAIN:
+			case SET_PRESSURE:
 			return {
 				...state,
 				pressure: {...state.pressure, ...action.payload}

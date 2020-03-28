@@ -16,19 +16,19 @@ const ArboniaRRN = (props) => {
 	}
 
 	let onChangeAirCoolerType = (e) => {
-		// alert(e.currentTarget.value);
+		props.setAirCoolerType(e.currentTarget.value, e.currentTarget.dataset.price);
 	}
 
 	let onChangeAirCoolerLocation = (e) => {
-		// alert(e.currentTarget.value);
+		props.setAirCoolerLocation(e.currentTarget.value, e.currentTarget.dataset.price);
 	}
 
 	let onChangeAirCoolerSize = (e) => {
-		// alert(e.currentTarget.value);
+		props.setAirCoolerSize(e.currentTarget.value, e.currentTarget.dataset.price);
 	}
 
 	let onChangePressure = (e) => {
-		// alert(e.currentTarget.value);
+		props.setPressure(e.currentTarget.value, e.currentTarget.dataset.price);
 	}
 
 	let onChangeDrain = () => {
@@ -41,6 +41,7 @@ const ArboniaRRN = (props) => {
 			d = 4;
 			price = 100;
 		}
+		props.setDrain(d, price);
 	}
 	return <div className={style.container}>
 		<h4>Безвентильное исполнение (RRN):</h4>
