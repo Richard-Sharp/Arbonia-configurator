@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './ArboniaRRN.module.css';
-import {setConnectionType} from "../../../Redux/Reducers/ExtraOptionsReducer";
 
 //Компонент для настройки безвентильного исполнения:
 const ArboniaRRN = (props) => {
@@ -108,7 +107,8 @@ const ArboniaRRN = (props) => {
 				<input onChange={(e) => {
 					onChangeAirCoolerType(e)
 				}} data-price="5.12"
-							 name="airСooler" type="radio" value="1" defaultChecked/>Встроенная заглушка с поворотным выпуском воздуха;
+							 name="airСooler" type="radio" value="1" defaultChecked/>Встроенная заглушка с поворотным выпуском
+				воздуха;
 				<input onChange={(e) => {
 					onChangeAirCoolerType(e)
 				}} data-price="0"
@@ -153,7 +153,8 @@ const ArboniaRRN = (props) => {
 
 		<div>
 			<p>[11] Слив:</p>
-			<input onChange={onChangeDrain} name="drain" ref={drain} type="checkbox" defaultChecked={false} value='3'/>Наличие слива
+			<input onChange={onChangeDrain} name="drain" ref={drain} type="checkbox" defaultChecked={false} value='3'/>Наличие
+			слива
 			(дренажа);
 		</div>
 
@@ -165,10 +166,12 @@ const ArboniaRRN = (props) => {
 			<div>
 				<input onChange={(e) => {
 					onChangePressure(e)
-				}} name="pressure" type="radio" value="10" defaultChecked/>Стандартное исполнение: 10 бар (1000 кПа);
+				}} data-price="10"
+							 name="pressure" type="radio" value="10" defaultChecked/>Стандартное исполнение: 10 бар (1000 кПа);
 				<input onChange={(e) => {
 					onChangePressure(e)
-				}} name="pressure" type="radio" value="16" />Исполнение для высокого давления: 16 бар (1600 кПа);
+				}} data-price="300"
+							 name="pressure" type="radio" value="16"/>Исполнение для высокого давления: 16 бар (1600 кПа);
 			</div>
 		</div>
 

@@ -96,9 +96,9 @@ export const setConnectionSize = (value, price) => ({type: SET_CONNECTION_SIZE, 
 
 export const setAirCoolerType = (value, price) => ({type: SET_AIRCOOLER_TYPE, payload: {value: value, price: price}});
 
-export const setAirCoolerLocation = (value, price) => ({type: SET_AIRCOOLER_LOCATION, payload: {value: value, price: price}});
+export const setAirCoolerLocation = (value, price = 0) => ({type: SET_AIRCOOLER_LOCATION, payload: {value: value, price: price}});
 
-export const setAirCoolerSize = (value, price) => ({type: SET_AIRCOOLER_SIZE, payload: {value: value, price: price}});
+export const setAirCoolerSize = (value, price = 0) => ({type: SET_AIRCOOLER_SIZE, payload: {value: value, price: price}});
 
 export const setPressure = (value, price = 0) => ({type: SET_PRESSURE, payload: {value: value, price: price}});
 
