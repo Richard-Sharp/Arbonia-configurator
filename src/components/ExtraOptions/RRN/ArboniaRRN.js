@@ -26,6 +26,10 @@ const ArboniaRRN = (props) => {
 		// alert(e.currentTarget.value);
 	}
 
+	let onChangePressure = (e) => {
+		// alert(e.currentTarget.value);
+	}
+
 	let onChangeDrain = () => {
 		let d;
 		if (!drain.current.checked) {
@@ -40,7 +44,7 @@ const ArboniaRRN = (props) => {
 	return <div className={style.container}>
 		<h4>Безвентильное исполнение (RRN):</h4>
 		<div>
-			<p>Схема подключения:</p>
+			<p> [6] Схема подключения:</p>
 			<div>
 				<input onChange={(e) => {
 					onChangeConnectionType(e)
@@ -76,7 +80,7 @@ const ArboniaRRN = (props) => {
 		</div>
 
 		<div>
-			<p>Размер подключения:</p>
+			<p>[7] Размер подключения:</p>
 			<div>
 				<input onChange={(e) => {
 					onChangeConnectionSize(e)
@@ -97,7 +101,7 @@ const ArboniaRRN = (props) => {
 		</div>
 
 		<div>
-			<p>Исполнение развоздушника:</p>
+			<p>[8] Исполнение развоздушника:</p>
 			<div>
 				<input onChange={(e) => {
 					onChangeAirCoolerType(e)
@@ -112,7 +116,7 @@ const ArboniaRRN = (props) => {
 		</div>
 
 		<div>
-			<p>Расположение развоздушника:</p>
+			<p>[9] Расположение развоздушника:</p>
 			<div>
 				<input onChange={(e) => {
 					onChangeAirCoolerLocation(e)
@@ -130,7 +134,7 @@ const ArboniaRRN = (props) => {
 		</div>
 
 		<div>
-			<p>Присоединительные размеры развоздушника:</p>
+			<p>[10] Присоединительные размеры развоздушника:</p>
 			<div>
 				<input onChange={(e) => {
 					onChangeAirCoolerSize(e)
@@ -143,10 +147,28 @@ const ArboniaRRN = (props) => {
 		</div>
 
 		<div>
-			<input onChange={onChangeDrain} ref={drain} type="checkbox" defaultChecked={false} value='3'/>Наличие слива (дренажа)
+			<p>[11] Слив:</p>
+			<input onChange={onChangeDrain} ref={drain} type="checkbox" defaultChecked={false} value='3'/>Наличие слива
+			(дренажа);
+		</div>
+
+		{/*<p>[12] Расположение сливного патрубка:</p>*/}
+		{/*<p>[13] Присоединительный размер сливного патрубка:</p>*/}
+
+		<div>
+			<p>[14] Исполнение по давлению:</p>
+			<div>
+				<input onChange={(e) => {
+					onChangePressure(e)
+				}} name="pressure" type="radio" value="10" defaultChecked/>Стандартное исполнение: 10 бар (1000 кПа);
+				<input onChange={(e) => {
+					onChangePressure(e)
+				}} name="pressure" type="radio" value="16" />Исполнение для высокого давления: 16 бар (1600 кПа);
+			</div>
 		</div>
 
 	</div>
 }
+
 
 export default ArboniaRRN;
