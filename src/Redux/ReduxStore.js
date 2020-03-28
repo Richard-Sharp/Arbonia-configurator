@@ -1,9 +1,11 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import thunkMiddleware from "redux-thunk";
 import {MainParamsReducer} from "./Reducers/MainParamsReducer";
+import ExtraOptionsReducer from "./Reducers/ExtraOptionsReducer";
 
 let reducers = combineReducers({
-	mainParams: MainParamsReducer
+	mainParams: MainParamsReducer,
+	extraOptions: ExtraOptionsReducer
 });
 
 

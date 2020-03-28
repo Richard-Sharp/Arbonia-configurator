@@ -1,17 +1,18 @@
 import React from 'react';
 import style from './ArboniaRRN.module.css';
+import {setConnectionType} from "../../../Redux/Reducers/ExtraOptionsReducer";
 
 //Компонент для настройки безвентильного исполнения:
 const ArboniaRRN = (props) => {
+	debugger
 	let drain = React.createRef();
 
 	let onChangeConnectionType = (e) => {
-		// alert(e.currentTarget.value + e.currentTarget.dataset.price);
-		// alert(e.currentTarget.dataset.price)
+		props.setConnectionType(e.currentTarget.value, e.currentTarget.dataset.price)
 	}
 
 	let onChangeConnectionSize = (e) => {
-		// alert(e.currentTarget.value + e.currentTarget.dataset.price);
+		props.setConnectionSize(e.currentTarget.value, e.currentTarget.dataset.price)
 	}
 
 	let onChangeAirCoolerType = (e) => {
@@ -32,14 +33,14 @@ const ArboniaRRN = (props) => {
 
 	let onChangeDrain = () => {
 		let d;
+		let price
 		if (!drain.current.checked) {
 			d = drain.current.value;
+			price = 0;
 		} else {
 			d = 4;
+			price = 100;
 		}
-		// alert(drain.current.checked);
-		// alert(drain.current.value);
-		// alert(d);
 	}
 	return <div className={style.container}>
 		<h4>Безвентильное исполнение (RRN):</h4>
@@ -59,22 +60,22 @@ const ArboniaRRN = (props) => {
 				<input onChange={(e) => {
 					onChangeConnectionType(e)
 				}}
-							 data-price="10,91"
+							 data-price="10.91"
 							 name="connectionType" type="radio" value="24"/>24;
 				<input onChange={(e) => {
 					onChangeConnectionType(e)
 				}}
-							 data-price="10,91"
+							 data-price="10.91"
 							 name="connectionType" type="radio" value="42"/>42;
 				<input onChange={(e) => {
 					onChangeConnectionType(e)
 				}}
-							 data-price="76,84"
+							 data-price="76.84"
 							 name="connectionType" type="radio" value="98"/>98;
 				<input onChange={(e) => {
 					onChangeConnectionType(e)
 				}}
-							 data-price="76,84"
+							 data-price="76.84"
 							 name="connectionType" type="radio" value="96"/>96;
 			</div>
 		</div>
@@ -90,7 +91,7 @@ const ArboniaRRN = (props) => {
 				<input onChange={(e) => {
 					onChangeConnectionSize(e)
 				}}
-							 data-price="4,5"
+							 data-price="4.5"
 							 name="connectionSize" type="radio" value="34"/>3/4" - ВР;
 				<input onChange={(e) => {
 					onChangeConnectionSize(e)
@@ -105,13 +106,16 @@ const ArboniaRRN = (props) => {
 			<div>
 				<input onChange={(e) => {
 					onChangeAirCoolerType(e)
-				}} name="airСooler" type="radio" value="1" defaultChecked/>Встроенная заглушка с поворотным выпуском воздуха;
+				}} data-price="5.12"
+							 name="airСooler" type="radio" value="1" defaultChecked/>Встроенная заглушка с поворотным выпуском воздуха;
 				<input onChange={(e) => {
 					onChangeAirCoolerType(e)
-				}} name="airСooler" type="radio" value="4"/>Только подключение;
+				}} data-price="0"
+							 name="airСooler" type="radio" value="4"/>Только подключение;
 				<input onChange={(e) => {
 					onChangeAirCoolerType(e)
-				}} name="airСooler" type="radio" value="3"/>Без выпуска воздуха (!при крайней необходимости);
+				}} data-price="0"
+							 name="airСooler" type="radio" value="3"/>Без выпуска воздуха (!при крайней необходимости);
 			</div>
 		</div>
 
@@ -148,7 +152,7 @@ const ArboniaRRN = (props) => {
 
 		<div>
 			<p>[11] Слив:</p>
-			<input onChange={onChangeDrain} ref={drain} type="checkbox" defaultChecked={false} value='3'/>Наличие слива
+			<input onChange={onChangeDrain} name="drain" ref={drain} type="checkbox" defaultChecked={false} value='3'/>Наличие слива
 			(дренажа);
 		</div>
 
