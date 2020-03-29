@@ -10,35 +10,36 @@ const SET_VALVE_TYPE = 'ExtraOptions/SET_VALVE_TYPE';
 let initialState = {
 	valve: {
 		valveExistence: false,
-		value: 2,
-		price: 0
+		code: 2,
+		price: 0,
+		model: null
 	},
 	connectionType: {
-		value: 12,
+		code: 12,
 		price: 0
 	},
 	connectionSize: {
-		value: 12,
+		code: 12,
 		price: 0
 	},
 	airCooler: {
-		value: 1,
+		code: 1,
 		price: 5.12
 	},
 	airCoolerLocation: {
-		value: 1,
+		code: 1,
 		price: 0
 	},
 	airCoolerSize: {
-		value: 12,
+		code: 12,
 		price: 0
 	},
 	drain: {
-		value: 12,
+		code: 12,
 		price: 0
 	},
 	pressure: {
-		value: 10,
+		code: 10,
 		price: 0
 	}
 };
@@ -57,7 +58,7 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 				...state,
 				connectionType: {
 					...state.connectionType,
-					value: action.value, price: action.price
+					code: action.code, price: action.price
 				}
 			}
 		case SET_CONNECTION_SIZE:
@@ -97,21 +98,21 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 }
 
 //Action creators:
-export const setValveType = (valve = false, value, price = 127.19) => ({type: SET_VALVE_TYPE, payload: {valveExistence: valve, value: value, price: price}});
+export const setValveType = (valve = false, code, price = 0, model = 'RRN') => ({type: SET_VALVE_TYPE, payload: {valveExistence: valve, code: code, price: price, model: model}});
 
-export const setConnectionType = (value, price) => ({type: SET_CONNECTION_TYPE, value, price});
+export const setConnectionType = (code, price) => ({type: SET_CONNECTION_TYPE, code, price});
 
-export const setConnectionSize = (value, price) => ({type: SET_CONNECTION_SIZE, payload: {value: value, price: price}});
+export const setConnectionSize = (code, price) => ({type: SET_CONNECTION_SIZE, payload: {code: code, price: price}});
 
-export const setAirCoolerType = (value, price) => ({type: SET_AIRCOOLER_TYPE, payload: {value: value, price: price}});
+export const setAirCoolerType = (code, price) => ({type: SET_AIRCOOLER_TYPE, payload: {code: code, price: price}});
 
-export const setAirCoolerLocation = (value, price = 0) => ({type: SET_AIRCOOLER_LOCATION, payload: {value: value, price: price}});
+export const setAirCoolerLocation = (code, price = 0) => ({type: SET_AIRCOOLER_LOCATION, payload: {code: code, price: price}});
 
-export const setAirCoolerSize = (value, price = 0) => ({type: SET_AIRCOOLER_SIZE, payload: {value: value, price: price}});
+export const setAirCoolerSize = (code, price = 0) => ({type: SET_AIRCOOLER_SIZE, payload: {code: code, price: price}});
 
-export const setPressure = (value, price = 0) => ({type: SET_PRESSURE, payload: {value: value, price: price}});
+export const setPressure = (code, price = 0) => ({type: SET_PRESSURE, payload: {code: code, price: price}});
 
-export const setDrain = (value, price = 0) => ({type: SET_DRAIN, payload: {value: value, price: price}});
+export const setDrain = (code, price = 0) => ({type: SET_DRAIN, payload: {code: code, price: price}});
 
 
 export default ExtraOptionsReducer;

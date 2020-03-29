@@ -15,7 +15,7 @@ import ArboniaRRV from "./ArboniaRRV";
 class ArboniaRRVContainer extends React.Component {
 
 	componentWillMount() {
-		this.props.setValveType(true, 31, 127.19);
+		this.props.setValveType(true, 31, 127.19, 'RRV');
 	}
 
 	// componentDidUpdate(prevProps) {

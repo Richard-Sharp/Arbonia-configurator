@@ -4,16 +4,14 @@ import React from "react";
 import {setArboniaModel} from "../../../Redux/Reducers/MainParamsReducer";
 
 
-
 class SpecificationsContainer extends React.Component {
 
 	// componentDidMount() {
 	// }
-	//
+
 	componentDidUpdate(prevProps) {
-		if(prevProps.params !== this.props.params) {
-			let model = this.props.type.code + this.props.height.code;
-			this.props.setArboniaModel(model);
+		if (prevProps.params !== this.props.params) {
+			this.props.setArboniaModel(this.props.type.code + this.props.height.code);
 		}
 	}
 
@@ -36,4 +34,4 @@ let mapState = (state) => ({
 
 })
 
-export default connect (mapState, {setArboniaModel})(SpecificationsContainer);
+export default connect(mapState, {setArboniaModel})(SpecificationsContainer);
