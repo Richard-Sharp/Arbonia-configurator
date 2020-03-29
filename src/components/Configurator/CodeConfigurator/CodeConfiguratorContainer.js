@@ -25,6 +25,8 @@ class CodeConfiguratorContainer extends React.Component {
 }
 
 let mapState = (state) => ({
+	arboniaModel: state.mainParams.arboniaModel,
+	quantitySections: state.mainParams.quantitySections,
 	valve: state.extraOptions.valve,
 	connectionType: state.extraOptions.connectionType,
 	connectionSize: state.extraOptions.connectionSize,

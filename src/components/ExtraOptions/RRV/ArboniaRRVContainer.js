@@ -18,15 +18,6 @@ class ArboniaRRVContainer extends React.Component {
 		this.props.setValveType(true, 31, 127.19, 'RRV');
 	}
 
-	// componentDidUpdate(prevProps) {
-	// 	// if(prevProps.userId !== this.props.userId) {
-	// 	// 	this.props.updateDialogs(this.props.userId);
-	// 	// 	this.props.getNewMessagesCount();
-	// 	// }
-	// }
-	//
-	// componentWillUnmount() {
-	// }
 
 	render() {
 
