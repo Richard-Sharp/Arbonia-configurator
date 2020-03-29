@@ -6,10 +6,11 @@ const Params = (props) => {
 	let quantityRef = React.createRef();
 
 	let onChangeParamHeight = () => {
-			props.setRadiatorsHeight(heightRef.current.value);
+		debugger
+			props.setRadiatorsHeight(heightRef.current.value, heightRef.current.value);
 	}
 	let onChangeParamType = (e) => {
-			props.setRadiatorsType(e.currentTarget.value);
+			props.setRadiatorsType(e.currentTarget.value, e.currentTarget.value);
 	}
 	let onChangeQuantitySections = () => {
 			props.setQuantitySections(quantityRef.current.value);
@@ -24,25 +25,25 @@ const Params = (props) => {
 					<p>Высота прибора:</p>
 					<select name="height" id="heightParam" required
 									ref={heightRef}
-									onChange={onChangeParamHeight}>
+									onChange={(e) => {onChangeParamHeight(e)}}>
 						<option value="0" selected disabled>Выберите высоту:</option>
-						<option value="300">300 мм</option>
-						<option value="500">500 мм</option>
-						<option value="600">600 мм</option>
-						<option value="1000">1000 мм</option>
-						<option value="1500">1500 мм</option>
-						<option value="1800">1800 мм</option>
-						<option value="2000">2000 мм</option>
+						<option value="030" >300 мм</option>
+						<option value="050" >500 мм</option>
+						<option value="060" >600 мм</option>
+						<option value="100" >1000 мм</option>
+						<option value="150" >1500 мм</option>
+						<option value="180" >1800 мм</option>
+						<option value="200" >2000 мм</option>
 					</select>
 				</div>
 
 				<div className={style.type}>
 					<p>Тип радиатора</p>
 					<div >
-					<input onChange={(e) => {onChangeParamType(e)}} name="type" type="radio" value="65" />2-трубчатый;
-					<input onChange={(e) => {onChangeParamType(e)}} name="type" type="radio" value="105" />3-трубчатый;
-					<input onChange={(e) => {onChangeParamType(e)}} name="type" type="radio" value="145"/>4-трубчатый;
-					<input onChange={(e) => {onChangeParamType(e)}} name="type" type="radio" value="185"/>5-трубчатый;
+					<input onChange={(e) => {onChangeParamType(e)}} name="type" type="radio" value="2" />2-трубчатый;
+					<input onChange={(e) => {onChangeParamType(e)}} name="type" type="radio" value="3" />3-трубчатый;
+					<input onChange={(e) => {onChangeParamType(e)}} name="type" type="radio" value="4"/>4-трубчатый;
+					<input onChange={(e) => {onChangeParamType(e)}} name="type" type="radio" value="5"/>5-трубчатый;
 					</div>
 				</div>
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import style from './ExtraOptions.module.css';
-import ArboniaRRV from "./RRV/ArboniaRRV";
 import {Route} from "react-router";
 import {NavLink} from "react-router-dom";
 import ArboniaRRNContainer from "./RRN/ArboniaRRNContainer";
+import ArboniaRRVContainer from "./RRV/ArboniaRRVContainer";
 
 
 //Компонент для настройки дополнительных параметров прибора:
@@ -20,7 +20,7 @@ const ExtraOptions = (props) => {
 
 		<div>
 			<Route exact path='/withoutVentil' render={() => <ArboniaRRNContainer/>}/>
-			<Route exact path='/withVentil' render={() => <ArboniaRRV/>}/>
+			<Route exact path='/withVentil' render={() => <ArboniaRRVContainer/>}/>
 
 		</div>
 

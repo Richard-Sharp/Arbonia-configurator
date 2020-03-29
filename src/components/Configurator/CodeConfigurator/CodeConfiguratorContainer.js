@@ -1,22 +1,12 @@
 import React from 'react';
-import ArboniaRRN from "./ArboniaRRN";
-import {
-	setConnectionType,
-	setConnectionSize,
-	setAirCoolerType,
-	setAirCoolerLocation,
-	setAirCoolerSize,
-	setPressure,
-	setDrain, setValveType
-} from "../../../Redux/Reducers/ExtraOptionsReducer";
 import {connect} from "react-redux";
+import CodeConfigurator from "./CodeConfigurator";
 
 
-class ArboniaRRNContainer extends React.Component {
+class CodeConfiguratorContainer extends React.Component {
 
-	componentWillMount() {
-		this.props.setValveType(false, 2, 0);
-	}
+	// componentWillMount() {
+	// }
 
 	// componentDidUpdate(prevProps) {
 	// 	// if(prevProps.userId !== this.props.userId) {
@@ -30,7 +20,7 @@ class ArboniaRRNContainer extends React.Component {
 
 	render() {
 
-		return <ArboniaRRN {...this.props} />
+		return <CodeConfigurator {...this.props} />
 	}
 }
 
@@ -46,4 +36,4 @@ let mapState = (state) => ({
 
 })
 
-export default connect(mapState, {setValveType, setConnectionType, setConnectionSize, setAirCoolerType, setAirCoolerLocation, setAirCoolerSize, setPressure, setDrain}) (ArboniaRRNContainer);
+export default connect(mapState, null) (CodeConfiguratorContainer);

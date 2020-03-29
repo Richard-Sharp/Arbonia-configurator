@@ -1,12 +1,20 @@
 const SET_RADIATORS_HEIGHT = 'MainParams/Params/SET_RADIATORS_HEIGHT';
 const SET_RADIATORS_TYPE = 'MainParams/Params/SET_RADIATORS_TYPE';
 const SET_QUANTITY_SECTIONS = 'MainParams/Params/SET_QUANTITY_SECTIONS';
+const SET_ARBONIA_TYPE = 'MainParams/Params/SET_ARBONIA_TYPE';
 
 let initialState = {
 	params: {
-		height: 0,
-		typeParam: 0,
+		height: {
+			value: 0,
+			code: 0
+		},
+		typeParam: {
+			value: 0,
+			code: 0
+		},
 	},
+	arboniaModel: 0,
 	specifications: {},
 	quantitySections: 4
 };
@@ -19,7 +27,10 @@ export const MainParamsReducer = (state = initialState, action) => {
 				...state,
 				params: {
 					...state.params,
-					height: action.height
+					height: {
+						...state.params.height,
+						value: action.value, code: action.code
+					}
 				}
 			}
 		case SET_RADIATORS_TYPE:
@@ -27,13 +38,21 @@ export const MainParamsReducer = (state = initialState, action) => {
 				...state,
 				params: {
 					...state.params,
-					typeParam: action.typeParam
+					typeParam: {
+						...state.params.typeParam,
+						value: action.value, code: action.code
+					}
 				}
 			}
 		case SET_QUANTITY_SECTIONS:
 			return {
 				...state,
 				quantitySections: action.number
+			}
+		case SET_ARBONIA_TYPE:
+			return {
+				...state,
+				arboniaModel: action.arboniaModel
 			}
 
 		default:
@@ -42,8 +61,10 @@ export const MainParamsReducer = (state = initialState, action) => {
 }
 
 //Action creators:
-export const setRadiatorsHeight = (height) => ({type: SET_RADIATORS_HEIGHT, height});
-export const setRadiatorsType = (typeParam) => ({type: SET_RADIATORS_TYPE, typeParam});
+export const setRadiatorsHeight = (value, code) => ({type: SET_RADIATORS_HEIGHT, value: value, code: code});
+export const setRadiatorsType = (value, code) => ({type: SET_RADIATORS_TYPE, value: value, code: code});
 export const setQuantitySections = (number) => ({type: SET_QUANTITY_SECTIONS, number});
+export const setArboniaModel = (arboniaModel) => ({type: SET_ARBONIA_TYPE, arboniaModel});
+
 
 export default MainParamsReducer;

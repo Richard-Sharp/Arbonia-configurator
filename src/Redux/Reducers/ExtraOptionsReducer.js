@@ -5,6 +5,7 @@ const SET_AIRCOOLER_LOCATION = 'ExtraOptions/SET_AIRCOOLER_LOCATION';
 const SET_AIRCOOLER_SIZE = 'ExtraOptions/SET_AIRCOOLER_SIZE';
 const SET_PRESSURE = 'ExtraOptions/SET_PRESSURE';
 const SET_DRAIN = 'ExtraOptions/SET_DRAIN';
+const SET_VALVE_TYPE = 'ExtraOptions/SET_VALVE_TYPE';
 
 let initialState = {
 	valve: {
@@ -45,6 +46,12 @@ let initialState = {
 
 export const ExtraOptionsReducer = (state = initialState, action) => {
 	switch (action.type) {
+		case SET_VALVE_TYPE:
+			return {
+				...state,
+				valve: {...state.valve, ...action.payload}
+			}
+
 		case SET_CONNECTION_TYPE:
 			return {
 				...state,
@@ -90,6 +97,8 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 }
 
 //Action creators:
+export const setValveType = (valve = false, value, price = 127.19) => ({type: SET_VALVE_TYPE, payload: {valveExistence: valve, value: value, price: price}});
+
 export const setConnectionType = (value, price) => ({type: SET_CONNECTION_TYPE, value, price});
 
 export const setConnectionSize = (value, price) => ({type: SET_CONNECTION_SIZE, payload: {value: value, price: price}});
