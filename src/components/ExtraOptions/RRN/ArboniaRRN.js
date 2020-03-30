@@ -3,7 +3,6 @@ import style from './ArboniaRRN.module.css';
 
 //Компонент для настройки безвентильного исполнения:
 const ArboniaRRN = (props) => {
-	debugger
 	let drain = React.createRef();
 
 	let onChangeConnectionType = (e) => {

@@ -1,6 +1,5 @@
 
 export const getMainParamsHeightData = (value) => {
-	debugger
 	switch (value) {
 		case '030':
 			return ({value: '300',	code: value})

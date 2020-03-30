@@ -5,19 +5,11 @@ import {setArboniaModel} from "../../../Redux/Reducers/MainParamsReducer";
 
 
 class SpecificationsContainer extends React.Component {
-
-	// componentDidMount() {
-	// }
-
 	componentDidUpdate(prevProps) {
 		if (prevProps.params !== this.props.params) {
 			this.props.setArboniaModel(this.props.type.code + this.props.height.code);
 		}
 	}
-
-	// componentWillUnmount() {
-	// }
-
 
 	render() {
 
