@@ -1,4 +1,4 @@
-import {getMainParamsHeightData} from "../../DataBase/MainParamsData/MainParamsData";
+import {getMainParamsHeightData, getMainParamsTypeData} from "../../DataBase/MainParamsData/MainParamsData";
 
 const SET_RADIATORS_HEIGHT = 'MainParams/Params/SET_RADIATORS_HEIGHT';
 const SET_RADIATORS_TYPE = 'MainParams/Params/SET_RADIATORS_TYPE';
@@ -64,7 +64,7 @@ export const MainParamsReducer = (state = initialState, action) => {
 
 //Action creators:
 export const setRadiatorsHeightSuccess = (value, code) => ({type: SET_RADIATORS_HEIGHT, value: value, code: code});
-export const setRadiatorsType = (value, code) => ({type: SET_RADIATORS_TYPE, value: value, code: code});
+export const setRadiatorsTypeSuccess = (value, code) => ({type: SET_RADIATORS_TYPE, value: value, code: code});
 export const setQuantitySections = (number) => ({type: SET_QUANTITY_SECTIONS, number});
 export const setArboniaModel = (arboniaModel) => ({type: SET_ARBONIA_TYPE, arboniaModel});
 
@@ -73,6 +73,10 @@ export const setArboniaModel = (arboniaModel) => ({type: SET_ARBONIA_TYPE, arbon
 export const setRadiatorsHeight = (value) => async (dispatch) => {
 	let heightValue = await getMainParamsHeightData(value);
 	dispatch(setRadiatorsHeightSuccess(heightValue.value, heightValue.code));
+};
+export const setRadiatorsType = (value) => async (dispatch) => {
+	let typeValue = await getMainParamsTypeData(value);
+	dispatch(setRadiatorsTypeSuccess(typeValue.value, typeValue.code));
 };
 
 export default MainParamsReducer;

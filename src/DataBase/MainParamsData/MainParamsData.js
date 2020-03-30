@@ -16,8 +16,15 @@ export const getMainParamsHeightData = (value) => {
 			return ({value: '1800',	code: value})
 		case '200':
 			return ({value: '2000',	code: value})
-
 		default:
-			return ({value: '30000',	code: value})
+			return ({value: '30000', code: value})
 	}
 }
+
+export const getMainParamsTypeData = (value) => (
+		{
+			'2': {value: '65', code: value},
+			'3': {value: '105', code: value},
+			'4': {value: '145', code: value},
+			'5': {value: '185', code: value}
+		}[value] || {value: '65', code: '2'});
