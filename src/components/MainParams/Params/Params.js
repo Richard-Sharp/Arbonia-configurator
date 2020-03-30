@@ -6,8 +6,7 @@ const Params = (props) => {
 	let quantityRef = React.createRef();
 
 	let onChangeParamHeight = () => {
-		debugger
-			props.setRadiatorsHeight(heightRef.current.value, heightRef.current.value);
+			props.setRadiatorsHeight(heightRef.current.value);
 	}
 	let onChangeParamType = (e) => {
 			props.setRadiatorsType(e.currentTarget.value, e.currentTarget.value);
