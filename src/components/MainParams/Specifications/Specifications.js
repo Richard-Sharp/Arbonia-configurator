@@ -39,7 +39,14 @@ debugger
 				<div>
 					<span>Длина прибора: </span>
 					<span>
-						{!props.quantitySections * 45 + 24} мм
+						{props.quantitySections ? props.quantitySections * 45 + 24 : 0} мм
+					</span>
+				</div>
+
+				<div>
+					<span>Мощность прибора (dT50): </span>
+					<span>
+						{props.quantitySections ? props.quantitySections * props.specifications.power.pw50 : 0} Вт
 					</span>
 				</div>
 

@@ -20,7 +20,7 @@ let initialState = {
 	},
 	arboniaModel: 0,
 	specifications: {},
-	quantitySections: 0
+	quantitySections: null
 };
 
 
@@ -92,7 +92,5 @@ export const setSpecificationsData= (arboniaModel) => async (dispatch) => {
 	let specifications = await getArboniaModelData(arboniaModel);
 	dispatch(setSpecificationsDataSuccess(specifications));
 };
-
-
 
 export default MainParamsReducer;
