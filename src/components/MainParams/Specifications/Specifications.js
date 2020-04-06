@@ -7,6 +7,14 @@ debugger
 	return (
 			<div className={style.container}>
 				<h4>Технические характеристики</h4>
+
+				<div>
+					<span>Модель прибора: </span>
+					<span>
+						{props.specifications.modelCode}
+					</span>
+				</div>
+
 				<div>
 					<span>Высота прибора: </span>
 					<span>
@@ -31,16 +39,9 @@ debugger
 				<div>
 					<span>Длина прибора: </span>
 					<span>
-						{props.quantitySections * 45 + 24} мм
+						{!props.quantitySections * 45 + 24} мм
 					</span>
 				</div>
-				<div>
-					<span>Модель прибора: </span>
-					<span>
-						{props.arboniaModel} мм
-					</span>
-				</div>
-
 
 			</div>
 	);
