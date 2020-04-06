@@ -3,7 +3,7 @@ import style from './Specifications.module.css';
 
 
 const Specifications = (props) => {
-debugger
+	debugger
 	return (
 			<div className={style.container}>
 				<h4>Технические характеристики</h4>
@@ -32,21 +32,22 @@ debugger
 				<div>
 					<span>Количество секций: </span>
 					<span>
-						{props.quantitySections} шт.
+						{!props.quantitySections ? 0 : props.quantitySections} шт.
 					</span>
 				</div>
 
 				<div>
 					<span>Длина прибора: </span>
 					<span>
-						{props.quantitySections ? props.quantitySections * 45 + 24 : 0} мм
+						{props.quantitySections > 0 ? props.totalLenght : 0} мм
 					</span>
 				</div>
 
 				<div>
 					<span>Мощность прибора (dT50): </span>
 					<span>
-						{props.quantitySections ? props.quantitySections * props.specifications.power.pw50 : 0} Вт
+						{/*{props.totalPower} Вт*/}
+						{!props.totalPower ? 0 : props.totalPower} Вт
 					</span>
 				</div>
 

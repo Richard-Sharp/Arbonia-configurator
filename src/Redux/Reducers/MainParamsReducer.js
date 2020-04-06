@@ -5,6 +5,8 @@ const SET_RADIATORS_HEIGHT = 'MainParams/Params/SET_RADIATORS_HEIGHT';
 const SET_RADIATORS_TYPE = 'MainParams/Params/SET_RADIATORS_TYPE';
 const SET_QUANTITY_SECTIONS = 'MainParams/Params/SET_QUANTITY_SECTIONS';
 const SET_ARBONIA_TYPE = 'MainParams/Params/SET_ARBONIA_TYPE';
+const SET_TOTAL_LENGHT = 'MainParams/Params/SET_TOTAL_LENGHT';
+const SET_TOTAL_POWER = 'MainParams/Params/SET_TOTAL_POWER';
 const SET_SPECIFICATION_DATA = 'MainParams/Params/SET_SPECIFICATION_DATA';
 
 let initialState = {
@@ -20,11 +22,14 @@ let initialState = {
 	},
 	arboniaModel: 0,
 	specifications: {},
-	quantitySections: null
+	quantitySections: null,
+	totalPower: null,
+	totalLenght: 0
 };
 
 
 export const MainParamsReducer = (state = initialState, action) => {
+	debugger
 	switch (action.type) {
 		case SET_RADIATORS_HEIGHT:
 			return {
@@ -58,6 +63,17 @@ export const MainParamsReducer = (state = initialState, action) => {
 				...state,
 				arboniaModel: action.arboniaModel
 			}
+			case SET_TOTAL_LENGHT:
+			return {
+				...state,
+				totalLenght: action.lenght
+			}
+			case SET_TOTAL_POWER:
+			return {
+				...state,
+				totalPower: action.power
+			}
+
 		case SET_SPECIFICATION_DATA:
 			return {
 				...state,
@@ -75,6 +91,9 @@ export const MainParamsReducer = (state = initialState, action) => {
 export const setRadiatorsHeightSuccess = (value, code) => ({type: SET_RADIATORS_HEIGHT, value: value, code: code});
 export const setRadiatorsTypeSuccess = (value, code) => ({type: SET_RADIATORS_TYPE, value: value, code: code});
 export const setQuantitySections = (number = 4) => ({type: SET_QUANTITY_SECTIONS, number});
+export const setTotalLenght = (lenght) => ({type: SET_TOTAL_LENGHT, lenght});
+export const setTotalPower = (power = 0) => ({type: SET_TOTAL_POWER, power});
+
 export const setArboniaModelSuccess = (arboniaModel) => ({type: SET_ARBONIA_TYPE, arboniaModel});
 export const setSpecificationsDataSuccess = (specifications) => ({type: SET_SPECIFICATION_DATA, specifications});
 
