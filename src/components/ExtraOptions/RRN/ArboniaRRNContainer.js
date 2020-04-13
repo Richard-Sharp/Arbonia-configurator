@@ -18,19 +18,39 @@ class ArboniaRRNContainer extends React.Component {
 		this.props.setValveType(false, 2, 0, 'RRN');
 	}
 
-	// componentDidUpdate(prevProps) {
-	// 	// if(prevProps.userId !== this.props.userId) {
-	// 	// 	this.props.updateDialogs(this.props.userId);
-	// 	// 	this.props.getNewMessagesCount();
-	// 	// }
-	// }
-	//
-	// componentWillUnmount() {
-	// }
+	setExtraOptions = (e) => {
+		const name = e.currentTarget.name;
+		const value = e.currentTarget.value;
+		const price = e.currentTarget.dataset.price;
+		switch (name) {
+			case 'connectionType':
+				this.props.setConnectionType(value, price);
+				break;
+			case 'connectionSize':
+				this.props.setConnectionSize(value, price);
+				break;
+			case 'airСooler':
+				this.props.setAirCoolerType(value, price);
+				break;
+			case 'airСoolerLocation':
+				this.props.setAirCoolerLocation(value, price);
+				break;
+			case 'airСoolerSize':
+				this.props.setAirCoolerSize(value, price);
+				break;
+			case 'pressure':
+				this.props.setPressure(value, price);
+				break;
+			default:
+				return (
+						alert('some error')
+				)
+		}
+	}
 
 	render() {
 
-		return <ArboniaRRN {...this.props} />
+		return <ArboniaRRN {...this.props} setExtraOptions={this.setExtraOptions}/>
 	}
 }
 
@@ -46,4 +66,13 @@ let mapState = (state) => ({
 
 })
 
-export default connect(mapState, {setValveType, setConnectionType, setConnectionSize, setAirCoolerType, setAirCoolerLocation, setAirCoolerSize, setPressure, setDrain}) (ArboniaRRNContainer);
+export default connect(mapState, {
+	setValveType,
+	setConnectionType,
+	setConnectionSize,
+	setAirCoolerType,
+	setAirCoolerLocation,
+	setAirCoolerSize,
+	setPressure,
+	setDrain
+})(ArboniaRRNContainer);
