@@ -95,6 +95,11 @@ const ArboniaRRN = (props) => {
 				<input onChange={(e) => {
 					onChangeConnectionSize(e)
 				}}
+							 data-price="4.5"
+							 name="connectionSize" type="radio" value="34"/>3/4" - ВР;
+				<input onChange={(e) => {
+					onChangeConnectionSize(e)
+				}}
 							 data-price="15"
 							 name="connectionSize" type="radio" value="10"/>1" - ВР;
 			</div>
@@ -152,7 +157,7 @@ const ArboniaRRN = (props) => {
 
 		<div>
 			<p>[11] Слив:</p>
-			<input onChange={onChangeDrain} name="drain" ref={drain} type="checkbox" defaultChecked={false} value='3'/>Наличие
+			<input onChange={onChangeDrain} name="drain" ref={drain} type="checkbox" defaultChecked={false} value='3/0/0'/>Наличие
 			слива
 			(дренажа);
 		</div>

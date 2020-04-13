@@ -1,3 +1,7 @@
 .container {
     color: darkblue;
 }
+
+.container input {
+    width: 500px;
+}

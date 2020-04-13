@@ -6,7 +6,6 @@ import {setSpecificationsData, setTotalPower} from "../../../Redux/Reducers/Main
 
 class SpecificationsContainer extends React.Component {
 	componentDidUpdate(prevProps) {
-		debugger
 		if (prevProps.params !== this.props.params) {
 			// this.props.setArboniaModel(this.props.type.code + this.props.height.code);
 			this.props.setSpecificationsData(this.props.type.code + this.props.height.code);

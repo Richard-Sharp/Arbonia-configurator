@@ -20,7 +20,6 @@ let initialState = {
 			code: 2
 		},
 	},
-	arboniaModel: 0,
 	specifications: {},
 	quantitySections: null,
 	totalPower: null,

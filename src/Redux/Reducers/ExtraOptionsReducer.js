@@ -35,7 +35,7 @@ let initialState = {
 		price: 0
 	},
 	drain: {
-		code: 12,
+		code: '3/0/0',
 		price: 0
 	},
 	pressure: {
