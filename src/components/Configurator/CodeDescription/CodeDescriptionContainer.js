@@ -11,13 +11,18 @@ class CodeDescriptionContainer extends React.Component {
 
 let mapState = (state) => ({
 	arboniaModel: state.mainParams.specifications.modelCode,
+	height: state.mainParams.params.height,
+	type: state.mainParams.params.typeParam,
 	quantitySections: state.mainParams.quantitySections,
+	totalLenght: state.mainParams.totalLenght,
+	totalPower: state.mainParams.totalPower,
 	valve: state.extraOptions.valve,
 	connectionType: state.extraOptions.connectionType,
 	connectionSize: state.extraOptions.connectionSize,
 	airCooler: state.extraOptions.airCooler,
 	airCoolerLocation: state.extraOptions.airCoolerLocation,
 	airCoolerSize: state.extraOptions.airCoolerSize,
+	pressure: state.extraOptions.pressure,
 	drain: state.extraOptions.drain
 
 })

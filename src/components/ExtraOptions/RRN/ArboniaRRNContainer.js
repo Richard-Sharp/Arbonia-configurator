@@ -40,7 +40,7 @@ class ArboniaRRNContainer extends React.Component {
 				this.props.setAirCoolerSize(value, price);
 				break;
 			case 'pressure':
-				this.props.setPressure(value, price);
+				this.props.setPressure(value, price, description);
 				break;
 			default:
 				return (

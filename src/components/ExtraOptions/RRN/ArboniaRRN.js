@@ -153,10 +153,12 @@ const ArboniaRRN = (props) => {
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}} data-price="10"
+							 data-description="10 бар"
 							 name="pressure" type="radio" value="10" defaultChecked/>Стандартное исполнение: 10 бар (1000 кПа);
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}} data-price="300"
+							 data-description="16 бар (спец. исполнение)"
 							 name="pressure" type="radio" value="16"/>Исполнение для высокого давления: 16 бар (1600 кПа);
 			</div>
 		</div>

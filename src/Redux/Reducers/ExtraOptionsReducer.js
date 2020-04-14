@@ -121,7 +121,7 @@ export const setAirCoolerLocation = (code, price = 0) => ({
 
 export const setAirCoolerSize = (code, price = 0) => ({type: SET_AIRCOOLER_SIZE, payload: {code: code, price: price}});
 
-export const setPressure = (code, price = 0) => ({type: SET_PRESSURE, payload: {code: code, price: price}});
+export const setPressure = (code, price = 0, description) => ({type: SET_PRESSURE, payload: {code: code, price: price, description: description}});
 
 export const setDrain = (code, price = 0) => ({type: SET_DRAIN, payload: {code: code, price: price}});
 

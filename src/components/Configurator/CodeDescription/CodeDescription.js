@@ -2,10 +2,10 @@ import React from 'react';
 import style from './CodeDescription.module.css';
 
 //Компонент для отображения описания прибора:
-const CodeDescription = ({arboniaModel, quantitySections, valve, connectionType, connectionSize, airCooler, airCoolerLocation, airCoolerSize, drain}) => {
+const CodeDescription = ({arboniaModel, height, type, quantitySections, valve, connectionType, connectionSize, airCooler, airCoolerLocation, airCoolerSize, pressure, totalLenght, totalPower}) => {
 debugger
 
-	let description = `${valve.model} ${arboniaModel}${valve.model === 'RRV' ? 'V' : ''} ${quantitySections}/${valve.code}/${connectionType.code}/${connectionSize.code}/${airCooler.code}/${airCoolerLocation.code}/${airCoolerSize.code}/${drain.code} AF  подключение ${connectionType.description} с диаметром ${connectionSize.description}` ;
+	let description = `Радиатор Arbonia ${arboniaModel}${!valve.valveExistence ? '' : 'V'}  ${type.code}-трубчатый глубиной - ${type.value} мм, высотой - ${height.value} мм. Количество секций - ${quantitySections}, общей длиной - ${totalLenght} мм, подключение ${connectionType.description} с диаметром ${connectionSize.description}, рабочее давление: ${pressure.description}. Общая мощность прибора при dT50 = ${totalPower} Вт.` ;
 
 
 	return <div className={style.container}>
