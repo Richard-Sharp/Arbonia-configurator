@@ -26,31 +26,37 @@ const ArboniaRRN = (props) => {
 					props.setExtraOptions(e)
 				}}
 							 data-price="0" defaultChecked
+							 data-description="боковое слева"
 							 name="connectionType" type="radio" value="12"/>12;
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}}
 							 data-price="0"
+							 data-description="боковое справа"
 							 name="connectionType" type="radio" value="34"/>34;
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}}
 							 data-price="10.91"
+							 data-description="нижнее проходное слева"
 							 name="connectionType" type="radio" value="24"/>24;
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}}
 							 data-price="10.91"
+							 data-description="нижнее проходное справа"
 							 name="connectionType" type="radio" value="42"/>42;
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}}
 							 data-price="76.84"
+							 data-description="нижнее центральное"
 							 name="connectionType" type="radio" value="98"/>98;
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}}
 							 data-price="76.84"
+							 data-description="нижнее центральное"
 							 name="connectionType" type="radio" value="96"/>96;
 			</div>
 		</div>

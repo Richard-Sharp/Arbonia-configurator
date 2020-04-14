@@ -22,9 +22,10 @@ class ArboniaRRNContainer extends React.Component {
 		const name = e.currentTarget.name;
 		const value = e.currentTarget.value;
 		const price = e.currentTarget.dataset.price;
+		const description = e.currentTarget.dataset.description;
 		switch (name) {
 			case 'connectionType':
-				this.props.setConnectionType(value, price);
+				this.props.setConnectionType(value, price, description);
 				break;
 			case 'connectionSize':
 				this.props.setConnectionSize(value, price);
