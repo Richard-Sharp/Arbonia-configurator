@@ -21,7 +21,8 @@ let initialState = {
 	},
 	connectionSize: {
 		code: 12,
-		price: 0
+		price: 0,
+		description: null
 	},
 	airCooler: {
 		code: 1,
@@ -41,7 +42,8 @@ let initialState = {
 	},
 	pressure: {
 		code: 10,
-		price: 0
+		price: 0,
+		description: null
 	}
 };
 
@@ -108,7 +110,7 @@ export const setValveType = (valve = false, code, price = 0, model = 'RRN') => (
 
 export const setConnectionType = (code, price, description) => ({type: SET_CONNECTION_TYPE, code, price, description});
 
-export const setConnectionSize = (code, price) => ({type: SET_CONNECTION_SIZE, payload: {code: code, price: price}});
+export const setConnectionSize = (code, price, description) => ({type: SET_CONNECTION_SIZE, payload: {code: code, price: price, description: description}});
 
 export const setAirCoolerType = (code, price) => ({type: SET_AIRCOOLER_TYPE, payload: {code: code, price: price}});
 

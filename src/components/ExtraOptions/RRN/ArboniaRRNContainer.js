@@ -28,7 +28,7 @@ class ArboniaRRNContainer extends React.Component {
 				this.props.setConnectionType(value, price, description);
 				break;
 			case 'connectionSize':
-				this.props.setConnectionSize(value, price);
+				this.props.setConnectionSize(value, price, description);
 				break;
 			case 'airСooler':
 				this.props.setAirCoolerType(value, price);

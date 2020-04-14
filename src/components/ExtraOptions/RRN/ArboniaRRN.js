@@ -68,21 +68,21 @@ const ArboniaRRN = (props) => {
 					props.setExtraOptions(e)
 				}}
 							 data-price="0" defaultChecked
+							 data-description='1/2" внутренняя резьба'
 							 name="connectionSize" type="radio" value="12"/>1/2" - ВР;
+
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}}
 							 data-price="4.5"
+							 data-description='3/4" внутренняя резьба'
 							 name="connectionSize" type="radio" value="34"/>3/4" - ВР;
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="4.5"
-							 name="connectionSize" type="radio" value="34"/>3/4" - ВР;
+
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}}
 							 data-price="15"
+							 data-description='1" внутренняя резьба'
 							 name="connectionSize" type="radio" value="10"/>1" - ВР;
 			</div>
 		</div>
