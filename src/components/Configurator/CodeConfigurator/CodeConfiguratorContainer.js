@@ -22,4 +22,4 @@ let mapState = (state) => ({
 
 })
 
-export default connect(mapState, null) (CodeConfiguratorContainer);
+export default connect(mapState, null)(CodeConfiguratorContainer);

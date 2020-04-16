@@ -62,12 +62,12 @@ export const MainParamsReducer = (state = initialState, action) => {
 				...state,
 				arboniaModel: action.arboniaModel
 			}
-			case SET_TOTAL_LENGHT:
+		case SET_TOTAL_LENGHT:
 			return {
 				...state,
 				totalLenght: action.lenght
 			}
-			case SET_TOTAL_POWER:
+		case SET_TOTAL_POWER:
 			return {
 				...state,
 				totalPower: action.power
@@ -77,7 +77,7 @@ export const MainParamsReducer = (state = initialState, action) => {
 			return {
 				...state,
 				specifications: {
-						...state.specifications, ...action.specifications
+					...state.specifications, ...action.specifications
 				}
 			}
 
@@ -106,7 +106,7 @@ export const setRadiatorsType = (value) => async (dispatch) => {
 	let typeValue = await getMainParamsTypeData(value);
 	dispatch(setRadiatorsTypeSuccess(typeValue.value, typeValue.code));
 };
-export const setSpecificationsData= (arboniaModel) => async (dispatch) => {
+export const setSpecificationsData = (arboniaModel) => async (dispatch) => {
 	let specifications = await getArboniaModelData(arboniaModel);
 	dispatch(setSpecificationsDataSuccess(specifications));
 };
