@@ -2,9 +2,9 @@ const arboniaModel = (modelCode, height, type, depthInstallation, power, price) 
 	return (
 			{
 				modelCode: modelCode,
-				height: height,
-				type: type,
-				depthInstallation: depthInstallation,
+				// height: height,
+				// type: type,
+				// depthInstallation: depthInstallation,
 				power: {
 					pw50: power
 				},
