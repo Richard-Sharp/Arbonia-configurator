@@ -15,7 +15,7 @@ import {connect} from "react-redux";
 class ArboniaRRNContainer extends React.Component {
 
 	componentWillMount() {
-		this.props.setValveType(false, 2, 0, 'RRN');
+		this.props.setValveType(false, 2, 0, 'RRN', 'безвентильного исполнения');
 	}
 
 	setExtraOptions = (e) => {

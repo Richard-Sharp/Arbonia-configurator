@@ -12,7 +12,8 @@ let initialState = {
 		valveExistence: false,
 		code: 2,
 		price: 0,
-		model: null
+		model: null,
+		description: null
 	},
 	connectionType: {
 		code: 12,
@@ -103,9 +104,9 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 }
 
 //Action creators:
-export const setValveType = (valve = false, code, price = 0, model = 'RRN') => ({
+export const setValveType = (valve = false, code, price = 0, model = 'RRN', description) => ({
 	type: SET_VALVE_TYPE,
-	payload: {valveExistence: valve, code: code, price: price, model: model}
+	payload: {valveExistence: valve, code: code, price: price, model: model, description: description}
 });
 
 export const setConnectionType = (code, price, description) => ({type: SET_CONNECTION_TYPE, code, price, description});
