@@ -1,4 +1,4 @@
-const arboniaModel = (modelCode, height, type, depthInstallation, power, price) => {
+const arboniaModel = (modelCode, power, price) => {
 	return (
 			{
 				modelCode: modelCode,
