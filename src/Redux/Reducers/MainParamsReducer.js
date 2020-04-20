@@ -7,6 +7,7 @@ const SET_QUANTITY_SECTIONS = 'MainParams/Params/SET_QUANTITY_SECTIONS';
 const SET_ARBONIA_TYPE = 'MainParams/Params/SET_ARBONIA_TYPE';
 const SET_TOTAL_LENGHT = 'MainParams/Params/SET_TOTAL_LENGHT';
 const SET_TOTAL_POWER = 'MainParams/Params/SET_TOTAL_POWER';
+const SET_TOTAL_PRICE = 'MainParams/Params/SET_TOTAL_PRICE';
 const SET_SPECIFICATION_DATA = 'MainParams/Params/SET_SPECIFICATION_DATA';
 
 let initialState = {
@@ -23,7 +24,8 @@ let initialState = {
 	specifications: {},
 	quantitySections: null,
 	totalPower: null,
-	totalLenght: 0
+	totalLenght: 0,
+	totalPrice: 0
 };
 
 
@@ -72,6 +74,11 @@ export const MainParamsReducer = (state = initialState, action) => {
 				...state,
 				totalPower: action.power
 			}
+		case SET_TOTAL_PRICE:
+			return {
+				...state,
+				totalPrice: action.price
+			}
 
 		case SET_SPECIFICATION_DATA:
 			return {
@@ -92,6 +99,7 @@ export const setRadiatorsTypeSuccess = (value, code) => ({type: SET_RADIATORS_TY
 export const setQuantitySections = (number = 4) => ({type: SET_QUANTITY_SECTIONS, number});
 export const setTotalLenght = (lenght) => ({type: SET_TOTAL_LENGHT, lenght});
 export const setTotalPower = (power = 0) => ({type: SET_TOTAL_POWER, power});
+export const setTotalPrice = (price = 0) => ({type: SET_TOTAL_PRICE, price});
 
 export const setArboniaModelSuccess = (arboniaModel) => ({type: SET_ARBONIA_TYPE, arboniaModel});
 export const setSpecificationsDataSuccess = (specifications) => ({type: SET_SPECIFICATION_DATA, specifications});

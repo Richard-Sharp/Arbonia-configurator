@@ -3,7 +3,6 @@ import style from './Specifications.module.css';
 
 
 const Specifications = (props) => {
-	debugger
 	return (
 			<div className={style.container}>
 				<h4>Технические характеристики</h4>

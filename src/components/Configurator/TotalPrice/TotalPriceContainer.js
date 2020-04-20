@@ -1,11 +1,24 @@
 import React from 'react';
 import {connect} from "react-redux";
 import TotalPrice from "./TotalPrice";
+import {setTotalPrice} from "../../../Redux/Reducers/MainParamsReducer";
 
 class TotalPriceContainer extends React.Component {
+	// componentDidUpdate(prevProps) {
+	// 	debugger
+	// 	if(prevProps !== this.props) {
+	// 		let totalPrice = (this.props.arboniaModelPrice * this.props.quantitySections) + this.props.valve.price + this.props.connectionType.price + this.props.connectionSize.price + this.props.airCooler.price + this.props.pressure.price + this.props.drain.price;
+	// 		setTotalPrice(totalPrice);
+	// 	}
+	// }
+	onChangeTotalPrice => {
+		debugger
+		let totalPrice = (this.props.arboniaModelPrice * this.props.quantitySections) + this.props.valve.price + this.props.connectionType.price + this.props.connectionSize.price + this.props.airCooler.price + this.props.pressure.price + this.props.drain.price;
+		this.setTotalPrice(totalPrice);
+	}
 
 	render() {
-		return <TotalPrice {...this.props} />
+		return <TotalPrice totalPrice={this.props.totalPrice} onChangeTatalPrice={this.onChangeTotalPrice}/>
 	}
 }
 
@@ -17,8 +30,9 @@ let mapState = (state) => ({
 	connectionSize: state.extraOptions.connectionSize,
 	airCooler: state.extraOptions.airCooler,
 	pressure: state.extraOptions.pressure,
-	drain: state.extraOptions.drain
+	drain: state.extraOptions.drain,
+	totalPrice: state.mainParams.totalPrice,
 
 })
 
-export default connect(mapState, null)(TotalPriceContainer);
+export default connect(mapState, {setTotalPrice})(TotalPriceContainer);
