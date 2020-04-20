@@ -20,8 +20,8 @@ class ArboniaRRNContainer extends React.Component {
 
 	setExtraOptions = (e) => {
 		const name = e.currentTarget.name;
-		const value = e.currentTarget.value;
-		const price = e.currentTarget.dataset.price;
+		const value = +e.currentTarget.value;
+		const price = +e.currentTarget.dataset.price;
 		const description = e.currentTarget.dataset.description;
 		switch (name) {
 			case 'connectionType':

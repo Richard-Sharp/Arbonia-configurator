@@ -8,9 +8,10 @@ import TotalPriceContainer from "./TotalPrice/TotalPriceContainer";
 //Компонент для расчета и отображения артикула прибора и его описания:
 const Configurator = (props) => {
 	return <div className={style.container}>
+		<TotalPriceContainer/>
 		<CodeConfiguratorContainer/>
 		<CodeDescriptionContainer/>
-		<TotalPriceContainer/>
+
 
 
 	</div>

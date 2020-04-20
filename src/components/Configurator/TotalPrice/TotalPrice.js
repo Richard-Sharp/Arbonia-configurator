@@ -5,7 +5,7 @@ import style from './TotalPrice.module.css';
 const TotalPrice = ({arboniaModelPrice, quantitySections, valve, connectionType, connectionSize, airCooler, pressure, drain}) => {
 
 
-	let totalPrice = (arboniaModelPrice * quantitySections) + valve.price + connectionType.price + connectionSize.price + airCooler.price + pressure.price + drain.price;
+	let totalPrice = +(arboniaModelPrice * quantitySections + valve.price + connectionType.price + connectionSize.price + airCooler.price + pressure.price + drain.price);
 
 
 	return <div className={style.container}>
