@@ -4,21 +4,20 @@ import TotalPrice from "./TotalPrice";
 import {setTotalPrice} from "../../../Redux/Reducers/MainParamsReducer";
 
 class TotalPriceContainer extends React.Component {
-	// componentDidUpdate(prevProps) {
-	// 	debugger
-	// 	if(prevProps !== this.props) {
-	// 		let totalPrice = (this.props.arboniaModelPrice * this.props.quantitySections) + this.props.valve.price + this.props.connectionType.price + this.props.connectionSize.price + this.props.airCooler.price + this.props.pressure.price + this.props.drain.price;
-	// 		setTotalPrice(totalPrice);
-	// 	}
-	// }
-	onChangeTotalPrice => {
-		debugger
-		let totalPrice = (this.props.arboniaModelPrice * this.props.quantitySections) + this.props.valve.price + this.props.connectionType.price + this.props.connectionSize.price + this.props.airCooler.price + this.props.pressure.price + this.props.drain.price;
-		this.setTotalPrice(totalPrice);
+	componentDidUpdate(prevProps) {
+		if(prevProps !== this.props) {
+			let totalPrice = (this.props.arboniaModelPrice * this.props.quantitySections) + this.props.valve.price + this.props.connectionType.price + this.props.connectionSize.price + this.props.airCooler.price + this.props.pressure.price + this.props.drain.price;
+			this.props.setTotalPrice(totalPrice);
+		}
 	}
+	// onChangeTotalPrice = () => {
+// 	let totalPrice = (this.props.arboniaModelPrice * this.props.quantitySections) + this.props.valve.price + this.props.connectionType.price + this.props.connectionSize.price + this.props.airCooler.price + this.props.pressure.price + this.props.drain.price;
+	// 	this.props.setTotalPrice(totalPrice);
+	// }
 
 	render() {
-		return <TotalPrice totalPrice={this.props.totalPrice} onChangeTatalPrice={this.onChangeTotalPrice}/>
+		return <TotalPrice totalPrice={this.props.totalPrice} />
+		// onChangeTatalPrice={this.onChangeTotalPrice}
 	}
 }
 
