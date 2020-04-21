@@ -23,6 +23,9 @@ class ArboniaRRVContainer extends React.Component {
 		const price = +e.currentTarget.dataset.price;
 		const description = e.currentTarget.dataset.description;
 		switch (name) {
+			case 'valveType':
+				this.props.setValveType(true, value, price, 'RRV', description);
+				break;
 			case 'connectionType':
 				this.props.setConnectionType(value, price, description);
 				break;

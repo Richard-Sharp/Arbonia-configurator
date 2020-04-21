@@ -62,7 +62,7 @@ const ArboniaRRN = (props) => {
 		</div>
 
 		<div>
-			<p>[7] Размер подключения:</p>
+			<p>[7] Диаметр подключения:</p>
 			<div>
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
@@ -74,7 +74,7 @@ const ArboniaRRN = (props) => {
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}}
-							 data-price="4.5"
+							 data-price="9.56"
 							 data-description='3/4" внутренняя резьба'
 							 name="connectionSize" type="radio" value="34"/>3/4" - ВР;
 
