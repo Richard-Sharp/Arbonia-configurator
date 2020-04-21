@@ -133,7 +133,7 @@ const ArboniaRRV = (props) => {
 			<div>
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
-				}} data-price="10"
+				}} data-price="0"
 							 data-description="10 бар"
 							 name="pressure" type="radio" value="10" defaultChecked/>Стандартное исполнение: 10 бар (1000 кПа);
 				<input onChange={(e) => {
