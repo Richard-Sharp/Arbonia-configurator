@@ -7,7 +7,7 @@ const TotalPrice = ({totalPrice, onChangeTatalPrice}) => {
 	return <div className={style.container}>
 		<h3>Цена за прибор:</h3>
 		<div>
-			{totalPrice} EUR
+			{totalPrice.toFixed(2)} EUR
 			{/*<div>*/}
 				{/*<button onClick={onChangeTatalPrice}>Рассчитать!</button>*/}
 			{/*</div>*/}

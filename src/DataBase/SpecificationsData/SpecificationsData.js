@@ -35,7 +35,7 @@ const arb4030 = arboniaModel(4030, 43, 16.44);
 const arb5030 = arboniaModel(5030, 53, 19.65);
 const arb6030 = arboniaModel(6030, 53, 22.95);
 
-const arb2050 = arboniaModel(2050, 9, 14.84);
+const arb2050 = arboniaModel(2050, 49, 14.84);
 const arb3050 = arboniaModel(3050, 53, 16.72);
 const arb4050 = arboniaModel(4050, 69, 18.61);
 const arb5050 = arboniaModel(5050, 85, 22.01);
