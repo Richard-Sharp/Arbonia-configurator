@@ -7,7 +7,7 @@ const Header = () => {
 	return (
 			<div className = {style.header}>
 				<h2>Arbonia configurator </h2>
-				<h5>Ver: 1.0.1 (alfa)</h5>
+				<h5>Ver: 1.0.2 (alfa)</h5>
 
 			</div>
 	);
