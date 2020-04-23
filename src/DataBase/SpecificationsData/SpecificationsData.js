@@ -39,7 +39,7 @@ const arb4019 = arboniaModel(4019, 27, 16.91);
 //260
 const arb2026 = arboniaModel(2026, 20, 14.38);
 const arb3026 = arboniaModel(3026, 28, 15.47);
-const arb4026 = arboniaModel(4026, 36, 17.27);
+const arb4026 = arboniaModel(4026, 36, 17.26);
 const arb5026 = arboniaModel(5026, 45, 21.04);
 const arb6026 = arboniaModel(6026, 53, 24.49);
 //300
@@ -95,12 +95,12 @@ const arb2090 = arboniaModel(2090, 67, 18.41);
 const arb3090 = arboniaModel(3090, 92, 21.89);
 const arb4090 = arboniaModel(4090, 117, 28.10);
 const arb5090 = arboniaModel(5090, 144, 33.26);
-const arb6090 = arboniaModel(6090, 168, 28.51);
+const arb6090 = arboniaModel(6090, 168, 38.51);
 //1000
 const arb2100 = arboniaModel(2100, 74, 19.27);
 const arb3100 = arboniaModel(3100, 102, 22.94);
 const arb4100 = arboniaModel(4100, 129, 30.36);
-const arb5100 = arboniaModel(5100, 158, 35.36);
+const arb5100 = arboniaModel(5100, 158, 35.46);
 const arb6100 = arboniaModel(6100, 185, 41.52);
 //1100
 const arb2110 = arboniaModel(2110, 81, 20.03);
@@ -110,7 +110,7 @@ const arb5110 = arboniaModel(5110, 172, 41.14);
 const arb6110 = arboniaModel(6110, 201, 48.95);
 //1200
 const arb2120 = arboniaModel(2120, 88, 21.38);
-const arb3120 = arboniaModel(3120, 120, 30.38);
+const arb3120 = arboniaModel(3120, 120, 30.13);
 const arb4120 = arboniaModel(4120, 152, 37.91);
 const arb5120 = arboniaModel(5120, 186, 47.61);
 const arb6120 = arboniaModel(6120, 217, 55.46);
