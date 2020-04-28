@@ -143,7 +143,6 @@ export const getArboniaModelData = (value) => (
 			'6300': arb6300,
 		}[value] || arb2030);
 
-
 //(модель, высота, трубки, глубина, мощность, цена)
 //180
 const arb5018 = arboniaModel(5018, 32, 20.93);
