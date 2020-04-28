@@ -143,7 +143,6 @@ const ArboniaRRV = (props) => {
 							 name="pressure" type="radio" value="16"/>Исполнение для высокого давления: 16 бар (1600 кПа);
 			</div>
 		</div>
-
 	</div>
 }
 
