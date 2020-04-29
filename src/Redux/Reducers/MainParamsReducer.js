@@ -1,4 +1,8 @@
-import {getMainParamsHeightData, getMainParamsTypeData} from "../../DataBase/MainParamsData/MainParamsData";
+import {
+	getMainParamsHeightData,
+	getMainParamsTypeData,
+	heightParamsDisplay
+} from "../../DataBase/MainParamsData/MainParamsData";
 import {getArboniaModelData} from "../../DataBase/SpecificationsData/SpecificationsData";
 
 const SET_RADIATORS_HEIGHT = 'MainParams/Params/SET_RADIATORS_HEIGHT';
@@ -21,6 +25,7 @@ let initialState = {
 			code: 2
 		},
 	},
+	heightParamsDefault: heightParamsDisplay,
 	specifications: {},
 	quantitySections: null,
 	totalPower: null,

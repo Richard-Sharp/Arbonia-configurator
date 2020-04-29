@@ -50,6 +50,31 @@ export const getMainParamsHeightData = (value) => {
 	}
 }
 
+export const heightParamsDisplay = [{description: '180',	value: '018'},
+{description: '190',	value: '019'},
+{description: '260',	value: '026'},
+{description: '300',	value: '030'},
+{description: '350',	value: '035'},
+{description: '400',	value: '040'},
+{description: '450',	value: '045'},
+{description: '500',	value: '050'},
+{description: '550',	value: '055'},
+{description: '600',	value: '060'},
+{description: '750',	value: '075'},
+{description: '900',	value: '090'},
+{description: '1000',	value: '100'},
+{description: '1100',	value: '110'},
+{description: '1200',	value: '120'},
+{description: '1500',	value: '150'},
+{description: '1800',	value: '180'},
+{description: '2000',	value: '200'},
+{description: '2200',	value: '220'},
+{description: '2500',	value: '250'},
+{description: '2800',	value: '280'},
+{description: '3000',	value: '300'}];
+
+
+
 export const getMainParamsTypeData = (value) => (
 		{
 			'2': {value: '65', code: value},
@@ -58,3 +83,5 @@ export const getMainParamsTypeData = (value) => (
 			'5': {value: '185', code: value},
 			'6': {value: '225', code: value}
 		}[value] || {value: '65', code: '2'});
+
+export typeParamsDisplay

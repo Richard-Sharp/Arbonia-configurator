@@ -23,7 +23,8 @@ class ParamsContainer extends React.Component {
 }
 
 let mapState = (state) => ({
-	quantitySections: state.mainParams.quantitySections
+	quantitySections: state.mainParams.quantitySections,
+	heightParamsDefault: state.mainParams.heightParamsDefault
 })
 
 export default connect(mapState, {setRadiatorsHeight, setRadiatorsType, setQuantitySections, setTotalLenght})(ParamsContainer);
