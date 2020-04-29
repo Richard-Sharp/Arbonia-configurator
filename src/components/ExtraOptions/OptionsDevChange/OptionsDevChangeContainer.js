@@ -6,19 +6,6 @@ import OptionsDevChange from "./OptionsDevChange";
 
 class OptionsDevChangeContainer extends React.Component {
 
-	// componentDidMount() {
-	// }
-	//
-	// componentDidUpdate(prevProps) {
-	// 	// if(prevProps.userId !== this.props.userId) {
-	// 	// 	this.props.updateDialogs(this.props.userId);
-	// 	// 	this.props.getNewMessagesCount();
-	// 	// }
-	// }
-	//
-	// componentWillUnmount() {
-	// }
-
 	render() {
 
 		return <OptionsDevChange {...this.props} />

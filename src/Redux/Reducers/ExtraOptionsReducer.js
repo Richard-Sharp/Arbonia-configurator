@@ -44,7 +44,7 @@ let initialState = {
 	pressure: {
 		code: 10,
 		price: 0,
-		description: null
+		description: '10 бар'
 	}
 };
 
