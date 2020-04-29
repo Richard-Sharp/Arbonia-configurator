@@ -1,7 +1,8 @@
 import {
 	getMainParamsHeightData,
 	getMainParamsTypeData,
-	heightParamsDisplay
+	heightParamsData,
+	typeParamsData
 } from "../../DataBase/MainParamsData/MainParamsData";
 import {getArboniaModelData} from "../../DataBase/SpecificationsData/SpecificationsData";
 
@@ -25,7 +26,8 @@ let initialState = {
 			code: 2
 		},
 	},
-	heightParamsDefault: heightParamsDisplay,
+	heightParamsDisplay: heightParamsData,
+	typeParamsDisplay: typeParamsData,
 	specifications: {},
 	quantitySections: null,
 	totalPower: null,

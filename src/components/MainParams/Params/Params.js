@@ -20,34 +20,31 @@ const Params = (props) => {
 				<h5>Основные параметры прибора</h5>
 				<div className={style.height}>
 					<p>Высота прибора:</p>
-					<select name="height" id="heightParam" required
-									ref={heightRef}
+					<select name="height" id="heightParam" required ref={heightRef}
 									onChange={(e) => {
 										onChangeParamHeight(e)
 									}}>
 						<option value="0" selected disabled>Выберите высоту:</option>
-						{props.heightParamsDefault.map(h => {
-							return <option value={h.value}>{h.description} мм</option>
+						{props.heightParamsDisplay.map(height => {
+							return <option key={height.value} value={height.value}>{height.description} мм</option>
 						})}
 						{/*<option value="030" >300 мм</option>*/}
 					</select>
 				</div>
 
 				<div className={style.type}>
-					<p>Тип радиатора</p>
+					<p>Тип радиатора:</p>
 					<div>
-						<input onChange={(e) => {
-							onChangeParamType(e)
-						}} name="type" type="radio" value="2"/>2-трубчатый;
-						<input onChange={(e) => {
-							onChangeParamType(e)
-						}} name="type" type="radio" value="3"/>3-трубчатый;
-						<input onChange={(e) => {
-							onChangeParamType(e)
-						}} name="type" type="radio" value="4"/>4-трубчатый;
-						<input onChange={(e) => {
-							onChangeParamType(e)
-						}} name="type" type="radio" value="5"/>5-трубчатый;
+						{props.typeParamsDisplay.map(type => {
+							return <div key={type.value}>
+								<input name='type' type="radio" value={type.value}
+											 onChange={(e) => {
+												 onChangeParamType(e)
+											 }}/>{type.description};
+							</div>
+						})}
+						{/*<input onChange={(e) => {onChangeParamType(e)}} */}
+						{/*name="type" type="radio" value="2"/>2-трубчатый;*/}
 					</div>
 				</div>
 
