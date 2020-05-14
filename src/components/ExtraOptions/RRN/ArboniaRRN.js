@@ -22,42 +22,16 @@ const ArboniaRRN = (props) => {
 		<div>
 			<p> [6] Схема подключения:</p>
 			<div>
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="0" defaultChecked
-							 data-description="боковое слева"
-							 name="connectionType" type="radio" value="12"/>12;
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="0"
-							 data-description="боковое справа"
-							 name="connectionType" type="radio" value="34"/>34;
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="10.91"
-							 data-description="нижнее проходное слева"
-							 name="connectionType" type="radio" value="24"/>24;
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="10.91"
-							 data-description="нижнее проходное справа"
-							 name="connectionType" type="radio" value="42"/>42;
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="76.84"
-							 data-description="нижнее центральное"
-							 name="connectionType" type="radio" value="98"/>98;
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="76.84"
-							 data-description="нижнее центральное"
-							 name="connectionType" type="radio" value="96"/>96;
+				{props.extraOptionRRNDisplay.map(type => {
+					return <>
+					<input onChange={(e) => {
+						props.setExtraOptions(e)
+					}}
+												data-price={type.dataPrice} key={type.value}
+												data-description={type.dataDescription}
+												name={type.name} type="radio" value={type.value}/>{type.text};
+												</>
+				})}
 			</div>
 		</div>
 

@@ -63,7 +63,8 @@ let mapState = (state) => ({
 	airCoolerLocation: state.extraOptions.airCoolerLocation,
 	airCoolerSize: state.extraOptions.airCoolerSize,
 	drain: state.extraOptions.drain,
-	pressure: state.extraOptions.pressure
+	pressure: state.extraOptions.pressure,
+	extraOptionRRNDisplay: state.extraOptions.extraOptionRRNDisplay
 
 })
 

@@ -5,6 +5,7 @@ import {
 	typeParamsData
 } from "../../DataBase/MainParamsData/MainParamsData";
 import {getArboniaModelData} from "../../DataBase/SpecificationsData/SpecificationsData";
+import {connectionTypeRRNData} from "../../DataBase/ExtraOptionsData/ExtraOptionsData";
 
 const SET_RADIATORS_HEIGHT = 'MainParams/Params/SET_RADIATORS_HEIGHT';
 const SET_RADIATORS_TYPE = 'MainParams/Params/SET_RADIATORS_TYPE';

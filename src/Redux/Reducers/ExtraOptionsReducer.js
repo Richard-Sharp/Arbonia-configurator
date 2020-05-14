@@ -1,3 +1,5 @@
+import {connectionTypeRRNData} from "../../DataBase/ExtraOptionsData/ExtraOptionsData";
+
 const SET_CONNECTION_TYPE = 'ExtraOptions/SET_CONNECTION_TYPE';
 const SET_CONNECTION_SIZE = 'ExtraOptions/SET_CONNECTION_SIZE';
 const SET_AIRCOOLER_TYPE = 'ExtraOptions/SET_AIRCOOLER_TYPE';
@@ -45,7 +47,8 @@ let initialState = {
 		code: 10,
 		price: 0,
 		description: '10 бар'
-	}
+	},
+	extraOptionRRNDisplay: connectionTypeRRNData
 };
 
 
