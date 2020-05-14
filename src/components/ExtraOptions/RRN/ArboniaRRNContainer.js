@@ -23,9 +23,11 @@ class ArboniaRRNContainer extends React.Component {
 		const value = +e.currentTarget.value;
 		const price = +e.currentTarget.dataset.price;
 		const description = e.currentTarget.dataset.description;
+		const airCooler = e.currentTarget.dataset.air;
 		switch (name) {
 			case 'connectionType':
 				this.props.setConnectionType(value, price, description);
+				this.props.setAirCoolerLocation(airCooler);
 				break;
 			case 'connectionSize':
 				this.props.setConnectionSize(value, price, description);
@@ -33,9 +35,9 @@ class ArboniaRRNContainer extends React.Component {
 			case 'airСooler':
 				this.props.setAirCoolerType(value, price);
 				break;
-			case 'airСoolerLocation':
-				this.props.setAirCoolerLocation(value, price);
-				break;
+			// case 'airСoolerLocation':
+			// 	this.props.setAirCoolerLocation(value, price);
+			// 	break;
 			case 'airСoolerSize':
 				this.props.setAirCoolerSize(value, price);
 				break;

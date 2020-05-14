@@ -24,13 +24,14 @@ const ArboniaRRN = (props) => {
 			<div>
 				{props.extraOptionRRNDisplay.map(type => {
 					return <>
-					<input onChange={(e) => {
-						props.setExtraOptions(e)
-					}}
-												data-price={type.dataPrice} key={type.value}
-												data-description={type.dataDescription}
-												name={type.name} type="radio" value={type.value}/>{type.text};
-												</>
+						<input onChange={(e) => {
+							props.setExtraOptions(e)
+						}}
+									 data-price={type.dataPrice} key={type.value}
+									 data-description={type.dataDescription}
+									 data-air={type.airCoolerLocation}
+									 name={type.name} type="radio" value={type.value}/>{type.text};
+					</>
 				})}
 			</div>
 		</div>
