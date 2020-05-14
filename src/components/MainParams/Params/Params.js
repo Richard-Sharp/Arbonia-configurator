@@ -12,7 +12,15 @@ const Params = (props) => {
 		props.setRadiatorsType(e.currentTarget.value, e.currentTarget.value);
 	}
 	let onChangeQuantitySections = () => {
-		props.setQuantitySections(quantityRef.current.value);
+		if (quantityRef.current.value < 4) {
+			props.setQuantitySections(4);
+		} else if (quantityRef.current.value > 60) {
+			props.setQuantitySections(60);
+		} else {
+			props.setQuantitySections(quantityRef.current.value);
+		}
+
+
 	}
 
 	return (
