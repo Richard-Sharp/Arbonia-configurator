@@ -8,7 +8,7 @@ class SpecificationsContainer extends React.Component {
 	componentDidUpdate(prevProps) {
 		if (prevProps.params !== this.props.params) {
 			// this.props.setArboniaModel(this.props.type.code + this.props.height.code);
-			this.props.setSpecificationsData(this.props.type.code + this.props.height.code);
+			this.props.setSpecificationsData(this.props.type.code, this.props.height.code);
 		}
 		if (prevProps.specifications.modelCode !== this.props.specifications.modelCode || prevProps.quantitySections !== this.props.quantitySections ) {
 			this.props.setTotalPower(this.props.specifications.power.pw50 * this.props.quantitySections);

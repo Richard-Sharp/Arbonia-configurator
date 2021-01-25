@@ -10,7 +10,9 @@ const Specifications = (props) => {
 				<div>
 					<span>Модель прибора: </span>
 					<span>
-						{props.specifications.modelCode}
+						{props.specifications.modelCode
+								? props.specifications.modelCode
+								: " .... "}
 					</span>
 				</div>
 

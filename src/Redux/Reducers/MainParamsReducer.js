@@ -23,8 +23,8 @@ let initialState = {
 			code: 0
 		},
 		typeParam: {
-			value: 65,
-			code: 2
+			value: 0, // - 65
+			code: 0 // - 2
 		},
 	},
 	heightParamsDisplay: heightParamsData,
@@ -38,7 +38,6 @@ let initialState = {
 
 
 export const MainParamsReducer = (state = initialState, action) => {
-	debugger
 	switch (action.type) {
 		case SET_RADIATORS_HEIGHT:
 			return {
@@ -122,9 +121,20 @@ export const setRadiatorsType = (value) => async (dispatch) => {
 	let typeValue = await getMainParamsTypeData(value);
 	dispatch(setRadiatorsTypeSuccess(typeValue.value, typeValue.code));
 };
-export const setSpecificationsData = (arboniaModel) => async (dispatch) => {
-	let specifications = await getArboniaModelData(arboniaModel);
-	dispatch(setSpecificationsDataSuccess(specifications));
+// export const setSpecificationsData = (arboniaModel) => async (dispatch) => {
+// 	let specifications = await getArboniaModelData(arboniaModel);
+// 	dispatch(setSpecificationsDataSuccess(specifications));
+// };
+
+//Запрашиваем данные по конкретной модели прибора:
+export const setSpecificationsData = (type, height) => async (dispatch) => {
+
+	if (type !== 0 && height !== 0) {
+		// const arboniaModel = type + height;
+		const specifications = await getArboniaModelData(type + height); // - arboniaModel (e.g.: 2180)
+		dispatch(setSpecificationsDataSuccess(specifications));
+	}
+
 };
 
 export default MainParamsReducer;
