@@ -70,8 +70,6 @@ const OptionsDevChange = (props) => {
 						<strong> Цена: </strong>{props.pressure.price} EUR;
 					</div>
 				</div>
-
-
 			</div>
 	);
 }

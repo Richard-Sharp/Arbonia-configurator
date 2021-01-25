@@ -17,8 +17,6 @@ const CodeConfigurator = ({arboniaModel, quantitySections, valve, connectionType
 		<div>
 			<strong>Наименование: </strong><input type="text" value={name}/>
 		</div>
-
-
 	</div>
 }
 

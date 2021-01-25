@@ -53,7 +53,8 @@ class ArboniaRRVContainer extends React.Component {
 
 	render() {
 
-		return <ArboniaRRV {...this.props} setExtraOptions={this.setExtraOptions}
+		return <ArboniaRRV {...this.props}
+											 setExtraOptions={this.setExtraOptions}
 											 setValveType={this.props.setValveType}/>
 	}
 }

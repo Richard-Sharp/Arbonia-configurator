@@ -5,13 +5,13 @@ const Params = (props) => {
 	let heightRef = React.createRef();
 	let quantityRef = React.createRef();
 
-	let onChangeParamHeight = () => {
+	const onChangeParamHeight = () => {
 		props.setRadiatorsHeight(heightRef.current.value);
 	}
-	let onChangeParamType = (e) => {
+	const onChangeParamType = (e) => {
 		props.setRadiatorsType(e.currentTarget.value, e.currentTarget.value);
 	}
-	let onChangeQuantitySections = () => {
+	const onChangeQuantitySections = () => {
 		if (quantityRef.current.value < 4) {
 			props.setQuantitySections(4);
 		} else if (quantityRef.current.value > 60) {
@@ -19,8 +19,6 @@ const Params = (props) => {
 		} else {
 			props.setQuantitySections(quantityRef.current.value);
 		}
-
-
 	}
 
 	return (

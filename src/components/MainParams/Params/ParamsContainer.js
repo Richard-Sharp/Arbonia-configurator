@@ -15,9 +15,7 @@ class ParamsContainer extends React.Component {
 		}
 	}
 
-
 	render() {
-
 		return <Params {...this.props} />
 	}
 }

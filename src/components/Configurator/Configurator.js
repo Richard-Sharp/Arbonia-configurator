@@ -12,8 +12,6 @@ const Configurator = (props) => {
 		<CodeConfiguratorContainer/>
 		<CodeDescriptionContainer/>
 
-
-
 	</div>
 }
 

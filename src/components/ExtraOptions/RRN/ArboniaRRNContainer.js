@@ -15,12 +15,13 @@ import {connect} from "react-redux";
 class ArboniaRRNContainer extends React.Component {
 
 	componentWillMount() {
-		this.props.setValveType(false, 2, 0, 'RRN', 'безвентильного исполнения');
+		this.props.setValveType(false, 2, 0, 'RRN', 'безвентильное исполнение');
 	}
 
 	setExtraOptions = (e) => {
 		const name = e.currentTarget.name;
 		const value = +e.currentTarget.value;
+
 		const price = +e.currentTarget.dataset.price;
 		const description = e.currentTarget.dataset.description;
 		const airCooler = e.currentTarget.dataset.air;
