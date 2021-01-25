@@ -113,10 +113,12 @@ export const setSpecificationsDataSuccess = (specifications) => ({type: SET_SPEC
 
 
 //Thunk creators:
+//Устанавливаем высоту прибора:
 export const setRadiatorsHeight = (value) => async (dispatch) => {
 	let heightValue = await getMainParamsHeightData(value);
 	dispatch(setRadiatorsHeightSuccess(heightValue.value, heightValue.code));
 };
+//Устанавливаем тип прибора:
 export const setRadiatorsType = (value) => async (dispatch) => {
 	let typeValue = await getMainParamsTypeData(value);
 	dispatch(setRadiatorsTypeSuccess(typeValue.value, typeValue.code));
