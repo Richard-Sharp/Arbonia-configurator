@@ -214,7 +214,7 @@ export const connectionTypeRRNData = [
 		dataDescription: 'сверху/снизу диагональное',
 		value: '58',
 		text: '58',
-		connectionSize: [size12, size34, size38, size10],
+		connectionSize: [size12, size34, size38],
 		airCoolerLocation: {
 			value: 3,
 			image: '3',
@@ -228,11 +228,11 @@ export const connectionTypeRRNData = [
 		dataDescription: 'сверху/снизу диагональное',
 		value: '76',
 		text: '76',
-		connectionSize: [size12, size34, size38, size10],
+		connectionSize: [size12, size34, size38],
 		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
+			value: 1,
+			image: '1',
+			description: 'сверху слева'
 		},
 		image: null
 	},
@@ -243,7 +243,7 @@ export const connectionTypeRRNData = [
 		dataDescription: 'снизу слева',
 		value: '69',
 		text: '69',
-		connectionSize: [size12, size34, size38, size10],
+		connectionSize: [size12, size38],
 		airCoolerLocation: {
 			value: 3,
 			image: '3',
@@ -257,11 +257,11 @@ export const connectionTypeRRNData = [
 		dataDescription: 'снизу справа',
 		value: '89',
 		text: '89',
-		connectionSize: [size12, size34, size38, size10],
+		connectionSize: [size12, size38],
 		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
+			value: 1,
+			image: '1',
+			description: 'сверху слева'
 		},
 		image: null
 	},
