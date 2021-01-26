@@ -272,11 +272,11 @@ export const connectionTypeRRNData = [
 		dataDescription: 'снизу/сверху диагональное',
 		value: '67',
 		text: '67',
-		connectionSize: [size12, size34, size38, size10],
+		connectionSize: [size12, size34, size38],
 		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
+			value: 1,
+			image: '1',
+			description: 'сверху слева'
 		},
 		image: null
 	},
@@ -286,7 +286,7 @@ export const connectionTypeRRNData = [
 		dataDescription: 'снизу/сверху диагональное',
 		value: '85',
 		text: '85',
-		connectionSize: [size12, size34, size38, size10],
+		connectionSize: [size12, size34, size38],
 		airCoolerLocation: {
 			value: 3,
 			image: '3',
@@ -300,11 +300,11 @@ export const connectionTypeRRNData = [
 		dataDescription: 'вверху слева/справа',
 		value: '57',
 		text: '57',
-		connectionSize: [size12, size34, size38, size10],
+		connectionSize: [size12, size34, size38],
 		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
+			value: 1,
+			image: '1',
+			description: 'сверху слева'
 		},
 		image: null
 	},
@@ -314,7 +314,7 @@ export const connectionTypeRRNData = [
 		dataDescription: 'вверху справа/слева',
 		value: '75',
 		text: '75',
-		connectionSize: [size12, size34, size38, size10],
+		connectionSize: [size12, size34, size38],
 		airCoolerLocation: {
 			value: 3,
 			image: '3',
@@ -329,7 +329,7 @@ export const connectionTypeRRNData = [
 		dataDescription: 'снизу по центру',
 		value: '98',
 		text: '98',
-		connectionSize: [size12, size34, size38, size10],
+		connectionSize: [size12],
 		airCoolerLocation: {
 			value: 3,
 			image: '3',
@@ -343,11 +343,11 @@ export const connectionTypeRRNData = [
 		dataDescription: 'снизу по центру',
 		value: '96',
 		text: '96',
-		connectionSize: [size12, size34, size38, size10],
+		connectionSize: [size12],
 		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
+			value: 1,
+			image: '1',
+			description: 'сверху слева'
 		},
 		image: null
 	}];
