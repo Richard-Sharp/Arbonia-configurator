@@ -33,7 +33,7 @@ const Specifications = (props) => {
 				<div>
 					<span>Количество секций: </span>
 					<span>
-						{!props.quantitySections ? 0 : props.quantitySections} шт.
+						{props.quantitySections} шт.
 					</span>
 				</div>
 
@@ -47,8 +47,8 @@ const Specifications = (props) => {
 				<div>
 					<span>Мощность прибора (dT50): </span>
 					<span>
-						{/*{props.totalPower} Вт*/}
-						{!props.totalPower ? 0 : props.totalPower} Вт
+						{props.totalPower} Вт
+						{/*{!props.totalPower ? 0 : props.totalPower} Вт*/}
 					</span>
 				</div>
 

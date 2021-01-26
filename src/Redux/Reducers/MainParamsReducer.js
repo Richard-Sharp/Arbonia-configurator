@@ -30,8 +30,8 @@ let initialState = {
 	heightParamsDisplay: heightParamsData,
 	typeParamsDisplay: typeParamsData,
 	specifications: {},
-	quantitySections: null,
-	totalPower: null,
+	quantitySections: 0,
+	totalPower: 0,
 	totalLenght: 0,
 	totalPrice: 0
 };

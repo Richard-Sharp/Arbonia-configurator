@@ -6,17 +6,22 @@ import {setSpecificationsData, setTotalPower} from "../../../Redux/Reducers/Main
 
 class SpecificationsContainer extends React.Component {
 	componentDidUpdate(prevProps) {
+		//Формирование кода модели прибора:
 		if (prevProps.params !== this.props.params) {
-			// this.props.setArboniaModel(this.props.type.code + this.props.height.code);
 			this.props.setSpecificationsData(this.props.type.code, this.props.height.code);
-		}
+		};
+		//Проверка на получение данных по коду модели прибора, расчет общей мощности прибора:
 		if (prevProps.specifications.modelCode !== this.props.specifications.modelCode || prevProps.quantitySections !== this.props.quantitySections ) {
-			this.props.setTotalPower(this.props.specifications.power.pw50 * this.props.quantitySections);
+			if(this.props.specifications.power) {
+				let setTotalPower = this.props.specifications.power.pw50 * this.props.quantitySections;
+				this.props.setTotalPower(setTotalPower);
+			} else {
+				this.props.setTotalPower(0);
+			}
 		}
 	}
 
 	render() {
-
 		return <Specifications {...this.props} />
 	}
 }
