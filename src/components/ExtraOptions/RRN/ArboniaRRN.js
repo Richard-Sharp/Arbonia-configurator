@@ -30,7 +30,9 @@ const ArboniaRRN = (props) => {
 									 data-price={type.dataPrice} key={type.value}
 									 data-description={type.dataDescription}
 									 data-air={type.airCoolerLocation}
-									 name={type.name} type="radio" value={type.value}/>{type.text};
+									 name={type.name} type="radio" value={type.value}
+									 defaultChecked={type.defaultChecked}
+						/>{type.text};
 					</>
 				})}
 			</div>
