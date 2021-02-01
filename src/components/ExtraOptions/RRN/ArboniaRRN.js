@@ -22,14 +22,14 @@ const ArboniaRRN = (props) => {
 		<div>
 			<p> [6] Схема подключения:</p>
 			<div>
-				{props.extraOptionRRNDisplay.map(type => {
+				{props.extraOptionRRNDisplay.map((type, index) => {
 					return <>
 						<input onChange={(e) => {
 							props.setExtraOptions(e)
 						}}
 									 data-price={type.dataPrice} key={type.value}
 									 data-description={type.dataDescription}
-									 data-air={type.airCoolerLocation}
+									 data-air={type.airCoolerLocation.value} id={index}
 									 name={type.name} type="radio" value={type.value}
 									 defaultChecked={type.defaultChecked}
 						/>{type.text};
@@ -40,28 +40,38 @@ const ArboniaRRN = (props) => {
 
 		<div>
 			<p>[7] Диаметр подключения:</p>
-			<div>
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="0" defaultChecked
-							 data-description='1/2" внутренняя резьба'
-							 name="connectionSize" type="radio" value="12"/>1/2" - ВР;
+				{props.connectionSizeOptions.map(el => {
+					return <>
+						<input onChange={(e) => {props.setExtraOptions(e)}}
+									 data-price={el.price} defaultChecked={el.defaultChecked}
+									 data-description={el.description}
+									 name={el.name} type="radio" value={el.value}/>{el.text}
+					</>
+				})
+				}
 
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="9.56"
-							 data-description='3/4" внутренняя резьба'
-							 name="connectionSize" type="radio" value="34"/>3/4" - ВР;
+			{/*<div>*/}
+				{/*<input onChange={(e) => {*/}
+					{/*props.setExtraOptions(e)*/}
+				{/*}}*/}
+							 {/*data-price="0"*/}
+							 {/*data-description='1/2" внутренняя резьба'*/}
+							 {/*name="connectionSize" type="radio" value="12"/>1/2" - ВР;*/}
 
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="15"
-							 data-description='1" внутренняя резьба'
-							 name="connectionSize" type="radio" value="10"/>1" - ВР;
-			</div>
+				{/*<input onChange={(e) => {*/}
+					{/*props.setExtraOptions(e)*/}
+				{/*}}*/}
+							 {/*data-price="9.56"*/}
+							 {/*data-description='3/4" внутренняя резьба'*/}
+							 {/*name="connectionSize" type="radio" value="34"/>3/4" - ВР;*/}
+
+				{/*<input onChange={(e) => {*/}
+					{/*props.setExtraOptions(e)*/}
+				{/*}}*/}
+							 {/*data-price="15"*/}
+							 {/*data-description='1" внутренняя резьба'*/}
+							 {/*name="connectionSize" type="radio" value="10"/>1" - ВР;*/}
+			{/*</div>*/}
 		</div>
 
 		<div>
@@ -85,20 +95,12 @@ const ArboniaRRN = (props) => {
 
 		<div>
 			<p>[9] Расположение развоздушника:</p>
-			<div>
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}} name="airСoolerLocation" type="radio" value="1" defaultChecked/>1; <input onChange={(e) => {
-				props.setExtraOptions(e)
-			}} name="airСoolerLocation" type="radio" value="3"/>3;
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}} name="airСoolerLocation" type="radio" value="5"/>5;
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}} name="airСoolerLocation" type="radio" value="7"/>7;
-
-			</div>
+				<div>
+					{props.airCoolerLocation.image}
+				</div>
+				<div>
+					{props.airCoolerLocation.description}
+				</div>
 		</div>
 
 		<div>

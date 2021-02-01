@@ -7,7 +7,7 @@ import {
 	setAirCoolerLocation,
 	setAirCoolerSize,
 	setPressure,
-	setDrain, setValveType
+	setDrain, setValveType, setConnectionSizeOptions
 } from "../../../Redux/Reducers/ExtraOptionsReducer";
 import {connect} from "react-redux";
 
@@ -18,17 +18,31 @@ class ArboniaRRNContainer extends React.Component {
 		this.props.setValveType(false, 2, 0, 'RRN', 'безвентильное исполнение');
 	}
 
+	componentDidMount() {
+		this.props.setConnectionSizeOptions(this.props.extraOptionRRNDisplay[0].connectionSize)
+		const {code, image, description} = this.props.extraOptionRRNDisplay[0].airCoolerLocation;
+		this.props.setAirCoolerLocation(code, image, description);
+	}
+
 	setExtraOptions = (e) => {
+		const {setConnectionSizeOptions} = this.props;
+
+
 		const name = e.currentTarget.name;
 		const value = +e.currentTarget.value;
+		const elemIndex = e.currentTarget.id;
 
 		const price = +e.currentTarget.dataset.price;
 		const description = e.currentTarget.dataset.description;
-		const airCooler = e.currentTarget.dataset.air;
+		// const airCooler = e.currentTarget.dataset.air;
+		console.log(this.props.extraOptionRRNDisplay[elemIndex]);
+		const {airCode, airImage, airDescription} = this.props.extraOptionRRNDisplay[elemIndex].airCoolerLocation;
+
 		switch (name) {
 			case 'connectionType':
 				this.props.setConnectionType(value, price, description);
-				this.props.setAirCoolerLocation(airCooler);
+				setConnectionSizeOptions(this.props.extraOptionRRNDisplay[elemIndex].connectionSize);
+				// this.props.setAirCoolerLocation(airCode, airImage, airDescription);
 				break;
 			case 'connectionSize':
 				this.props.setConnectionSize(value, price, description);
@@ -67,7 +81,8 @@ let mapState = (state) => ({
 	airCoolerSize: state.extraOptions.airCoolerSize,
 	drain: state.extraOptions.drain,
 	pressure: state.extraOptions.pressure,
-	extraOptionRRNDisplay: state.extraOptions.extraOptionRRNDisplay
+	extraOptionRRNDisplay: state.extraOptions.extraOptionRRNDisplay,
+	connectionSizeOptions: state.extraOptions.connectionSizeOptions
 
 })
 
@@ -79,5 +94,6 @@ export default connect(mapState, {
 	setAirCoolerLocation,
 	setAirCoolerSize,
 	setPressure,
-	setDrain
+	setDrain,
+	setConnectionSizeOptions
 })(ArboniaRRNContainer);

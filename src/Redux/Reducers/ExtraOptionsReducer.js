@@ -8,6 +8,7 @@ const SET_AIRCOOLER_SIZE = 'ExtraOptions/SET_AIRCOOLER_SIZE';
 const SET_PRESSURE = 'ExtraOptions/SET_PRESSURE';
 const SET_DRAIN = 'ExtraOptions/SET_DRAIN';
 const SET_VALVE_TYPE = 'ExtraOptions/SET_VALVE_TYPE';
+const SET_CONNECTION_SIZE_OPTIONS = 'ExtraOptions/SET_CONNECTION_SIZE_OPTIONS';
 
 let initialState = {
 	valve: {
@@ -32,8 +33,9 @@ let initialState = {
 		price: 5.12
 	},
 	airCoolerLocation: {
-		code: 1,
-		price: 0
+		code: 3,
+		image: '3',
+		description: 'сверху справа'
 	},
 	airCoolerSize: {
 		code: 12,
@@ -48,7 +50,17 @@ let initialState = {
 		price: 0,
 		description: '10 бар'
 	},
-	extraOptionRRNDisplay: connectionTypeRRNData
+	extraOptionRRNDisplay: connectionTypeRRNData,
+	connectionSizeOptions: [
+		{
+			value: 12,
+			price: 0,
+			description: '1/2" внутренняя резьба',
+			name: 'connectionSize',
+			text: '1/2" - ВР; ',
+			defaultChecked: true
+		}
+	]
 };
 
 
@@ -100,6 +112,11 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 				...state,
 				pressure: {...state.pressure, ...action.payload}
 			}
+		case SET_CONNECTION_SIZE_OPTIONS:
+			return {
+					...state,
+				connectionSizeOptions: action.options
+			}
 
 		default:
 			return state;
@@ -118,9 +135,9 @@ export const setConnectionSize = (code, price, description) => ({type: SET_CONNE
 
 export const setAirCoolerType = (code, price) => ({type: SET_AIRCOOLER_TYPE, payload: {code: code, price: price}});
 
-export const setAirCoolerLocation = (code, price = 0) => ({
+export const setAirCoolerLocation = (code, image, description) => ({
 	type: SET_AIRCOOLER_LOCATION,
-	payload: {code: code, price: price}
+	payload: {code: code, image: image, description: description}
 });
 
 export const setAirCoolerSize = (code, price = 0) => ({type: SET_AIRCOOLER_SIZE, payload: {code: code, price: price}});
@@ -128,6 +145,8 @@ export const setAirCoolerSize = (code, price = 0) => ({type: SET_AIRCOOLER_SIZE,
 export const setPressure = (code, price = 0, description) => ({type: SET_PRESSURE, payload: {code: code, price: price, description: description}});
 
 export const setDrain = (code, price = 0) => ({type: SET_DRAIN, payload: {code: code, price: price}});
+
+export const setConnectionSizeOptions = (options) => ({type: SET_CONNECTION_SIZE_OPTIONS, options});
 
 
 export default ExtraOptionsReducer;

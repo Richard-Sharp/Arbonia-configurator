@@ -32,8 +32,6 @@ const size10 = {
 };
 
 
-
-
 //Типы подключений радиаторов RRN:
 export const connectionTypeRRNData = [
 	{
