@@ -13,15 +13,15 @@ const SET_CONNECTION_SIZE_OPTIONS = 'ExtraOptions/SET_CONNECTION_SIZE_OPTIONS';
 let initialState = {
 	valve: {
 		valveExistence: false,
-		code: 2,
+		code: 0,
 		price: 0,
 		model: null,
-		description: null
+		description: "_ _ _ "
 	},
 	connectionType: {
-		code: 12,
+		code: 0,
 		price: 0,
-		description: 'боковое слева'
+		description: null
 	},
 	connectionSize: {
 		code: 12,

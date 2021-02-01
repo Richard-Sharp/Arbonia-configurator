@@ -14,20 +14,27 @@ import {connect} from "react-redux";
 
 class ArboniaRRNContainer extends React.Component {
 
+	setConnectionTypeDefault = (option) => {
+		const {value, dataPrice, dataDescription} = option;
+		this.props.setConnectionType(value, +dataPrice, dataDescription);
+	}
+
 	componentWillMount() {
 		this.props.setValveType(false, 2, 0, 'RRN', 'безвентильное исполнение');
 	}
 
 	componentDidMount() {
+		this.props.setConnectionSizeOptions(this.props.extraOptionRRNDisplay[0].connectionSize);
+		this.setConnectionTypeDefault(this.props.extraOptionRRNDisplay[0]);
+		console.log(this.props.extraOptionRRNDisplay[0]);
+
 		// const {code, image, description} = this.props.extraOptionRRNDisplay[0].airCoolerLocation;
 		// const {value, price} = this.props.extraOptionRRNDisplay[0].connectionSize[0];
 		// const descriptionConnectionSize = this.props.extraOptionRRNDisplay[0].connectionSize[0].description;
-
-		this.props.setConnectionSizeOptions(this.props.extraOptionRRNDisplay[0].connectionSize);
 		// this.props.setAirCoolerLocation(code, image, description);
 		// this.props.setConnectionSize(value, price, descriptionConnectionSize);
-
 	}
+
 
 	setExtraOptions = (e) => {
 		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
