@@ -25,39 +25,35 @@ class ArboniaRRNContainer extends React.Component {
 	}
 
 	setExtraOptions = (e) => {
-		const {setConnectionSizeOptions} = this.props;
+		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
 
-
+		const elemIndex = e.currentTarget.id;
 		const name = e.currentTarget.name;
 		const value = +e.currentTarget.value;
-		const elemIndex = e.currentTarget.id;
 
 		const price = +e.currentTarget.dataset.price;
-		const description = e.currentTarget.dataset.description;
-		// const airCooler = e.currentTarget.dataset.air;
+		const descriptionData = e.currentTarget.dataset.description;
+		const {code, image, description} = this.props.extraOptionRRNDisplay[elemIndex].airCoolerLocation;
+
 		console.log(this.props.extraOptionRRNDisplay[elemIndex]);
-		const {airCode, airImage, airDescription} = this.props.extraOptionRRNDisplay[elemIndex].airCoolerLocation;
 
 		switch (name) {
 			case 'connectionType':
-				this.props.setConnectionType(value, price, description);
+				this.props.setConnectionType(value, price, descriptionData);
 				setConnectionSizeOptions(this.props.extraOptionRRNDisplay[elemIndex].connectionSize);
-				// this.props.setAirCoolerLocation(airCode, airImage, airDescription);
+				setAirCoolerLocation(code, image, description);
 				break;
 			case 'connectionSize':
-				this.props.setConnectionSize(value, price, description);
+				this.props.setConnectionSize(value, price, descriptionData);
 				break;
 			case 'airСooler':
 				this.props.setAirCoolerType(value, price);
 				break;
-			// case 'airСoolerLocation':
-			// 	this.props.setAirCoolerLocation(value, price);
-			// 	break;
 			case 'airСoolerSize':
 				this.props.setAirCoolerSize(value, price);
 				break;
 			case 'pressure':
-				this.props.setPressure(value, price, description);
+				this.props.setPressure(value, price, descriptionData);
 				break;
 			default:
 				return (
