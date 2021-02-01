@@ -23,6 +23,11 @@ class ArboniaRRNContainer extends React.Component {
 		this.props.setConnectionSize(value, +price, description);
 	}
 
+	setAirCoolerLocationDefault = (option) => {
+		const {value, image, description} = option;
+		this.props.setAirCoolerLocation(value, image, description);
+	}
+
 	componentWillMount() {
 		this.props.setValveType(false, 2, 0, 'RRN', 'безвентильное исполнение');
 	}
@@ -31,15 +36,9 @@ class ArboniaRRNContainer extends React.Component {
 		this.props.setConnectionSizeOptions(this.props.extraOptionRRNDisplay[0].connectionSize);
 		this.setConnectionTypeDefault(this.props.extraOptionRRNDisplay[0]);
 		this.setConnectionSizeDefault(this.props.extraOptionRRNDisplay[0].connectionSize[0]);
+		this.setAirCoolerLocationDefault(this.props.extraOptionRRNDisplay[0].airCoolerLocation);
 
-
-		console.log(this.props.extraOptionRRNDisplay[0]);
-
-		// const {code, image, description} = this.props.extraOptionRRNDisplay[0].airCoolerLocation;
-		// const {value, price} = this.props.extraOptionRRNDisplay[0].connectionSize[0];
-		// const descriptionConnectionSize = this.props.extraOptionRRNDisplay[0].connectionSize[0].description;
-		// this.props.setAirCoolerLocation(code, image, description);
-		// this.props.setConnectionSize(value, price, descriptionConnectionSize);
+		console.log(this.props.extraOptionRRNDisplay[0].airCoolerLocation);
 	}
 
 

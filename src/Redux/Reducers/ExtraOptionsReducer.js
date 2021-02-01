@@ -33,9 +33,9 @@ let initialState = {
 		price: 5.12
 	},
 	airCoolerLocation: {
-		code: 3,
-		image: '3',
-		description: 'сверху справа'
+		code: 0,
+		image: null,
+		description: null
 	},
 	airCoolerSize: {
 		code: 12,
