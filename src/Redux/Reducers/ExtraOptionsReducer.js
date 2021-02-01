@@ -24,9 +24,9 @@ let initialState = {
 		description: null
 	},
 	connectionSize: {
-		code: 12,
+		code: 0,
 		price: 0,
-		description: '1/2" внутренняя резьба'
+		description: null
 	},
 	airCooler: {
 		code: 1,

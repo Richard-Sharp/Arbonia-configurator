@@ -18,6 +18,10 @@ class ArboniaRRNContainer extends React.Component {
 		const {value, dataPrice, dataDescription} = option;
 		this.props.setConnectionType(value, +dataPrice, dataDescription);
 	}
+	setConnectionSizeDefault = (option) => {
+		const {value, price, description} = option;
+		this.props.setConnectionSize(value, +price, description);
+	}
 
 	componentWillMount() {
 		this.props.setValveType(false, 2, 0, 'RRN', 'безвентильное исполнение');
@@ -26,6 +30,9 @@ class ArboniaRRNContainer extends React.Component {
 	componentDidMount() {
 		this.props.setConnectionSizeOptions(this.props.extraOptionRRNDisplay[0].connectionSize);
 		this.setConnectionTypeDefault(this.props.extraOptionRRNDisplay[0]);
+		this.setConnectionSizeDefault(this.props.extraOptionRRNDisplay[0].connectionSize[0]);
+
+
 		console.log(this.props.extraOptionRRNDisplay[0]);
 
 		// const {code, image, description} = this.props.extraOptionRRNDisplay[0].airCoolerLocation;
@@ -39,16 +46,14 @@ class ArboniaRRNContainer extends React.Component {
 	setExtraOptions = (e) => {
 		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
 
-		const elemIndex = e.currentTarget.id;
+		const elemIndex = e.currentTarget.id || 0;
 		const name = e.currentTarget.name;
 		const price = +e.currentTarget.dataset.price;
 		const valueData = +e.currentTarget.value;
 		const descriptionData = e.currentTarget.dataset.description;
 
 		const {value, image, description} = this.props.extraOptionRRNDisplay[elemIndex].airCoolerLocation;
-
-		// console.log(this.props.extraOptionRRNDisplay[elemIndex]);
-
+		console.log(this.props.extraOptionRRNDisplay[elemIndex]);
 
 		switch (name) {
 			case 'connectionType':
