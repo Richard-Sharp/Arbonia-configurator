@@ -5,9 +5,9 @@ import style from './ArboniaRRN.module.css';
 const ArboniaRRN = (props) => {
 	let drain = React.createRef();
 
-	let onChangeDrain = () => {
+	const onChangeDrain = () => {
 		let d;
-		let price
+		let price;
 		if (!drain.current.checked) {
 			d = drain.current.value;
 			price = 0;
@@ -16,7 +16,7 @@ const ArboniaRRN = (props) => {
 			price = 100;
 		}
 		props.setDrain(d, price);
-	}
+	};
 	return <div className={style.container}>
 		<h4>Безвентильное исполнение (RRN):</h4>
 		<div>
@@ -50,28 +50,6 @@ const ArboniaRRN = (props) => {
 				})
 				}
 
-			{/*<div>*/}
-				{/*<input onChange={(e) => {*/}
-					{/*props.setExtraOptions(e)*/}
-				{/*}}*/}
-							 {/*data-price="0"*/}
-							 {/*data-description='1/2" внутренняя резьба'*/}
-							 {/*name="connectionSize" type="radio" value="12"/>1/2" - ВР;*/}
-
-				{/*<input onChange={(e) => {*/}
-					{/*props.setExtraOptions(e)*/}
-				{/*}}*/}
-							 {/*data-price="9.56"*/}
-							 {/*data-description='3/4" внутренняя резьба'*/}
-							 {/*name="connectionSize" type="radio" value="34"/>3/4" - ВР;*/}
-
-				{/*<input onChange={(e) => {*/}
-					{/*props.setExtraOptions(e)*/}
-				{/*}}*/}
-							 {/*data-price="15"*/}
-							 {/*data-description='1" внутренняя резьба'*/}
-							 {/*name="connectionSize" type="radio" value="10"/>1" - ВР;*/}
-			{/*</div>*/}
 		</div>
 
 		<div>
@@ -112,7 +90,6 @@ const ArboniaRRN = (props) => {
 				<input onChange={(e) => {
 					props.setExtraOptions(e)
 				}} name="airСoolerSize" type="radio" value="12" defaultChecked/>Внутренняя резьба G 1/2";
-
 			</div>
 		</div>
 
@@ -143,6 +120,6 @@ const ArboniaRRN = (props) => {
 		</div>
 
 	</div>
-}
+};
 
 export default ArboniaRRN;

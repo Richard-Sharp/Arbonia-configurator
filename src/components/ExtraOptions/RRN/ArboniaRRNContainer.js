@@ -19,9 +19,14 @@ class ArboniaRRNContainer extends React.Component {
 	}
 
 	componentDidMount() {
-		this.props.setConnectionSizeOptions(this.props.extraOptionRRNDisplay[0].connectionSize)
-		const {code, image, description} = this.props.extraOptionRRNDisplay[0].airCoolerLocation;
-		this.props.setAirCoolerLocation(code, image, description);
+		// const {code, image, description} = this.props.extraOptionRRNDisplay[0].airCoolerLocation;
+		// const {value, price} = this.props.extraOptionRRNDisplay[0].connectionSize[0];
+		// const descriptionConnectionSize = this.props.extraOptionRRNDisplay[0].connectionSize[0].description;
+
+		this.props.setConnectionSizeOptions(this.props.extraOptionRRNDisplay[0].connectionSize);
+		// this.props.setAirCoolerLocation(code, image, description);
+		// this.props.setConnectionSize(value, price, descriptionConnectionSize);
+
 	}
 
 	setExtraOptions = (e) => {
@@ -29,38 +34,39 @@ class ArboniaRRNContainer extends React.Component {
 
 		const elemIndex = e.currentTarget.id;
 		const name = e.currentTarget.name;
-		const value = +e.currentTarget.value;
-
 		const price = +e.currentTarget.dataset.price;
+		const valueData = +e.currentTarget.value;
 		const descriptionData = e.currentTarget.dataset.description;
-		const {code, image, description} = this.props.extraOptionRRNDisplay[elemIndex].airCoolerLocation;
 
-		console.log(this.props.extraOptionRRNDisplay[elemIndex]);
+		const {value, image, description} = this.props.extraOptionRRNDisplay[elemIndex].airCoolerLocation;
+
+		// console.log(this.props.extraOptionRRNDisplay[elemIndex]);
+
 
 		switch (name) {
 			case 'connectionType':
-				this.props.setConnectionType(value, price, descriptionData);
+				this.props.setConnectionType(valueData, price, descriptionData);
 				setConnectionSizeOptions(this.props.extraOptionRRNDisplay[elemIndex].connectionSize);
-				setAirCoolerLocation(code, image, description);
+				setAirCoolerLocation(value, image, description);
 				break;
 			case 'connectionSize':
-				this.props.setConnectionSize(value, price, descriptionData);
+				this.props.setConnectionSize(valueData, price, descriptionData);
 				break;
 			case 'airСooler':
-				this.props.setAirCoolerType(value, price);
+				this.props.setAirCoolerType(valueData, price);
 				break;
 			case 'airСoolerSize':
-				this.props.setAirCoolerSize(value, price);
+				this.props.setAirCoolerSize(valueData, price);
 				break;
 			case 'pressure':
-				this.props.setPressure(value, price, descriptionData);
+				this.props.setPressure(valueData, price, descriptionData);
 				break;
 			default:
 				return (
 						alert('some error')
 				)
 		}
-	}
+	};
 
 	render() {
 
@@ -80,7 +86,7 @@ let mapState = (state) => ({
 	extraOptionRRNDisplay: state.extraOptions.extraOptionRRNDisplay,
 	connectionSizeOptions: state.extraOptions.connectionSizeOptions
 
-})
+});
 
 export default connect(mapState, {
 	setValveType,

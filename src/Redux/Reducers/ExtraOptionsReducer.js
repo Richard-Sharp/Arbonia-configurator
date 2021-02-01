@@ -21,12 +21,12 @@ let initialState = {
 	connectionType: {
 		code: 12,
 		price: 0,
-		description: null
+		description: 'боковое слева'
 	},
 	connectionSize: {
 		code: 12,
 		price: 0,
-		description: null
+		description: '1/2" внутренняя резьба'
 	},
 	airCooler: {
 		code: 1,
