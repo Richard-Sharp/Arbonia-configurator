@@ -6,7 +6,7 @@ import {
 	setAirCoolerLocation,
 	setAirCoolerSize,
 	setPressure,
-	setDrain, setValveType
+	setDrain, setValveType, setConnectionSizeOptions, setConnectionTypeOptions
 } from "../../../Redux/Reducers/ExtraOptionsReducer";
 import {connect} from "react-redux";
 import ArboniaRRV from "./ArboniaRRV";
@@ -18,13 +18,19 @@ class ArboniaRRVContainer extends React.Component {
 		this.props.setValveType(true, 31, 127.62, 'RRV', 'со встроенным вентилем ');
 	}
 	setExtraOptions = (e) => {
+		const {setConnectionTypeOptions, setConnectionSizeOptions, setAirCoolerLocation} = this.props;
+		const elemIndex = e.currentTarget.id || 0;
+
 		const name = e.currentTarget.name;
 		const value = +e.currentTarget.value;
 		const price = +e.currentTarget.dataset.price;
 		const description = e.currentTarget.dataset.description;
+		console.log("## elem click connection: ", this.props.extraOptionRRVDisplay[elemIndex].connectionType);
+
 		switch (name) {
 			case 'valveType':
 				this.props.setValveType(true, value, price, 'RRV', description);
+				setConnectionTypeOptions(this.props.extraOptionRRVDisplay[elemIndex].connectionType);
 				break;
 			case 'connectionType':
 				this.props.setConnectionType(value, price, description);
@@ -67,8 +73,10 @@ let mapState = (state) => ({
 	airCoolerLocation: state.extraOptions.airCoolerLocation,
 	airCoolerSize: state.extraOptions.airCoolerSize,
 	drain: state.extraOptions.drain,
-	pressure: state.extraOptions.pressure
-
+	pressure: state.extraOptions.pressure,
+	extraOptionRRVDisplay: state.extraOptions.extraOptionRRVDisplay,
+	connectionSizeOptions: state.extraOptions.connectionSizeOptions,
+	connectionTypeOptions: state.extraOptions.connectionTypeOptions,
 })
 
 export default connect(mapState, {
@@ -79,5 +87,7 @@ export default connect(mapState, {
 	setAirCoolerLocation,
 	setAirCoolerSize,
 	setPressure,
-	setDrain
+	setDrain,
+	setConnectionSizeOptions,
+	setConnectionTypeOptions
 })(ArboniaRRVContainer);

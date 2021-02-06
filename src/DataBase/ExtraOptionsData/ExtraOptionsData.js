@@ -1,4 +1,3 @@
-
 const size12 = {
 	value: 12,
 	price: 0,
@@ -29,6 +28,14 @@ const size10 = {
 	description: '1" внутренняя резьба',
 	name: 'connectionSize',
 	text: '1" - ВР; ',
+};
+
+const size84 = {
+	value: 84,
+	price: 9.56,
+	description: '3/4" внутренняя резьба',
+	name: 'connectionSize',
+	text: '3/4" - ВР; '
 };
 
 
@@ -351,3 +358,82 @@ export const connectionTypeRRNData = [
 	}];
 
 
+//Типы подключений радиаторов RRV:
+const connectionType89 = {
+	name: 'connectionType',
+	dataPrice: 0,
+	dataDescription: 'снизу справа, вентиль справа',
+	value: '89',
+	text: '89',
+	connectionSize: [size12, size84],
+	airCoolerLocation: {
+		value: 1,
+		image: '1',
+		description: 'сверху слева'
+	},
+	image: null,
+	defaultChecked: true
+};
+const connectionType69 = {
+	name: 'connectionType',
+	dataPrice: 0,
+	dataDescription: 'снизу слева, вентиль слева',
+	value: '69',
+	text: '69',
+	connectionSize: [size12, size84],
+	airCoolerLocation: {
+		value: 3,
+		image: '3',
+		description: 'сверху справа'
+	},
+	image: null
+};
+const connectionType98 = {
+	name: 'connectionType',
+	dataPrice: 59.03,
+	dataDescription: 'снизу по центру, вентиль слева',
+	value: '98',
+	text: '98',
+	connectionSize: [size12, size84],
+	airCoolerLocation: {
+		value: 3,
+		image: '3',
+		description: 'сверху справа'
+	},
+	image: null
+};
+const connectionType96 = {
+	name: 'connectionType',
+	dataPrice: 59.03,
+	dataDescription: 'снизу по центру, вентиль справа',
+	value: '96',
+	text: '96',
+	connectionSize: [size12, size84],
+	airCoolerLocation: {
+		value: 1,
+		image: '1',
+		description: 'сверху слева'
+	},
+	image: null
+};
+
+//Варианты расположения втроенного вентиля (31 и 61):
+export const valveTypeData = [
+	{
+		name: 'valveType',
+		value: '31',
+		price: 127.62,
+		description: 'со встроенным вентилем вверху',
+		text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
+		connectionType: [connectionType89, connectionType69, connectionType98, connectionType96],
+		defaultChecked: true
+	},
+	{
+		name: 'valveType',
+		value: '61',
+		price: 179.34,
+		description: "со встроенным вентилем внизу",
+		text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+		connectionType: [connectionType89, connectionType69]
+	},
+];

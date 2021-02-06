@@ -3,7 +3,7 @@ import style from './ArboniaRRV.module.css';
 
 //Компонент для настройки вентильного исполнения:
 const ArboniaRRV = (props) => {
-	let drain = React.createRef();
+	const drain = React.createRef();
 	let onChangeDrain = () => {
 		let d;
 		let price
@@ -17,28 +17,45 @@ const ArboniaRRV = (props) => {
 		props.setDrain(d, price);
 	}
 
+
 	return <div className={style.container}>
 		<h4>Со встроенным термостатическим вентилем (RRV):</h4>
 		<div>
 			<p> [5] Расположение вентиля:</p>
 			<div>
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="127.62"
-							 data-description="со встроенным вентилем вверху"
-							 name="valveType" type="radio" value="31"/>Стандарнтный вентиль с подключением сбоку вверху (M30x1,5);
-				<input onChange={(e) => {
-					props.setExtraOptions(e)
-				}}
-							 data-price="179.34"
-							 data-description="со встроенным вентилем внизу"
-							 name="valveType" type="radio" value="61"/>Стандарнтный вентиль с подключением сбоку внизу (M30x1,5);
+				{props.extraOptionRRVDisplay.map((type, index) => {
+					return <>
+						<input onChange={(e) => {
+							props.setExtraOptions(e)
+						}}
+									 data-price={type.price} key={type.value}
+									 data-description={type.description} id={index}
+									 name={type.name} type="radio" value={type.value}
+									 defaultChecked={type.defaultChecked}
+						/>{type.text};
+					</>
+				})}
 			</div>
 		</div>
 
 		<div>
 			<p> [6] Схема подключения:</p>
+			<div>
+				{props.connectionTypeOptions.map((type, index) => {
+					return <>
+						<input onChange={(e) => {
+							props.setExtraOptions(e)
+						}}
+									 data-price={type.dataPrice} key={type.value}
+									 data-description={type.dataDescription}
+									 data-air={type.airCoolerLocation.value} id={index}
+									 name={type.name} type="radio" value={type.value}
+									 defaultChecked={type.defaultChecked}
+						/>{type.text};
+					</>
+				})}
+			</div>
+
 			<div>
 				<input onChange={(e) => {
 					props.setExtraOptions(e)

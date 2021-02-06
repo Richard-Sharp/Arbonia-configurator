@@ -1,4 +1,4 @@
-import {connectionTypeRRNData} from "../../DataBase/ExtraOptionsData/ExtraOptionsData";
+import {connectionTypeRRNData, valveTypeData} from "../../DataBase/ExtraOptionsData/ExtraOptionsData";
 
 const SET_CONNECTION_TYPE = 'ExtraOptions/SET_CONNECTION_TYPE';
 const SET_CONNECTION_SIZE = 'ExtraOptions/SET_CONNECTION_SIZE';
@@ -9,6 +9,7 @@ const SET_PRESSURE = 'ExtraOptions/SET_PRESSURE';
 const SET_DRAIN = 'ExtraOptions/SET_DRAIN';
 const SET_VALVE_TYPE = 'ExtraOptions/SET_VALVE_TYPE';
 const SET_CONNECTION_SIZE_OPTIONS = 'ExtraOptions/SET_CONNECTION_SIZE_OPTIONS';
+const SET_CONNECTION_TYPE_OPTIONS = 'ExtraOptions/SET_CONNECTION_TYPE_OPTIONS';
 
 let initialState = {
 	valve: {
@@ -51,6 +52,7 @@ let initialState = {
 		description: '10 бар'
 	},
 	extraOptionRRNDisplay: connectionTypeRRNData,
+	extraOptionRRVDisplay: valveTypeData,
 	connectionSizeOptions: [
 		{
 			value: 12,
@@ -58,6 +60,32 @@ let initialState = {
 			description: '1/2" внутренняя резьба',
 			name: 'connectionSize',
 			text: '1/2" - ВР; ',
+			defaultChecked: true
+		}
+	],
+	connectionTypeOptions: [
+		{
+			name: 'connectionType',
+			dataPrice: 0,
+			dataDescription: 'снизу справа, вентиль справа',
+			value: '89',
+			text: '89',
+			connectionSize: [
+				{
+					value: 12,
+					price: 0,
+					description: '1/2" внутренняя резьба',
+					name: 'connectionSize',
+					text: '1/2" - ВР; ',
+					defaultChecked: true
+				}
+			],
+			airCoolerLocation: {
+				value: 1,
+				image: '1',
+				description: 'сверху слева'
+			},
+			image: null,
 			defaultChecked: true
 		}
 	]
@@ -114,8 +142,13 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 			}
 		case SET_CONNECTION_SIZE_OPTIONS:
 			return {
-					...state,
+				...state,
 				connectionSizeOptions: action.options
+			}
+		case SET_CONNECTION_TYPE_OPTIONS:
+			return {
+				...state,
+				connectionTypeOptions: action.options
 			}
 
 		default:
@@ -131,7 +164,10 @@ export const setValveType = (valve = false, code, price = 0, model = 'RRN', desc
 
 export const setConnectionType = (code, price, description) => ({type: SET_CONNECTION_TYPE, code, price, description});
 
-export const setConnectionSize = (code, price, description) => ({type: SET_CONNECTION_SIZE, payload: {code: code, price: price, description: description}});
+export const setConnectionSize = (code, price, description) => ({
+	type: SET_CONNECTION_SIZE,
+	payload: {code: code, price: price, description: description}
+});
 
 export const setAirCoolerType = (code, price) => ({type: SET_AIRCOOLER_TYPE, payload: {code: code, price: price}});
 
@@ -142,11 +178,16 @@ export const setAirCoolerLocation = (code, image, description) => ({
 
 export const setAirCoolerSize = (code, price = 0) => ({type: SET_AIRCOOLER_SIZE, payload: {code: code, price: price}});
 
-export const setPressure = (code, price = 0, description) => ({type: SET_PRESSURE, payload: {code: code, price: price, description: description}});
+export const setPressure = (code, price = 0, description) => ({
+	type: SET_PRESSURE,
+	payload: {code: code, price: price, description: description}
+});
 
 export const setDrain = (code, price = 0) => ({type: SET_DRAIN, payload: {code: code, price: price}});
 
 export const setConnectionSizeOptions = (options) => ({type: SET_CONNECTION_SIZE_OPTIONS, options});
+
+export const setConnectionTypeOptions = (options) => ({type: SET_CONNECTION_TYPE_OPTIONS, options});
 
 
 export default ExtraOptionsReducer;
