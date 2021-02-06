@@ -1,4 +1,8 @@
-import {connectionTypeRRNData, valveTypeData} from "../../DataBase/ExtraOptionsData/ExtraOptionsData";
+import {
+	connectionTypeRRNData,
+	connectionTypeRRVData,
+	valveTypeData
+} from "../../DataBase/ExtraOptionsData/ExtraOptionsData";
 
 const SET_CONNECTION_TYPE = 'ExtraOptions/SET_CONNECTION_TYPE';
 const SET_CONNECTION_SIZE = 'ExtraOptions/SET_CONNECTION_SIZE';
@@ -17,7 +21,8 @@ let initialState = {
 		code: 0,
 		price: 0,
 		model: null,
-		description: "_ _ _ "
+		description: "_ _ _ ",
+		text: null
 	},
 	connectionType: {
 		code: 0,
@@ -52,7 +57,7 @@ let initialState = {
 		description: '10 бар'
 	},
 	extraOptionRRNDisplay: connectionTypeRRNData,
-	extraOptionRRVDisplay: valveTypeData,
+	extraOptionRRVDisplay: connectionTypeRRVData,
 	connectionSizeOptions: [
 		{
 			value: 12,
@@ -63,32 +68,8 @@ let initialState = {
 			defaultChecked: true
 		}
 	],
-	connectionTypeOptions: [
-		{
-			name: 'connectionType',
-			dataPrice: 0,
-			dataDescription: 'снизу справа, вентиль справа',
-			value: '89',
-			text: '89',
-			connectionSize: [
-				{
-					value: 12,
-					price: 0,
-					description: '1/2" внутренняя резьба',
-					name: 'connectionSize',
-					text: '1/2" - ВР; ',
-					defaultChecked: true
-				}
-			],
-			airCoolerLocation: {
-				value: 1,
-				image: '1',
-				description: 'сверху слева'
-			},
-			image: null,
-			defaultChecked: true
-		}
-	]
+	connectionTypeOptions: []
+
 };
 
 
@@ -157,9 +138,9 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 }
 
 //Action creators:
-export const setValveType = (valve = false, code, price = 0, model = 'RRN', description) => ({
+export const setValveType = (valve = false, code, price = 0, model = 'RRN', description, text) => ({
 	type: SET_VALVE_TYPE,
-	payload: {valveExistence: valve, code: code, price: price, model: model, description: description}
+	payload: {valveExistence: valve, code: code, price: price, model: model, description: description, text: text}
 });
 
 export const setConnectionType = (code, price, description) => ({type: SET_CONNECTION_TYPE, code, price, description});

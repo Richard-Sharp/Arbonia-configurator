@@ -12,43 +12,45 @@ import {connect} from "react-redux";
 import ArboniaRRV from "./ArboniaRRV";
 
 
-class ArboniaRRVContainer extends React.Component {
+class ArboniaRRVContainer extends React.PureComponent {
 
 	componentWillMount() {
-		this.props.setValveType(true, 31, 127.62, 'RRV', 'со встроенным вентилем ');
+		this.props.setValveType(true, 31, 127.62, 'RRV', 'со встроенным вентилем ', 'Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)');
+	}
+
+	componentDidMount() {
+		console.log(this.props);
 	}
 	setExtraOptions = (e) => {
-		const {setConnectionTypeOptions, setConnectionSizeOptions, setAirCoolerLocation} = this.props;
+		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
 		const elemIndex = e.currentTarget.id || 0;
 
 		const name = e.currentTarget.name;
-		const value = +e.currentTarget.value;
-		const price = +e.currentTarget.dataset.price;
-		const description = e.currentTarget.dataset.description;
-		console.log("## elem click connection: ", this.props.extraOptionRRVDisplay[elemIndex].connectionType);
+		const priceData = +e.currentTarget.dataset.price;
+		const valueData = +e.currentTarget.value;
+		const descriptionData = e.currentTarget.dataset.description;
+		const airValue = e.currentTarget.dataset.airValue;
+		const airImage = e.currentTarget.dataset.airImage;
+		const airDescriotion = e.currentTarget.dataset.airDescriotion;
+
+		const {valveExistence, value, price, model, description, text} = this.props.extraOptionRRVDisplay[elemIndex].valveTypeData;
+		console.log("## elem click connectionType: ", this.props.extraOptionRRVDisplay[elemIndex]);
 
 		switch (name) {
-			case 'valveType':
-				this.props.setValveType(true, value, price, 'RRV', description);
-				setConnectionTypeOptions(this.props.extraOptionRRVDisplay[elemIndex].connectionType);
-				break;
 			case 'connectionType':
-				this.props.setConnectionType(value, price, description);
+				this.props.setConnectionType(valueData, priceData, descriptionData);
+				setConnectionSizeOptions(this.props.extraOptionRRVDisplay[elemIndex].connectionSize);
+				setAirCoolerLocation(airValue, airImage, airDescriotion);
+				this.props.setValveType(valveExistence, value, price, model, description, text);
 				break;
 			case 'connectionSize':
-				this.props.setConnectionSize(value, price, description);
-				break;
-			case 'airСooler':
-				this.props.setAirCoolerType(value, price);
-				break;
-			case 'airСoolerLocation':
-				this.props.setAirCoolerLocation(value, price);
+				this.props.setConnectionSize(valueData, priceData, descriptionData);
 				break;
 			case 'airСoolerSize':
-				this.props.setAirCoolerSize(value, price);
+				this.props.setAirCoolerSize(valueData, descriptionData);
 				break;
 			case 'pressure':
-				this.props.setPressure(value, price, description);
+				this.props.setPressure(valueData, priceData, descriptionData);
 				break;
 			default:
 				return (
