@@ -13,14 +13,32 @@ import ArboniaRRV from "./ArboniaRRV";
 
 
 class ArboniaRRVContainer extends React.PureComponent {
+	setConnectionTypeDefault = (option) => {
+		const {value, dataPrice, dataDescription} = option;
+		this.props.setConnectionType(value, +dataPrice, dataDescription);
+	}
+	setConnectionSizeDefault = (option) => {
+		const {value, price, description} = option;
+		this.props.setConnectionSize(value, +price, description);
+	}
+
+	setAirCoolerLocationDefault = (option) => {
+		const {value, image, description} = option;
+		this.props.setAirCoolerLocation(value, image, description);
+	}
 
 	componentWillMount() {
 		this.props.setValveType(true, 31, 127.62, 'RRV', 'со встроенным вентилем ', 'Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)');
 	}
 
 	componentDidMount() {
-		console.log(this.props);
+		this.props.setConnectionSizeOptions(this.props.extraOptionRRVDisplay[0].connectionSize);
+		this.setConnectionTypeDefault(this.props.extraOptionRRVDisplay[0]);
+		this.setConnectionSizeDefault(this.props.extraOptionRRVDisplay[0].connectionSize[0]);
+		this.setAirCoolerLocationDefault(this.props.extraOptionRRVDisplay[0].airCoolerLocation);
 	}
+
+
 	setExtraOptions = (e) => {
 		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
 		const elemIndex = e.currentTarget.id || 0;
