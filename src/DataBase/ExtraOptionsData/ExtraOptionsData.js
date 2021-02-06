@@ -48,7 +48,20 @@ const airCoolerLocationValue3 = {
 	value: 3,
 	image: '3',
 	description: 'воздушный клапан сверху справа'
-}
+};
+
+const airCoolerLocationValue0 = {
+	value: 0,
+	image: '0',
+	description: 'без воздушного клапана'
+};
+
+const airCoolerLocationValue = {
+	value: 1,
+	image: '5',
+	description: 'воздушный клапан сверху слева и справа (х2)'
+};
+
 
 
 //Типы подключений радиаторов RRN:
@@ -61,11 +74,7 @@ export const connectionTypeRRNData = [
 		text: '12',
 		defaultChecked: true,
 		connectionSize: [size12, size34, size38, size10],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null
 	},
 	{
@@ -75,11 +84,7 @@ export const connectionTypeRRNData = [
 		value: '34',
 		text: '34',
 		connectionSize: [size12, size34, size38, size10],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	},
 	{
@@ -89,11 +94,7 @@ export const connectionTypeRRNData = [
 		value: '14',
 		text: '14',
 		connectionSize: [size12, size34, size38, size10],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null
 	},
 	{
@@ -103,11 +104,7 @@ export const connectionTypeRRNData = [
 		value: '32',
 		text: '32',
 		connectionSize: [size12, size34, size38, size10],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	},
 
@@ -118,11 +115,7 @@ export const connectionTypeRRNData = [
 		value: '24',
 		text: '24',
 		connectionSize: [size12, size34, size38, size10],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null
 	},
 	{
@@ -132,11 +125,7 @@ export const connectionTypeRRNData = [
 		value: '42',
 		text: '42',
 		connectionSize: [size12, size34, size38, size10],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	},
 
@@ -147,11 +136,7 @@ export const connectionTypeRRNData = [
 		value: '13',
 		text: '13',
 		connectionSize: [size12, size34, size38, size10],
-		airCoolerLocation: {
-			value: 0,
-			image: '0',
-			description: 'нет'
-		},
+		airCoolerLocation: airCoolerLocationValue0,
 		image: null
 	},
 	{
@@ -161,11 +146,7 @@ export const connectionTypeRRNData = [
 		value: '31',
 		text: '31',
 		connectionSize: [size12, size34, size38, size10],
-		airCoolerLocation: {
-			value: 0,
-			image: '0',
-			description: 'нет'
-		},
+		airCoolerLocation: airCoolerLocationValue0,
 		image: null
 	},
 	{
@@ -175,11 +156,7 @@ export const connectionTypeRRNData = [
 		value: '41',
 		text: '41',
 		connectionSize: [size12, size34, size38, size10],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	},
 	{
@@ -189,11 +166,7 @@ export const connectionTypeRRNData = [
 		value: '23',
 		text: '23',
 		connectionSize: [size12, size34, size38, size10],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null
 	},
 
@@ -204,11 +177,7 @@ export const connectionTypeRRNData = [
 		value: '68',
 		text: '68',
 		connectionSize: [size12, size34, size38],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null
 	},
 	{
@@ -218,11 +187,7 @@ export const connectionTypeRRNData = [
 		value: '86',
 		text: '86',
 		connectionSize: [size12, size34, size38],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	},
 	{
@@ -232,11 +197,7 @@ export const connectionTypeRRNData = [
 		value: '58',
 		text: '58',
 		connectionSize: [size12, size34, size38],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null
 	},
 	{
@@ -246,11 +207,7 @@ export const connectionTypeRRNData = [
 		value: '76',
 		text: '76',
 		connectionSize: [size12, size34, size38],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	},
 
@@ -261,11 +218,7 @@ export const connectionTypeRRNData = [
 		value: '69',
 		text: '69',
 		connectionSize: [size12, size38],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null
 	},
 	{
@@ -275,11 +228,7 @@ export const connectionTypeRRNData = [
 		value: '89',
 		text: '89',
 		connectionSize: [size12, size38],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	},
 
@@ -290,11 +239,7 @@ export const connectionTypeRRNData = [
 		value: '67',
 		text: '67',
 		connectionSize: [size12, size34, size38],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	},
 	{
@@ -304,11 +249,7 @@ export const connectionTypeRRNData = [
 		value: '85',
 		text: '85',
 		connectionSize: [size12, size34, size38],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null
 	},
 	{
@@ -318,11 +259,7 @@ export const connectionTypeRRNData = [
 		value: '57',
 		text: '57',
 		connectionSize: [size12, size34, size38],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	},
 	{
@@ -332,11 +269,7 @@ export const connectionTypeRRNData = [
 		value: '75',
 		text: '75',
 		connectionSize: [size12, size34, size38],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null
 	},
 
@@ -347,11 +280,7 @@ export const connectionTypeRRNData = [
 		value: '98',
 		text: '98',
 		connectionSize: [size12],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null
 	},
 	{
@@ -361,11 +290,7 @@ export const connectionTypeRRNData = [
 		value: '96',
 		text: '96',
 		connectionSize: [size12],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	}];
 
@@ -461,11 +386,7 @@ export const connectionTypeRRVData = [
 		value: '89',
 		text: '89 - вентиль сверху',
 		connectionSize: [size12, size84],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'воздушный клапан сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null,
 		valveTypeData: {
 			valveExistence: true,
@@ -484,11 +405,7 @@ export const connectionTypeRRVData = [
 		value: '89',
 		text: '89 - вентиль снизу',
 		connectionSize: [size12, size84],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue,
 		image: null,
 		valveTypeData: {
 			valveExistence: true,
@@ -506,11 +423,7 @@ export const connectionTypeRRVData = [
 		value: '69',
 		text: '69 - вентиль сверху',
 		connectionSize: [size12, size84],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null,
 		valveTypeData: {
 			valveExistence: true,
@@ -528,11 +441,7 @@ export const connectionTypeRRVData = [
 		value: '69',
 		text: '69 - вентиль снизу',
 		connectionSize: [size12, size84],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue,
 		image: null,
 		valveTypeData: {
 			valveExistence: true,
@@ -550,11 +459,7 @@ export const connectionTypeRRVData = [
 		value: '96',
 		text: '96 - вентиль сверху',
 		connectionSize: [size12, size84],
-		airCoolerLocation: {
-			value: 1,
-			image: '1',
-			description: 'сверху слева'
-		},
+		airCoolerLocation: airCoolerLocationValue1,
 		image: null,
 		valveTypeData: {
 			valveExistence: true,
@@ -572,11 +477,7 @@ export const connectionTypeRRVData = [
 		value: '98',
 		text: '98 - вентиль сверху',
 		connectionSize: [size12, size84],
-		airCoolerLocation: {
-			value: 3,
-			image: '3',
-			description: 'сверху справа'
-		},
+		airCoolerLocation: airCoolerLocationValue3,
 		image: null,
 		valveTypeData: {
 			valveExistence: true,
@@ -587,4 +488,4 @@ export const connectionTypeRRVData = [
 			text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
 		}
 	},
-]
+];
