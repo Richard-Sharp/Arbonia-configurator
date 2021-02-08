@@ -1,53 +1,60 @@
+import type2 from '../../images/types/type2.png';
+import type3 from '../../images/types/type3.png';
+import type4 from '../../images/types/type4.png';
+import type5 from '../../images/types/type5.png';
+import type6 from '../../images/types/type6.png';
+
+
 export const getMainParamsHeightData = (value) => {
 	switch (value) {
 		case '018':
-			return ({value: '180', code: value})
+			return ({value: '180', code: value});
 		case '019':
-			return ({value: '190', code: value})
+			return ({value: '190', code: value});
 		case '026':
-			return ({value: '260', code: value})
+			return ({value: '260', code: value});
 		case '030':
-			return ({value: '300', code: value})
+			return ({value: '300', code: value});
 		case '035':
-			return ({value: '350', code: value})
+			return ({value: '350', code: value});
 		case '040':
-			return ({value: '400', code: value})
+			return ({value: '400', code: value});
 		case '045':
-			return ({value: '450', code: value})
+			return ({value: '450', code: value});
 		case '050':
-			return ({value: '500', code: value})
+			return ({value: '500', code: value});
 		case '055':
-			return ({value: '550', code: value})
+			return ({value: '550', code: value});
 		case '060':
-			return ({value: '600', code: value})
+			return ({value: '600', code: value});
 		case '075':
-			return ({value: '750', code: value})
+			return ({value: '750', code: value});
 		case '090':
-			return ({value: '900', code: value})
+			return ({value: '900', code: value});
 		case '100':
-			return ({value: '1000', code: value})
+			return ({value: '1000', code: value});
 		case '110':
-			return ({value: '1100', code: value})
+			return ({value: '1100', code: value});
 		case '120':
-			return ({value: '1200', code: value})
+			return ({value: '1200', code: value});
 		case '150':
-			return ({value: '1500', code: value})
+			return ({value: '1500', code: value});
 		case '180':
-			return ({value: '1800', code: value})
+			return ({value: '1800', code: value});
 		case '200':
-			return ({value: '2000', code: value})
+			return ({value: '2000', code: value});
 		case '220':
-			return ({value: '2200', code: value})
+			return ({value: '2200', code: value});
 		case '250':
-			return ({value: '2500', code: value})
+			return ({value: '2500', code: value});
 		case '280':
-			return ({value: '2800', code: value})
+			return ({value: '2800', code: value});
 		case '300':
-			return ({value: '3000', code: value})
+			return ({value: '3000', code: value});
 		default:
-			return ({value: '500', code: '050'})
+			return ({value: '500', code: '050'});
 	}
-}
+};
 
 export const heightParamsData = [
 	{description: '180', value: '018'},
@@ -84,8 +91,8 @@ export const getMainParamsTypeData = (value) => (
 		}[value] || {value: '65', code: '2'});
 
 export const typeParamsData = [
-	{value: '2', description: '2-трубчатый'},
-	{value: '3', description: '3-трубчатый'},
-	{value: '4', description: '4-трубчатый'},
-	{value: '5', description: '5-трубчатый'},
-	{value: '6', description: '6-трубчатый'}];
+	{value: '2', description: '2-трубчатый', image: type2},
+	{value: '3', description: '3-трубчатый', image: type3},
+	{value: '4', description: '4-трубчатый', image: type4},
+	{value: '5', description: '5-трубчатый', image: type5},
+	{value: '6', description: '6-трубчатый', image: type6}];
