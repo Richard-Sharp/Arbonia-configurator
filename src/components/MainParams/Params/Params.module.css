@@ -43,6 +43,24 @@
 .quantity {
 
 }
+.quantity input {
+    width: 70px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 3px 0 3px 15px;
+    border-radius: 10px;
+    border: 2px solid darkgrey;
+}
+
+
+.quantity input::-webkit-inner-spin-button {
+    opacity: 1;
+}
+.quantity input:focus {
+    outline: none;
+}
+
 /*////////////////*/
 .typeContainer {
 
@@ -102,7 +120,7 @@
 }
 
 .ui_select_2 select {
-    font-family: Arial;
+    font-family: Calibri;
     width: 100%;
     display: inline-block;
     cursor: pointer;

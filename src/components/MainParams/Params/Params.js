@@ -1,10 +1,13 @@
 import React from 'react';
 import style from './Params.module.css';
+import {useState} from "react";
 
 
 const Params = (props) => {
 	let heightRef = React.createRef();
 	let quantityRef = React.createRef();
+
+	const [count, setCount] = useState(1);
 
 	const onChangeParamHeight = () => {
 		props.setRadiatorsHeight(heightRef.current.value);
@@ -57,8 +60,10 @@ const Params = (props) => {
 
 				<div className={style.quantity}>
 					<p>Количество секций:</p>
-					<input onChange={onChangeQuantitySections} ref={quantityRef} defaultValue={props.quantitySections}
-								 type="number" name="sectionQuantity" min="4" max="60" step="1"/>
+					<input onChange={onChangeQuantitySections} ref={quantityRef}
+								defaultValue="0" id="sectionQuantity"
+								 type="number" name="sectionQuantity"
+								 min="4" max="60" step="1"/>
 				</div>
 			</div>
 	);
