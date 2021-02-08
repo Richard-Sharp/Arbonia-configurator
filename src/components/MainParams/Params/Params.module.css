@@ -3,8 +3,37 @@
     border: 1px solid black;
 }
 
+
 .height {
 
+}
+/*Costomization Select*/
+.height select {
+    width: 60%;
+    height: 40px;
+    font-size: large;
+    /*padding-left: 20px;*/
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px 5px 30px;
+    outline: 0;
+    border: 1px solid #2E3138;
+    color: dimgray;
+}
+
+.height select:hover,
+.height select:focus {
+    color: dimgrey;
+    background: #ffe0a6;
+}
+
+.height option {
+    color: black;
+    background: white;
+}
+.height select:disabled {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .type {
@@ -19,6 +48,7 @@
 
 }
 
+/*Costomization Radio*/
 .radio_btn {
     display: inline-block;
     margin-right: 10px;
@@ -42,6 +72,10 @@
     /*background: #ffe0a6;*/
     background: greenyellow;
 }
+.radio_btn input[type=radio]:hover  + label {
+    /*background: #ffe0a6;*/
+    background: #ffe0a6;
+}
 
 .radio_btn label:hover {
     color: #666;
@@ -57,4 +91,46 @@
     height: 100px;
     cursor: pointer;
     user-select: none;
+}
+
+/*Costomization Select*/
+.ui_select_2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.ui_select_2 select {
+    font-family: Arial;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 1px solid #2E3138;
+    border-radius: 15px;
+    background: white;
+    color: dimgrey;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.ui_select_2 select::-ms-expand {
+    display: none;
+}
+.ui_select_2 select:hover,
+.ui_select_2 select:focus {
+    color: dimgrey;
+    background: #ffe0a6;
+}
+
+.ui_select_2 select:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ui_select_2 option{
+    padding: 10px;
+    background: white;
 }

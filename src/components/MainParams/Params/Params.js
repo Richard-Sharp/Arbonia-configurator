@@ -52,7 +52,6 @@ const Params = (props) => {
 								<label htmlFor={'type-' + type.value}><img src={type.image} alt={type.description}/></label>
 							</div>
 						})}
-
 					</div>
 				</div>
 
