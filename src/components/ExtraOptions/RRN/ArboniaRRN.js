@@ -78,7 +78,7 @@ const ArboniaRRN = (props) => {
 				{/*<button className={style.select_btn}>Open select</button>*/}
 				{/*<div id="myDropdown" className={style.select_content}>*/}
 					{/*<a href="#">Link 1</a>*/}
-	\				{/*<a href="#">Link 2</a>*/}
+					{/*<a href="#">Link 2</a>*/}
 					{/*<a href="#">Link 3</a>*/}
 				{/*</div>*/}
 			{/*</div>*/}
