@@ -5,3 +5,66 @@
     margin: 0 auto;
     padding-bottom: 20px;
 }
+
+.select {
+    position: relative;
+    display: inline-block;
+}
+
+.select_btn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.select_btn:hover, .select_btn:focus {
+    background-color: red;
+}
+
+.select_content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.select_content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.select_content a:hover {
+    background-color: greenyellow;
+}
+
+.show {
+    display:block;
+}
+
+
+.item {
+    height: 100px;
+    width: 150px;
+}
+
+
+.ui
+.avatar
+.image img{
+    height: 100px;
+    width: 150px;
+    margin: 0;
+}
+
+.test_div {
+    width: 400px;
+    height: 300px;
+    padding: 15px;
+}

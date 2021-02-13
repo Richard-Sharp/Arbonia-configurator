@@ -3,7 +3,7 @@ import style from './CodeConfigurator.module.css';
 
 //Компонент для отображения артикула прибора:
 const CodeConfigurator = ({arboniaModel, quantitySections, valve, connectionType, connectionSize, airCooler, airCoolerLocation, airCoolerSize, drain}) => {
-debugger
+
 
 	let article = `${valve.model} ${arboniaModel}${!valve.valveExistence ? '' : 'V'} ${quantitySections}/${valve.code}/${connectionType.code}/${connectionSize.code}/${airCooler.code}/${airCoolerLocation.code}/${airCoolerSize.code}/${drain.code} AF`;
 

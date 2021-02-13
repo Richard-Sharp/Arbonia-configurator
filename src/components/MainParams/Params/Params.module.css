@@ -3,13 +3,12 @@
     border: 1px solid black;
 }
 
-
 .height {
 
 }
 /*Costomization Select*/
 .height select {
-    width: 60%;
+    width: 50%;
     height: 40px;
     font-size: large;
     /*padding-left: 20px;*/
@@ -51,6 +50,7 @@
     padding: 3px 0 3px 15px;
     border-radius: 10px;
     border: 2px solid darkgrey;
+    color: dimgray;
 }
 
 

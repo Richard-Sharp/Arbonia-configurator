@@ -1,3 +1,5 @@
+import img12 from '../../images/connections/connection-12.png'
+
 const size12 = {
 	value: 12,
 	price: 0,
@@ -71,11 +73,11 @@ export const connectionTypeRRNData = [
 		dataPrice: '0',
 		dataDescription: 'боковое слева',
 		value: '12',
-		text: '12',
+		text: 'боковое слева',
 		defaultChecked: true,
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue3,
-		image: null
+		image: { avatar: false, src: img12 },
 	},
 	{
 		name: 'connectionType',
