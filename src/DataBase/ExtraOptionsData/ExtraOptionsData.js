@@ -1,4 +1,83 @@
-import img12 from '../../images/connections/connection-12.png'
+import connectionImg12 from '../../images/connections/connection-12.png';
+import connectionImg34 from '../../images/connections/connection-34.png';
+import connectionImg14 from '../../images/connections/connection-14.png';
+import connectionImg32 from '../../images/connections/connection-32.png';
+import connectionImg24 from '../../images/connections/connection-24.png';
+import connectionImg42 from '../../images/connections/connection-42.png';
+import connectionImg13 from '../../images/connections/connection-13.png';
+import connectionImg31 from '../../images/connections/connection-31.png';
+import connectionImg23 from '../../images/connections/connection-23.png';
+import connectionImg41 from '../../images/connections/connection-41.png';
+import connectionImg68 from '../../images/connections/connection-68.png';
+import connectionImg86 from '../../images/connections/connection-86.png';
+import connectionImg58 from '../../images/connections/connection-58.png';
+import connectionImg76 from '../../images/connections/connection-76.png';
+import connectionImg69 from '../../images/connections/connection-69.png';
+import connectionImg89 from '../../images/connections/connection-89.png';
+import connectionImg50 from '../../images/connections/connection-50.png';
+import connectionImg70 from '../../images/connections/connection-70.png';
+import connectionImg67 from '../../images/connections/connection-67.png';
+import connectionImg85 from '../../images/connections/connection-85.png';
+import connectionImg57 from '../../images/connections/connection-57.png';
+import connectionImg75 from '../../images/connections/connection-75.png';
+import connectionImg96 from '../../images/connections/connection-96.png';
+import connectionImg98 from '../../images/connections/connection-98.png';
+import connectionImg07 from '../../images/connections/connection-07.png';
+import connectionImg05 from '../../images/connections/connection-05.png';
+import connectionImg69V from '../../images/connections/connection-69V.png';
+import connectionImg89V from '../../images/connections/connection-89V.png';
+import connectionImg98V from '../../images/connections/connection-98V.png';
+import connectionImg96V from '../../images/connections/connection-96V.png';
+import connectionImg69V61 from '../../images/connections/connection-69V-61.png';
+import connectionImg89V61 from '../../images/connections/connection-89V-61.png';
+import connectionImg98V61 from '../../images/connections/connection-98V-61.png';
+import connectionImg96V61 from '../../images/connections/connection-96V-61.png';
+
+
+
+
+
+const getConnectionTypeImage = (value) => (
+		{
+			'12': { avatar: false, src: connectionImg12},
+			'34': { avatar: false, src: connectionImg34},
+			'14': { avatar: false, src: connectionImg14},
+			'32': { avatar: false, src: connectionImg32},
+			'24': { avatar: false, src: connectionImg24},
+			'42': { avatar: false, src: connectionImg42},
+			'13': { avatar: false, src: connectionImg13},
+			'31': { avatar: false, src: connectionImg31},
+			'23': { avatar: false, src: connectionImg23},
+			'41': { avatar: false, src: connectionImg41},
+			'68': { avatar: false, src: connectionImg68},
+			'86': { avatar: false, src: connectionImg86},
+			'58': { avatar: false, src: connectionImg58},
+			'76': { avatar: false, src: connectionImg76},
+			'69': { avatar: false, src: connectionImg69},
+			'89': { avatar: false, src: connectionImg89},
+			'50': { avatar: false, src: connectionImg50},
+			'70': { avatar: false, src: connectionImg70},
+			'67': { avatar: false, src: connectionImg67},
+			'85': { avatar: false, src: connectionImg85},
+			'57': { avatar: false, src: connectionImg57},
+			'75': { avatar: false, src: connectionImg75},
+			'96': { avatar: false, src: connectionImg96},
+			'98': { avatar: false, src: connectionImg98},
+			'07': { avatar: false, src: connectionImg07},
+			'05': { avatar: false, src: connectionImg05},
+			'69V': { avatar: false, src: connectionImg69V},
+			'89V': { avatar: false, src: connectionImg89V},
+			'98V': { avatar: false, src: connectionImg98V},
+			'96V': { avatar: false, src: connectionImg96V},
+			'69V61': { avatar: false, src: connectionImg69V61},
+			'89V61': { avatar: false, src: connectionImg89V61},
+			'98V61': { avatar: false, src: connectionImg98V61},
+			'96V61': { avatar: false, src: connectionImg96V61},
+		}[value] || { avatar: false, src: connectionImg12});
+
+
+
+
 
 const size12 = {
 	value: 12,
@@ -71,20 +150,20 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: '0',
-		dataDescription: 'боковое слева',
-		value: '12',
 		text: 'боковое слева',
+		value: '12',
+		description: '12',
 		defaultChecked: true,
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue3,
-		image: { avatar: false, src: img12 },
+		image: null
 	},
 	{
 		name: 'connectionType',
 		dataPrice: '0',
-		dataDescription: 'боковое справа',
+		text: 'боковое справа',
 		value: '34',
-		text: '34',
+		description: '34',
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue1,
 		image: null
@@ -92,9 +171,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: '0',
-		dataDescription: 'боковое  диагональное слева',
+		text: 'боковое  диагональное слева',
 		value: '14',
-		text: '14',
+		description: '14',
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue3,
 		image: null
@@ -102,9 +181,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: '0',
-		dataDescription: 'боковое  диагональное справа',
+		text: 'боковое  диагональное справа',
 		value: '32',
-		text: '32',
+		description: '32',
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue1,
 		image: null
@@ -113,9 +192,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 11.65,
-		dataDescription: 'нижнее проходное слева-направо',
+		text: 'нижнее проходное слева-направо',
 		value: '24',
-		text: '24',
+		description: '24',
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue3,
 		image: null
@@ -123,9 +202,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 11.65,
-		dataDescription: 'нижнее проходное справа-налево',
+		text: 'нижнее проходное справа-налево',
 		value: '42',
-		text: '42',
+		description: '42',
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue1,
 		image: null
@@ -134,9 +213,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 28.05,
-		dataDescription: 'проходное слева-направо',
+		text: 'проходное слева-направо',
 		value: '13',
-		text: '13',
+		description: '13',
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue0,
 		image: null
@@ -144,9 +223,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 28.05,
-		dataDescription: 'проходное справа-налево',
+		text: 'проходное справа-налево',
 		value: '31',
-		text: '31',
+		description: '31',
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue0,
 		image: null
@@ -154,9 +233,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 28.05,
-		dataDescription: 'нижнее диагональное справа',
+		text: 'нижнее диагональное справа',
 		value: '41',
-		text: '41',
+		description: '41',
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue1,
 		image: null
@@ -164,9 +243,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 28.05,
-		dataDescription: 'нижнее диагональное слева',
+		text: 'нижнее диагональное слева',
 		value: '23',
-		text: '23',
+		description: '23',
 		connectionSize: [size12, size34, size38, size10],
 		airCoolerLocation: airCoolerLocationValue3,
 		image: null
@@ -175,9 +254,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 59.65,
-		dataDescription: 'внизу слева/справа',
+		text: 'внизу слева/справа',
 		value: '68',
-		text: '68',
+		description: '68',
 		connectionSize: [size12, size34, size38],
 		airCoolerLocation: airCoolerLocationValue3,
 		image: null
@@ -185,9 +264,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 59.65,
-		dataDescription: 'внизу справа/слева',
+		text: 'внизу справа/слева',
 		value: '86',
-		text: '86',
+		description: '86',
 		connectionSize: [size12, size34, size38],
 		airCoolerLocation: airCoolerLocationValue1,
 		image: null
@@ -195,9 +274,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 59.65,
-		dataDescription: 'сверху/снизу диагональное',
+		text: 'сверху/снизу диагональное',
 		value: '58',
-		text: '58',
+		description: '58',
 		connectionSize: [size12, size34, size38],
 		airCoolerLocation: airCoolerLocationValue3,
 		image: null
@@ -205,9 +284,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 59.65,
-		dataDescription: 'сверху/снизу диагональное',
+		text: 'сверху/снизу диагональное',
 		value: '76',
-		text: '76',
+		description: '76',
 		connectionSize: [size12, size34, size38],
 		airCoolerLocation: airCoolerLocationValue1,
 		image: null
@@ -216,9 +295,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 59.65,
-		dataDescription: 'снизу слева',
+		text: 'снизу слева',
 		value: '69',
-		text: '69',
+		description: '69',
 		connectionSize: [size12, size38],
 		airCoolerLocation: airCoolerLocationValue3,
 		image: null
@@ -226,20 +305,39 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 59.65,
-		dataDescription: 'снизу справа',
+		text: 'снизу справа',
 		value: '89',
-		text: '89',
+		description: '89',
 		connectionSize: [size12, size38],
 		airCoolerLocation: airCoolerLocationValue1,
 		image: null
 	},
-
+	{
+		name: 'connectionType',
+		dataPrice: 59.65,
+		text: 'сверху слева',
+		value: '50',
+		description: '50',
+		connectionSize: [size12, size38],
+		airCoolerLocation: airCoolerLocationValue3,
+		image: null
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 59.65,
+		text: 'сверху справа',
+		value: '70',
+		description: '70',
+		connectionSize: [size12, size38],
+		airCoolerLocation: airCoolerLocationValue1,
+		image: null
+	},
 	{
 		name: 'connectionType',
 		dataPrice: 82.11,
-		dataDescription: 'снизу/сверху диагональное',
+		text: 'снизу/сверху диагональное',
 		value: '67',
-		text: '67',
+		description: '67',
 		connectionSize: [size12, size34, size38],
 		airCoolerLocation: airCoolerLocationValue1,
 		image: null
@@ -247,9 +345,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 82.11,
-		dataDescription: 'снизу/сверху диагональное',
+		text: 'снизу/сверху диагональное',
 		value: '85',
-		text: '85',
+		description: '85',
 		connectionSize: [size12, size34, size38],
 		airCoolerLocation: airCoolerLocationValue3,
 		image: null
@@ -257,9 +355,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 82.11,
-		dataDescription: 'вверху слева/справа',
+		text: 'вверху слева/справа',
 		value: '57',
-		text: '57',
+		description: '57',
 		connectionSize: [size12, size34, size38],
 		airCoolerLocation: airCoolerLocationValue1,
 		image: null
@@ -267,9 +365,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 82.11,
-		dataDescription: 'вверху справа/слева',
+		text: 'вверху справа/слева',
 		value: '75',
-		text: '75',
+		description: '75',
 		connectionSize: [size12, size34, size38],
 		airCoolerLocation: airCoolerLocationValue3,
 		image: null
@@ -278,9 +376,9 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 82.11,
-		dataDescription: 'снизу по центру',
+		text: 'снизу по центру',
 		value: '98',
-		text: '98',
+		description: '98',
 		connectionSize: [size12],
 		airCoolerLocation: airCoolerLocationValue3,
 		image: null
@@ -288,13 +386,34 @@ export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
 		dataPrice: 82.11,
-		dataDescription: 'снизу по центру',
+		text: 'снизу по центру',
 		value: '96',
-		text: '96',
+		description: '96',
 		connectionSize: [size12],
 		airCoolerLocation: airCoolerLocationValue1,
 		image: null
-	}];
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 82.11,
+		text: 'сверху по центру',
+		value: '07',
+		description: '07',
+		connectionSize: [size12],
+		airCoolerLocation: airCoolerLocationValue3,
+		image: null
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 82.11,
+		text: 'сверху по центру',
+		value: '05',
+		description: '05',
+		connectionSize: [size12],
+		airCoolerLocation: airCoolerLocationValue1,
+		image: null
+	},
+];
 
 
 //Типы подключений радиаторов RRV:
