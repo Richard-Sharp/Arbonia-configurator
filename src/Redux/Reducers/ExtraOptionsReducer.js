@@ -1,7 +1,6 @@
 import {
 	connectionTypeRRNData,
 	connectionTypeRRVData,
-	valveTypeData
 } from "../../DataBase/ExtraOptionsData/ExtraOptionsData";
 
 const SET_CONNECTION_TYPE = 'ExtraOptions/SET_CONNECTION_TYPE';
@@ -79,7 +78,7 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 			return {
 				...state,
 				valve: {...state.valve, ...action.payload}
-			}
+			};
 
 		case SET_CONNECTION_TYPE:
 			return {
@@ -90,52 +89,52 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 					price: action.price,
 					description: action.description
 				}
-			}
+			};
 		case SET_CONNECTION_SIZE:
 			return {
 				...state,
 				connectionSize: {...state.connectionSize, ...action.payload}
-			}
+			};
 		case SET_AIRCOOLER_TYPE:
 			return {
 				...state,
 				airCooler: {...state.airCooler, ...action.payload}
-			}
+			};
 		case SET_AIRCOOLER_LOCATION:
 			return {
 				...state,
 				airCoolerLocation: {...state.airCoolerLocation, ...action.payload}
-			}
+			};
 		case SET_AIRCOOLER_SIZE:
 			return {
 				...state,
 				airCoolerSize: {...state.airCoolerSize, ...action.payload}
-			}
+			};
 		case SET_DRAIN:
 			return {
 				...state,
 				drain: {...state.drain, ...action.payload}
-			}
+			};
 		case SET_PRESSURE:
 			return {
 				...state,
 				pressure: {...state.pressure, ...action.payload}
-			}
+			};
 		case SET_CONNECTION_SIZE_OPTIONS:
 			return {
 				...state,
 				connectionSizeOptions: action.options
-			}
+			};
 		case SET_CONNECTION_TYPE_OPTIONS:
 			return {
 				...state,
 				connectionTypeOptions: action.options
-			}
+			};
 
 		default:
 			return state;
 	}
-}
+};
 
 //Action creators:
 export const setValveType = (valve = false, code, price = 0, model = 'RRN', description, text) => ({

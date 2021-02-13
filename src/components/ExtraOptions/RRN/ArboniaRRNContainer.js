@@ -7,7 +7,7 @@ import {
 	setAirCoolerLocation,
 	setAirCoolerSize,
 	setPressure,
-	setDrain, setValveType, setConnectionSizeOptions
+	setDrain, setValveType, setConnectionSizeOptions, setConnectionTypeOptions
 } from "../../../Redux/Reducers/ExtraOptionsReducer";
 import {connect} from "react-redux";
 
@@ -17,16 +17,16 @@ class ArboniaRRNContainer extends React.Component {
 	setConnectionTypeDefault = (option) => {
 		const {value, dataPrice, dataDescription} = option;
 		this.props.setConnectionType(value, +dataPrice, dataDescription);
-	}
+	};
 	setConnectionSizeDefault = (option) => {
 		const {value, price, description} = option;
 		this.props.setConnectionSize(value, +price, description);
-	}
+	};
 
 	setAirCoolerLocationDefault = (option) => {
 		const {value, image, description} = option;
 		this.props.setAirCoolerLocation(value, image, description);
-	}
+	};
 
 	componentWillMount() {
 		this.props.setValveType(false, 2, 0, 'RRN', 'безвентильное исполнение');
@@ -37,28 +37,30 @@ class ArboniaRRNContainer extends React.Component {
 		this.setConnectionTypeDefault(this.props.extraOptionRRNDisplay[0]);
 		this.setConnectionSizeDefault(this.props.extraOptionRRNDisplay[0].connectionSize[0]);
 		this.setAirCoolerLocationDefault(this.props.extraOptionRRNDisplay[0].airCoolerLocation);
-
 	}
 
+	setConnectionTypesData = (e, {options, value}) => {
+		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
+		let data = options.filter(el => el.value === value);
+		console.log(data[0]);
+		const {price, text, connectionSize, airCoolerLocation} = data[0];
+		this.props.setConnectionTypeOptions(data[0]);
+		this.props.setConnectionType(value, +price, text);
+		setConnectionSizeOptions(connectionSize);
+		setAirCoolerLocation(airCoolerLocation.value, airCoolerLocation.image, airCoolerLocation.description);
+		console.log(this.props.connectionTypeOptions);
+	};
 
 	setExtraOptions = (e) => {
-		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
-
 		const elemIndex = e.currentTarget.id || 0;
 		const name = e.currentTarget.name;
 		const price = +e.currentTarget.dataset.price;
 		const valueData = +e.currentTarget.value;
 		const descriptionData = e.currentTarget.dataset.description;
 
-		const {value, image, description} = this.props.extraOptionRRNDisplay[elemIndex].airCoolerLocation;
 		console.log(this.props.extraOptionRRNDisplay[elemIndex]);
 
 		switch (name) {
-			case 'connectionType':
-				this.props.setConnectionType(valueData, price, descriptionData);
-				setConnectionSizeOptions(this.props.extraOptionRRNDisplay[elemIndex].connectionSize);
-				setAirCoolerLocation(value, image, description);
-				break;
 			case 'connectionSize':
 				this.props.setConnectionSize(valueData, price, descriptionData);
 				break;
@@ -80,7 +82,9 @@ class ArboniaRRNContainer extends React.Component {
 
 	render() {
 
-		return <ArboniaRRN {...this.props} setExtraOptions={this.setExtraOptions}/>
+		return <ArboniaRRN {...this.props}
+											 setExtraOptions={this.setExtraOptions}
+											 setConnectionTypesData={this.setConnectionTypesData}/>
 	}
 }
 
@@ -94,7 +98,8 @@ let mapState = (state) => ({
 	drain: state.extraOptions.drain,
 	pressure: state.extraOptions.pressure,
 	extraOptionRRNDisplay: state.extraOptions.extraOptionRRNDisplay,
-	connectionSizeOptions: state.extraOptions.connectionSizeOptions
+	connectionSizeOptions: state.extraOptions.connectionSizeOptions,
+	connectionTypeOptions: state.extraOptions.connectionTypeOptions,
 
 });
 
@@ -107,5 +112,6 @@ export default connect(mapState, {
 	setAirCoolerSize,
 	setPressure,
 	setDrain,
-	setConnectionSizeOptions
+	setConnectionSizeOptions,
+	setConnectionTypeOptions
 })(ArboniaRRNContainer);

@@ -5,7 +5,7 @@ import {
 	typeParamsData
 } from "../../DataBase/MainParamsData/MainParamsData";
 import {getArboniaModelData} from "../../DataBase/SpecificationsData/SpecificationsData";
-import {connectionTypeRRNData} from "../../DataBase/ExtraOptionsData/ExtraOptionsData";
+
 
 const SET_RADIATORS_HEIGHT = 'MainParams/Params/SET_RADIATORS_HEIGHT';
 const SET_RADIATORS_TYPE = 'MainParams/Params/SET_RADIATORS_TYPE';
@@ -49,7 +49,7 @@ export const MainParamsReducer = (state = initialState, action) => {
 						value: action.value, code: action.code
 					}
 				}
-			}
+			};
 		case SET_RADIATORS_TYPE:
 			return {
 				...state,
@@ -60,32 +60,32 @@ export const MainParamsReducer = (state = initialState, action) => {
 						value: action.value, code: action.code
 					}
 				}
-			}
+			};
 		case SET_QUANTITY_SECTIONS:
 			return {
 				...state,
 				quantitySections: action.number
-			}
+			};
 		case SET_ARBONIA_TYPE:
 			return {
 				...state,
 				arboniaModel: action.arboniaModel
-			}
+			};
 		case SET_TOTAL_LENGHT:
 			return {
 				...state,
 				totalLenght: action.lenght
-			}
+			};
 		case SET_TOTAL_POWER:
 			return {
 				...state,
 				totalPower: action.power
-			}
+			};
 		case SET_TOTAL_PRICE:
 			return {
 				...state,
 				totalPrice: action.price
-			}
+			};
 
 		case SET_SPECIFICATION_DATA:
 			return {
@@ -93,12 +93,12 @@ export const MainParamsReducer = (state = initialState, action) => {
 				specifications: {
 					...state.specifications, ...action.specifications
 				}
-			}
+			};
 
 		default:
 			return state;
 	}
-}
+};
 
 //Action creators:
 export const setRadiatorsHeightSuccess = (value, code) => ({type: SET_RADIATORS_HEIGHT, value: value, code: code});
@@ -132,5 +132,3 @@ export const setSpecificationsData = (type, height) => async (dispatch) => {
 		dispatch(setSpecificationsDataSuccess(specifications));
 	}
 };
-
-export default MainParamsReducer;

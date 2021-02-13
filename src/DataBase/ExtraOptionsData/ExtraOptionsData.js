@@ -32,6 +32,9 @@ import connectionImg69V61 from '../../images/connections/connection-69V-61.png';
 import connectionImg89V61 from '../../images/connections/connection-89V-61.png';
 import connectionImg98V61 from '../../images/connections/connection-98V-61.png';
 import connectionImg96V61 from '../../images/connections/connection-96V-61.png';
+import airCooler1 from '../../images/airLocation/airLocation-1.png';
+import airCooler3 from '../../images/airLocation/airLocation-3.png';
+import airCooler0 from '../../images/airLocation/airLocation-0.png';
 
 
 
@@ -121,19 +124,19 @@ const size84 = {
 
 const airCoolerLocationValue1 = {
 	value: 1,
-	image: '1',
+	image: airCooler1,
 	description: 'воздушный клапан сверху слева'
 };
 
 const airCoolerLocationValue3 = {
 	value: 3,
-	image: '3',
+	image: airCooler3,
 	description: 'воздушный клапан сверху справа'
 };
 
 const airCoolerLocationValue0 = {
 	value: 0,
-	image: '0',
+	image: airCooler0,
 	description: 'без воздушного клапана'
 };
 
@@ -149,7 +152,7 @@ const airCoolerLocationValue = {
 export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
-		dataPrice: '0',
+		price: '0',
 		text: 'боковое слева',
 		value: '12',
 		description: '[12]',
@@ -160,7 +163,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: '0',
+		price: '0',
 		text: 'боковое справа',
 		value: '34',
 		description: '[34]',
@@ -170,7 +173,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: '0',
+		price: '0',
 		text: 'боковое  диагональное слева',
 		value: '14',
 		description: '[14]',
@@ -180,7 +183,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: '0',
+		price: '0',
 		text: 'боковое  диагональное справа',
 		value: '32',
 		description: '[32]',
@@ -191,7 +194,7 @@ export const connectionTypeRRNData = [
 
 	{
 		name: 'connectionType',
-		dataPrice: 11.65,
+		price: 11.65,
 		text: 'нижнее проходное слева-направо',
 		value: '24',
 		description: '[24]',
@@ -201,7 +204,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 11.65,
+		price: 11.65,
 		text: 'нижнее проходное справа-налево',
 		value: '42',
 		description: '[42]',
@@ -212,7 +215,7 @@ export const connectionTypeRRNData = [
 
 	{
 		name: 'connectionType',
-		dataPrice: 28.05,
+		price: 28.05,
 		text: 'проходное слева-направо',
 		value: '13',
 		description: '[13]',
@@ -222,7 +225,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 28.05,
+		price: 28.05,
 		text: 'проходное справа-налево',
 		value: '31',
 		description: '[31]',
@@ -232,7 +235,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 28.05,
+		price: 28.05,
 		text: 'нижнее диагональное справа',
 		value: '41',
 		description: '[41]',
@@ -242,7 +245,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 28.05,
+		price: 28.05,
 		text: 'нижнее диагональное слева',
 		value: '23',
 		description: '[23]',
@@ -253,7 +256,7 @@ export const connectionTypeRRNData = [
 
 	{
 		name: 'connectionType',
-		dataPrice: 59.65,
+		price: 59.65,
 		text: 'внизу слева/справа',
 		value: '68',
 		description: '[68]',
@@ -263,7 +266,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 59.65,
+		price: 59.65,
 		text: 'внизу справа/слева',
 		value: '86',
 		description: '[86]',
@@ -273,7 +276,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 59.65,
+		price: 59.65,
 		text: 'сверху/снизу диагональное',
 		value: '58',
 		description: '[58]',
@@ -283,7 +286,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 59.65,
+		price: 59.65,
 		text: 'сверху/снизу диагональное',
 		value: '76',
 		description: '[76]',
@@ -294,7 +297,7 @@ export const connectionTypeRRNData = [
 
 	{
 		name: 'connectionType',
-		dataPrice: 59.65,
+		price: 59.65,
 		text: 'снизу слева',
 		value: '69',
 		description: '[69]',
@@ -304,7 +307,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 59.65,
+		price: 59.65,
 		text: 'снизу справа',
 		value: '89',
 		description: '[89]',
@@ -314,27 +317,27 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 59.65,
+		price: 59.65,
 		text: 'сверху слева',
 		value: '50',
 		description: '[50]',
 		connectionSize: [size12, size38],
-		airCoolerLocation: airCoolerLocationValue3,
+		airCoolerLocation: airCoolerLocationValue,
 		image: getConnectionTypeImage(50),
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 59.65,
+		price: 59.65,
 		text: 'сверху справа',
 		value: '70',
 		description: '[70]',
 		connectionSize: [size12, size38],
-		airCoolerLocation: airCoolerLocationValue1,
+		airCoolerLocation: airCoolerLocationValue,
 		image: getConnectionTypeImage(70),
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 82.11,
+		price: 82.11,
 		text: 'снизу/сверху диагональное',
 		value: '67',
 		description: '[67]',
@@ -344,7 +347,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 82.11,
+		price: 82.11,
 		text: 'снизу/сверху диагональное',
 		value: '85',
 		description: '[85]',
@@ -354,7 +357,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 82.11,
+		price: 82.11,
 		text: 'вверху слева/справа',
 		value: '57',
 		description: '[57]',
@@ -364,7 +367,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 82.11,
+		price: 82.11,
 		text: 'вверху справа/слева',
 		value: '75',
 		description: '[75]',
@@ -375,7 +378,7 @@ export const connectionTypeRRNData = [
 
 	{
 		name: 'connectionType',
-		dataPrice: 82.11,
+		price: 82.11,
 		text: 'снизу по центру',
 		value: '98',
 		description: '[98]',
@@ -385,7 +388,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 82.11,
+		price: 82.11,
 		text: 'снизу по центру',
 		value: '96',
 		description: '[96]',
@@ -395,7 +398,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 82.11,
+		price: 82.11,
 		text: 'сверху по центру',
 		value: '07',
 		description: '[07]',
@@ -405,7 +408,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 82.11,
+		price: 82.11,
 		text: 'сверху по центру',
 		value: '05',
 		description: '[05]',

@@ -17,7 +17,7 @@ class TotalPriceContainer extends React.Component {
 
 	render() {
 		return <TotalPrice totalPrice={this.props.totalPrice} />
-		// onChangeTatalPrice={this.onChangeTotalPrice}
+		// onChangeTotalPrice={this.onChangeTotalPrice}
 	}
 }
 
@@ -32,6 +32,6 @@ let mapState = (state) => ({
 	drain: state.extraOptions.drain,
 	totalPrice: state.mainParams.totalPrice,
 
-})
+});
 
 export default connect(mapState, {setTotalPrice})(TotalPriceContainer);

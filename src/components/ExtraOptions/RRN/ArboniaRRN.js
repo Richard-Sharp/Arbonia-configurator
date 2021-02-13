@@ -21,13 +21,9 @@ const ArboniaRRN = (props) => {
 	};
 
 	// const defaultOption = friendOptions[0].value;
+	const {image} = props.connectionTypeOptions;
+	console.log('###', props.connectionTypeOptions);
 
-	const getParamsData = (e, { options, value }) => {
-		console.log(value);
-
-		let data = options.filter(el => el.value === value);
-		console.log(data[0].dataDescription);
-	}
 	return <div className={style.container}>
 		<h4>Безвентильное исполнение (RRN):</h4>
 		<div>
@@ -43,7 +39,7 @@ const ArboniaRRN = (props) => {
 			{/*</div>*/}
 			<div className={style.test_div}>
 				<Dropdown
-						onChange={getParamsData}
+						onChange={props.setConnectionTypesData}
 						placeholder='Выберите тип подключение: '
 						fluid={true}
 						selection
@@ -54,19 +50,16 @@ const ArboniaRRN = (props) => {
 			</div>
 
 			<div>
-				{props.extraOptionRRNDisplay.map((type, index) => {
-					return <>
-						<input onChange={(e) => {
-							props.setExtraOptions(e)
-						}}
-									 data-price={type.dataPrice} key={type.value}
-									 data-description={type.dataDescription}
-									 data-air={type.airCoolerLocation.value} id={index}
-									 name={type.name} type="radio" value={type.value}
-									 defaultChecked={type.defaultChecked}
-						/>{type.text};
-					</>
-				})}
+				{props.connectionTypeOptions.image &&
+				<div className={style.connection_img}>
+					<img src={image.src} alt="тип подключения"/>
+				</div>}
+
+				{props.connectionTypeOptions.image &&
+				<div className={style.cooler_img}>
+					<p>[9] Расположение развоздушника:</p>
+					<img src={props.airCoolerLocation.image} alt={props.airCoolerLocation.description}/>
+				</div>}
 			</div>
 		</div>
 
@@ -103,8 +96,8 @@ const ArboniaRRN = (props) => {
 
 		<div>
 			<p>[9] Расположение развоздушника:</p>
-				<div>
-					{props.airCoolerLocation.image}
+				<div className={style.cooler_img}>
+					<img src={props.airCoolerLocation.image} alt={props.airCoolerLocation.description}/>
 				</div>
 				<div>
 					{props.airCoolerLocation.description}

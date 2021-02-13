@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './Params.module.css';
-import {useState} from "react";
 
 
 const Params = (props) => {
@@ -29,7 +28,8 @@ const Params = (props) => {
 				<h5>Основные параметры прибора</h5>
 				<div className={style.height}>
 					<p>Высота прибора:</p>
-					<select name="height" id="heightParam" required ref={heightRef}
+					<select name="height" id="heightParam"
+									required ref={heightRef}
 									onChange={(e) => {
 										onChangeParamHeight(e)
 									}}>

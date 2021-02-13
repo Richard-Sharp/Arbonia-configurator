@@ -29,7 +29,7 @@
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -55,16 +55,29 @@
 }
 
 
-.ui
-.avatar
-.image img{
-    height: 100px;
-    width: 150px;
-    margin: 0;
-}
 
 .test_div {
     width: 400px;
-    height: 300px;
+
     padding: 15px;
+}
+
+.connection_img {
+    display: flex;
+    align-items: left;
+    padding: 20px;
+}
+.connection_img img{
+    width: 300px;
+    height: 225px;
+}
+
+.cooler_img img{
+    width: 168px;
+    height: 100px;
+}
+.cooler_img {
+    display: flex;
+    align-items: left;
+    padding: 20px;
 }
