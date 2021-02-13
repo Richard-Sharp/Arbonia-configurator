@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './ArboniaRRN.module.css';
-import img from '../../../images/airLocation/airLocation-1.png'
 import { Dropdown } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 
@@ -21,47 +20,7 @@ const ArboniaRRN = (props) => {
 		props.setDrain(d, price);
 	};
 
-	const friendOptions = [
-		{
-			key: 'Jenny Hess',
-			text: '',
-			value: 'Jenny Hess',
-			dataPrice: 12,
-			description: 'connection 89',
-			image: { avatar: false, src: img, width: '100px' },
-		},
-		{
-			key: 'Elliot Fu',
-			text: 'Elliot Fu',
-			value: 'Elliot Fu',
-			image: { avatar: true, src: '/images/avatar/small/elliot.jpg' },
-		},
-		{
-			key: 'Stevie Feliciano',
-			text: 'Stevie Feliciano',
-			value: 'Stevie Feliciano',
-			image: { avatar: true, src: '/images/avatar/small/stevie.jpg' },
-		},
-		{
-			key: 'Christian',
-			text: 'Christian',
-			value: 'Christian',
-			image: { avatar: true, src: '/images/avatar/small/christian.jpg' },
-		},
-		{
-			key: 'Matt',
-			text: 'Matt',
-			value: 'Matt',
-			image: { avatar: true, src: '/images/avatar/small/matt.jpg' },
-		},
-		{
-			key: 'Justen Kitsune',
-			text: 'cdjbsdmbvmnbvmbsdmnvbmxcb  dbdsjbfd fbdsjbfkdsbf',
-			value: 'Justen Kitsune',
-			image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
-		},
-	]
-	const defaultOption = friendOptions[0].value;
+	// const defaultOption = friendOptions[0].value;
 
 	const getParamsData = (e, { options, value }) => {
 		console.log(value);
