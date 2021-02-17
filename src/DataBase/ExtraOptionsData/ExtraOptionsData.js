@@ -523,10 +523,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '31',
-			price: 127.62,
-			description: 'со встроенным вентилем вверху',
-			text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
+			valveValue: '31',
+			valvePrice: 127.62,
+			valveDescription: 'со встроенным вентилем вверху',
+			valveText: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
 		},
 		defaultChecked: true
 	},
@@ -542,10 +542,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '31',
-			price: 127.62,
-			description: 'со встроенным вентилем вверху',
-			text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
+			valveValue: '31',
+			valvePrice: 127.62,
+			valveDescription: 'со встроенным вентилем вверху',
+			valveText: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
 		}
 	},
 	{
@@ -560,10 +560,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '31',
-			price: 127.62,
-			description: 'со встроенным вентилем вверху',
-			text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
+			valveValue: '31',
+			valvePrice: 127.62,
+			valveDescription: 'со встроенным вентилем вверху',
+			valveText: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
 		}
 	},
 	{
@@ -578,10 +578,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '31',
-			price: 127.62,
-			description: 'со встроенным вентилем вверху',
-			text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
+			valveValue: '31',
+			valvePrice: 127.62,
+			valveDescription: 'со встроенным вентилем вверху',
+			valveText: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
 		}
 	},
 	{
@@ -596,10 +596,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '61',
-			price: 179.34,
-			description: 'со встроенным вентилем внизу',
-			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+			valveValue: '61',
+			valvePrice: 179.34,
+			valveDescription: 'со встроенным вентилем внизу',
+			valveText: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
 		}
 	},
 	{
@@ -614,10 +614,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '61',
-			price: 179.34,
-			description: 'со встроенным вентилем внизу',
-			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+			valveValue: '61',
+			valvePrice: 179.34,
+			valveDescription: 'со встроенным вентилем внизу',
+			valveText: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
 		}
 	},
 	{
@@ -632,10 +632,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '61',
-			price: 179.34,
-			description: 'со встроенным вентилем внизу',
-			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+			valveValue: '61',
+			valvePrice: 179.34,
+			valveDescription: 'со встроенным вентилем внизу',
+			valveText: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
 		}
 	},
 	{
@@ -650,10 +650,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '61',
-			price: 179.34,
-			description: 'со встроенным вентилем внизу',
-			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+			valveValue: '61',
+			valvePrice: 179.34,
+			valveDescription: 'со встроенным вентилем внизу',
+			valveText: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
 		}
 	},
 	{
@@ -668,10 +668,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '31',
-			price: 127.62,
-			description: 'со встроенным вентилем вверху',
-			text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
+			valveValue: '31',
+			valvePrice: 127.62,
+			valveDescription: 'со встроенным вентилем вверху',
+			valveText: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
 		},
 	},
 	{
@@ -686,10 +686,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '31',
-			price: 127.62,
-			description: 'со встроенным вентилем вверху',
-			text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
+			valveValue: '31',
+			valvePrice: 127.62,
+			valveDescription: 'со встроенным вентилем вверху',
+			valveText: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
 		}
 	},
 	{
@@ -704,10 +704,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '61',
-			price: 179.34,
-			description: 'со встроенным вентилем внизу',
-			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+			valveValue: '61',
+			valvePrice: 179.34,
+			valveDescription: 'со встроенным вентилем внизу',
+			valveText: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
 		}
 	},
 	{
@@ -722,10 +722,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '61',
-			price: 179.34,
-			description: 'со встроенным вентилем внизу',
-			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+			valveValue: '61',
+			valvePrice: 179.34,
+			valveDescription: 'со встроенным вентилем внизу',
+			valveText: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
 		}
 	},
 	{
@@ -740,10 +740,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '61',
-			price: 179.34,
-			description: 'со встроенным вентилем внизу',
-			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+			valveValue: '61',
+			valvePrice: 179.34,
+			valveDescription: 'со встроенным вентилем внизу',
+			valveText: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
 		}
 	},
 	{
@@ -758,10 +758,10 @@ export const connectionTypeRRVData = [
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
-			value: '61',
-			price: 179.34,
-			description: 'со встроенным вентилем внизу',
-			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+			valveValue: '61',
+			valvePrice: 179.34,
+			valveDescription: 'со встроенным вентилем внизу',
+			valveText: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
 		}
 	},
 ];

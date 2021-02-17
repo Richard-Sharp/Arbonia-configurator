@@ -1,5 +1,7 @@
 import React from 'react';
 import style from './ArboniaRRV.module.css';
+import { Dropdown } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 
 //Компонент для настройки вентильного исполнения:
 const ArboniaRRV = (props) => {
@@ -17,11 +19,38 @@ const ArboniaRRV = (props) => {
 		props.setDrain(d, price);
 	}
 
-
+	const {image} = props.connectionTypeOptions;
 	return <div className={style.container}>
 		<h4>Со встроенным термостатическим вентилем (RRV):</h4>
 		<div>
 			<p> [6] Схема подключения:</p>
+			<div className={style.test_div}>
+				<Dropdown
+						onChange={props.setConnectionTypesData}
+						placeholder='Выберите тип подключение: '
+						fluid={true}
+						selection
+						item
+						options={props.extraOptionRRVDisplay}
+						upward={false}
+				/>
+			</div>
+
+			<div>
+				{props.connectionTypeOptions.image &&
+				<div className={style.connection_img}>
+					<img src={image.src} alt="тип подключения"/>
+				</div>}
+
+				{props.connectionTypeOptions.image &&
+				<div className={style.cooler_img}>
+					<p>[9] Расположение развоздушника:</p>
+					<img src={props.airCoolerLocation.image} alt={props.airCoolerLocation.description}/>
+				</div>}
+			</div>
+
+
+
 			<div>
 				{props.extraOptionRRVDisplay.map((type, index) => {
 					return <>

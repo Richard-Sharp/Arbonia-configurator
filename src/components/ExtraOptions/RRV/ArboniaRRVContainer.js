@@ -13,6 +13,7 @@ import ArboniaRRV from "./ArboniaRRV";
 
 
 class ArboniaRRVContainer extends React.PureComponent {
+
 	setConnectionTypeDefault = (option) => {
 		const {value, dataPrice, dataDescription} = option;
 		this.props.setConnectionType(value, +dataPrice, dataDescription);
@@ -38,9 +39,22 @@ class ArboniaRRVContainer extends React.PureComponent {
 		this.setAirCoolerLocationDefault(this.props.extraOptionRRVDisplay[0].airCoolerLocation);
 	}
 
+	setConnectionTypesData = (e, {options, value}) => {
+		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
+		let data = options.filter(el => el.value === value);
+		console.log(data[0]);
+		const {price, text, connectionSize, airCoolerLocation} = data[0];
+		const {valveExistence, valveValue, valvePrice, model, valveDescription, valveText} = data[0].valveTypeData;
+		this.props.setConnectionTypeOptions(data[0]);
+		this.props.setConnectionType(value, +price, text);
+		setConnectionSizeOptions(connectionSize);
+		setAirCoolerLocation(airCoolerLocation.value, airCoolerLocation.image, airCoolerLocation.description);
+		this.props.setValveType(valveExistence, valveValue, valvePrice, model, valveDescription, valveText);
+		console.log('connectionTypeOptions', this.props.connectionTypeOptions);
+	};
+
 
 	setExtraOptions = (e) => {
-		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
 		const elemIndex = e.currentTarget.id || 0;
 
 		const name = e.currentTarget.name;
@@ -81,6 +95,7 @@ class ArboniaRRVContainer extends React.PureComponent {
 
 		return <ArboniaRRV {...this.props}
 											 setExtraOptions={this.setExtraOptions}
+											 setConnectionTypesData={this.setConnectionTypesData}
 											 setValveType={this.props.setValveType}/>
 	}
 }

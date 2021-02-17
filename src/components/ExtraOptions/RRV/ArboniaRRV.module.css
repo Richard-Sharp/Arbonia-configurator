@@ -5,3 +5,35 @@
     margin: 0 auto;
     padding-bottom: 20px;
 }
+
+.item {
+    height: 100px;
+    width: 150px;
+}
+
+.test_div {
+    width: 400px;
+
+    padding: 15px;
+}
+
+.connection_img {
+    display: flex;
+    align-items: left;
+    padding: 20px;
+}
+/*base size: 600x450 px*/
+.connection_img img{
+    width: 240px;
+    height: 180px;
+}
+/*base size: 800x600 px*/
+.cooler_img img{
+    width: 200px;
+    height: 150px;
+}
+.cooler_img {
+    display: flex;
+    align-items: left;
+    padding: 20px;
+}
