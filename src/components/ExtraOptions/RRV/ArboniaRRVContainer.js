@@ -49,7 +49,7 @@ class ArboniaRRVContainer extends React.PureComponent {
 		this.props.setConnectionType(value, +price, text);
 		setConnectionSizeOptions(connectionSize);
 		setAirCoolerLocation(airCoolerLocation.value, airCoolerLocation.image, airCoolerLocation.description);
-		this.props.setValveType(valveExistence, valveValue, valvePrice, model, valveDescription, valveText);
+		this.props.setValveType(valveExistence, valveValue, +valvePrice, model, valveDescription, valveText);
 		console.log('connectionTypeOptions', this.props.connectionTypeOptions);
 	};
 
@@ -58,31 +58,26 @@ class ArboniaRRVContainer extends React.PureComponent {
 		const elemIndex = e.currentTarget.id || 0;
 
 		const name = e.currentTarget.name;
-		const priceData = +e.currentTarget.dataset.price;
+		const price = +e.currentTarget.dataset.price;
 		const valueData = +e.currentTarget.value;
 		const descriptionData = e.currentTarget.dataset.description;
-		const airValue = e.currentTarget.dataset.airValue;
-		const airImage = e.currentTarget.dataset.airImage;
-		const airDescriotion = e.currentTarget.dataset.airDescriotion;
-
-		const {valveExistence, value, price, model, description, text} = this.props.extraOptionRRVDisplay[elemIndex].valveTypeData;
-		console.log("## elem click connectionType: ", this.props.extraOptionRRVDisplay[elemIndex]);
+		console.log(this.props.extraOptionRRVDisplay[elemIndex]);
 
 		switch (name) {
-			case 'connectionType':
-				this.props.setConnectionType(valueData, priceData, descriptionData);
-				setConnectionSizeOptions(this.props.extraOptionRRVDisplay[elemIndex].connectionSize);
-				setAirCoolerLocation(airValue, airImage, airDescriotion);
-				this.props.setValveType(valveExistence, value, price, model, description, text);
-				break;
+			// case 'connectionType':
+			// 	this.props.setConnectionType(valueData, priceData, descriptionData);
+			// 	setConnectionSizeOptions(this.props.extraOptionRRVDisplay[elemIndex].connectionSize);
+			// 	setAirCoolerLocation(airValue, airImage, airDescriotion);
+			// 	this.props.setValveType(valveExistence, value, price, model, description, text);
+			// 	break;
 			case 'connectionSize':
-				this.props.setConnectionSize(valueData, priceData, descriptionData);
+				this.props.setConnectionSize(valueData, price, descriptionData);
 				break;
 			case 'airСoolerSize':
 				this.props.setAirCoolerSize(valueData, descriptionData);
 				break;
 			case 'pressure':
-				this.props.setPressure(valueData, priceData, descriptionData);
+				this.props.setPressure(valueData, price, descriptionData);
 				break;
 			default:
 				return (

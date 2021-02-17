@@ -49,26 +49,6 @@ const ArboniaRRV = (props) => {
 				</div>}
 			</div>
 
-
-
-			<div>
-				{props.extraOptionRRVDisplay.map((type, index) => {
-					return <>
-						<input onChange={(e) => {
-							props.setExtraOptions(e)
-						}}
-									 id={index}
-									 data-price={type.dataPrice} key={type.value}
-									 data-description={type.dataDescription}
-									 data-air-value={type.airCoolerLocation.value}
-									 data-air-image={type.airCoolerLocation.image}
-									 data-air-descriotion={type.airCoolerLocation.description}
-									 name={type.name} type="radio" value={type.value}
-									 defaultChecked={type.defaultChecked}
-						/>{type.text};
-					</>
-				})}
-			</div>
 		</div>
 
 		<div>
