@@ -28,10 +28,16 @@ import connectionImg69V from '../../images/connections/connection-69V.png';
 import connectionImg89V from '../../images/connections/connection-89V.png';
 import connectionImg98V from '../../images/connections/connection-98V.png';
 import connectionImg96V from '../../images/connections/connection-96V.png';
+import connectionImg50V from '../../images/connections/connection-50V.png';
+import connectionImg70V from '../../images/connections/connection-70V.png';
 import connectionImg69V61 from '../../images/connections/connection-69V-61.png';
 import connectionImg89V61 from '../../images/connections/connection-89V-61.png';
 import connectionImg98V61 from '../../images/connections/connection-98V-61.png';
 import connectionImg96V61 from '../../images/connections/connection-96V-61.png';
+import connectionImg70V61 from '../../images/connections/connection-70V-61.png';
+import connectionImg50V61 from '../../images/connections/connection-50V-61.png';
+import connectionImg05V61 from '../../images/connections/connection-05V-61.png';
+import connectionImg07V61 from '../../images/connections/connection-07V-61.png';
 import airCooler1 from '../../images/airLocation/airLocation-1.png';
 import airCooler3 from '../../images/airLocation/airLocation-3.png';
 import airCooler0 from '../../images/airLocation/airLocation-0.png';
@@ -72,14 +78,17 @@ const getConnectionTypeImage = (value) => (
 			'89V': { avatar: false, src: connectionImg89V},
 			'98V': { avatar: false, src: connectionImg98V},
 			'96V': { avatar: false, src: connectionImg96V},
+			'50V': { avatar: false, src: connectionImg50V},
+			'70V': { avatar: false, src: connectionImg70V},
 			'69V61': { avatar: false, src: connectionImg69V61},
 			'89V61': { avatar: false, src: connectionImg89V61},
 			'98V61': { avatar: false, src: connectionImg98V61},
 			'96V61': { avatar: false, src: connectionImg96V61},
+			'70V61': { avatar: false, src: connectionImg70V61},
+			'50V61': { avatar: false, src: connectionImg50V61},
+			'105V61': { avatar: false, src: connectionImg05V61},
+			'107V61': { avatar: false, src: connectionImg07V61},
 		}[value] || { avatar: false, src: connectionImg12});
-
-
-
 
 
 const size12 = {
@@ -145,7 +154,6 @@ const airCoolerLocationValue = {
 	image: '5',
 	description: 'воздушный клапан сверху слева и справа (х2)'
 };
-
 
 
 //Типы подключений радиаторов RRN:
@@ -511,7 +519,7 @@ export const connectionTypeRRVData = [
 		text: '89 - вентиль сверху',
 		connectionSize: [size12, size84],
 		airCoolerLocation: airCoolerLocationValue1,
-		image: null,
+		image: getConnectionTypeImage('89V'),
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
@@ -525,30 +533,12 @@ export const connectionTypeRRVData = [
 	{
 		name: 'connectionType',
 		dataPrice: 0,
-		dataDescription: 'снизу справа, вентиль справа',
-		value: '89',
-		text: '89 - вентиль снизу',
-		connectionSize: [size12, size84],
-		airCoolerLocation: airCoolerLocationValue,
-		image: null,
-		valveTypeData: {
-			valveExistence: true,
-			model: "RRV",
-			value: '61',
-			price: 179.34,
-			description: 'со встроенным вентилем внизу',
-			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
-		}
-	},
-	{
-		name: 'connectionType',
-		dataPrice: 0,
 		dataDescription: 'снизу слева, вентиль слева',
 		value: '69',
 		text: '69 - вентиль сверху',
 		connectionSize: [size12, size84],
 		airCoolerLocation: airCoolerLocationValue3,
-		image: null,
+		image: getConnectionTypeImage('69V'),
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
@@ -560,31 +550,13 @@ export const connectionTypeRRVData = [
 	},
 	{
 		name: 'connectionType',
-		dataPrice: 0,
-		dataDescription: 'снизу слева, вентиль слева',
-		value: '69',
-		text: '69 - вентиль снизу',
-		connectionSize: [size12, size84],
-		airCoolerLocation: airCoolerLocationValue,
-		image: null,
-		valveTypeData: {
-			valveExistence: true,
-			model: "RRV",
-			value: '61',
-			price: 179.34,
-			description: 'со встроенным вентилем внизу',
-			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
-		}
-	},
-	{
-		name: 'connectionType',
 		dataPrice: 59.03,
 		dataDescription: 'снизу по центру, вентиль справа',
 		value: '96',
 		text: '96 - вентиль сверху',
 		connectionSize: [size12, size84],
 		airCoolerLocation: airCoolerLocationValue1,
-		image: null,
+		image: getConnectionTypeImage('96V'),
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
@@ -602,7 +574,7 @@ export const connectionTypeRRVData = [
 		text: '98 - вентиль сверху',
 		connectionSize: [size12, size84],
 		airCoolerLocation: airCoolerLocationValue3,
-		image: null,
+		image: getConnectionTypeImage('98V'),
 		valveTypeData: {
 			valveExistence: true,
 			model: "RRV",
@@ -610,6 +582,186 @@ export const connectionTypeRRVData = [
 			price: 127.62,
 			description: 'со встроенным вентилем вверху',
 			text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
+		}
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 0,
+		dataDescription: 'снизу справа, вентиль справа',
+		value: '89',
+		text: '89 - вентиль снизу',
+		connectionSize: [size12, size84],
+		airCoolerLocation: airCoolerLocationValue,
+		image: getConnectionTypeImage('89V61'),
+		valveTypeData: {
+			valveExistence: true,
+			model: "RRV",
+			value: '61',
+			price: 179.34,
+			description: 'со встроенным вентилем внизу',
+			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+		}
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 0,
+		dataDescription: 'снизу слева, вентиль слева',
+		value: '69',
+		text: '69 - вентиль снизу',
+		connectionSize: [size12, size84],
+		airCoolerLocation: airCoolerLocationValue,
+		image: getConnectionTypeImage('69V61'),
+		valveTypeData: {
+			valveExistence: true,
+			model: "RRV",
+			value: '61',
+			price: 179.34,
+			description: 'со встроенным вентилем внизу',
+			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+		}
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 59.03,
+		dataDescription: 'снизу по центру, вентиль справа',
+		value: '96',
+		text: '96 - вентиль снизу',
+		connectionSize: [size12, size84],
+		airCoolerLocation: airCoolerLocationValue1,
+		image: getConnectionTypeImage('96V61'),
+		valveTypeData: {
+			valveExistence: true,
+			model: "RRV",
+			value: '61',
+			price: 179.34,
+			description: 'со встроенным вентилем внизу',
+			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+		}
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 59.03,
+		dataDescription: 'снизу по центру, вентиль слева',
+		value: '98',
+		text: '98 - вентиль снизу',
+		connectionSize: [size12, size84],
+		airCoolerLocation: airCoolerLocationValue3,
+		image: getConnectionTypeImage('98V61'),
+		valveTypeData: {
+			valveExistence: true,
+			model: "RRV",
+			value: '61',
+			price: 179.34,
+			description: 'со встроенным вентилем внизу',
+			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+		}
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 0,
+		dataDescription: 'сверху справа (вентиль справа)',
+		value: '70',
+		text: '70 - вентиль сверху',
+		connectionSize: [size12, size84],
+		airCoolerLocation: airCoolerLocationValue1,
+		image: getConnectionTypeImage('70V'),
+		valveTypeData: {
+			valveExistence: true,
+			model: "RRV",
+			value: '31',
+			price: 127.62,
+			description: 'со встроенным вентилем вверху',
+			text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
+		},
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 0,
+		dataDescription: 'сверху слева, вентиль слева',
+		value: '50',
+		text: '50 - вентиль сверху',
+		connectionSize: [size12, size84],
+		airCoolerLocation: airCoolerLocationValue3,
+		image: getConnectionTypeImage('50V'),
+		valveTypeData: {
+			valveExistence: true,
+			model: "RRV",
+			value: '31',
+			price: 127.62,
+			description: 'со встроенным вентилем вверху',
+			text: "Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)",
+		}
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 0,
+		dataDescription: 'сверху справа, вентиль справа',
+		value: '70',
+		text: '70 - вентиль снизу',
+		connectionSize: [size12, size84],
+		airCoolerLocation: airCoolerLocationValue,
+		image: getConnectionTypeImage('70V61'),
+		valveTypeData: {
+			valveExistence: true,
+			model: "RRV",
+			value: '61',
+			price: 179.34,
+			description: 'со встроенным вентилем внизу',
+			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+		}
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 0,
+		dataDescription: 'сверху слева, вентиль слева',
+		value: '50',
+		text: '50 - вентиль снизу',
+		connectionSize: [size12, size84],
+		airCoolerLocation: airCoolerLocationValue,
+		image: getConnectionTypeImage('50V61'),
+		valveTypeData: {
+			valveExistence: true,
+			model: "RRV",
+			value: '61',
+			price: 179.34,
+			description: 'со встроенным вентилем внизу',
+			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+		}
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 59.03,
+		dataDescription: 'сверху по центру, вентиль справа',
+		value: '05',
+		text: '05 - вентиль снизу',
+		connectionSize: [size12, size84],
+		airCoolerLocation: airCoolerLocationValue,
+		image: getConnectionTypeImage('105V61'),
+		valveTypeData: {
+			valveExistence: true,
+			model: "RRV",
+			value: '61',
+			price: 179.34,
+			description: 'со встроенным вентилем внизу',
+			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
+		}
+	},
+	{
+		name: 'connectionType',
+		dataPrice: 59.03,
+		dataDescription: 'сверху по центру, вентиль слева',
+		value: '07',
+		text: '07 - вентиль снизу',
+		connectionSize: [size12, size84],
+		airCoolerLocation: airCoolerLocationValue,
+		image: getConnectionTypeImage('107V61'),
+		valveTypeData: {
+			valveExistence: true,
+			model: "RRV",
+			value: '61',
+			price: 179.34,
+			description: 'со встроенным вентилем внизу',
+			text: "Стандарнтный вентиль с подключением сбоку внизу (M30x1,5)",
 		}
 	},
 ];
