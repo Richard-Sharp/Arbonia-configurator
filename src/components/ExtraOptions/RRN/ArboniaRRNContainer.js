@@ -37,7 +37,8 @@ class ArboniaRRNContainer extends React.Component {
 		this.setConnectionTypeDefault(this.props.extraOptionRRNDisplay[0]);
 		this.setConnectionSizeDefault(this.props.extraOptionRRNDisplay[0].connectionSize[0]);
 		this.setAirCoolerLocationDefault(this.props.extraOptionRRNDisplay[0].airCoolerLocation);
-	}
+		this.props.setConnectionTypeOptions([]);
+	};
 
 	setConnectionTypesData = (e, {options, value}) => {
 		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;

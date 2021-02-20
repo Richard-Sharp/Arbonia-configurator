@@ -15,29 +15,30 @@ import ArboniaRRV from "./ArboniaRRV";
 class ArboniaRRVContainer extends React.PureComponent {
 
 	setConnectionTypeDefault = (option) => {
-		const {value, dataPrice, dataDescription} = option;
-		this.props.setConnectionType(value, +dataPrice, dataDescription);
-	}
+		const {dataValue, dataPrice, dataDescription} = option;
+		this.props.setConnectionType(dataValue, +dataPrice, dataDescription);
+	};
 	setConnectionSizeDefault = (option) => {
 		const {value, price, description} = option;
 		this.props.setConnectionSize(value, +price, description);
-	}
+	};
 
 	setAirCoolerLocationDefault = (option) => {
 		const {value, image, description} = option;
 		this.props.setAirCoolerLocation(value, image, description);
-	}
+	};
 
 	componentWillMount() {
 		this.props.setValveType(true, 31, 127.62, 'RRV', 'со встроенным вентилем ', 'Стандарнтный вентиль с подключением сбоку вверху (M30x1,5)');
-	}
+	};
 
 	componentDidMount() {
 		this.props.setConnectionSizeOptions(this.props.extraOptionRRVDisplay[0].connectionSize);
 		this.setConnectionTypeDefault(this.props.extraOptionRRVDisplay[0]);
 		this.setConnectionSizeDefault(this.props.extraOptionRRVDisplay[0].connectionSize[0]);
 		this.setAirCoolerLocationDefault(this.props.extraOptionRRVDisplay[0].airCoolerLocation);
-	}
+		this.props.setConnectionTypeOptions([]);
+	};
 
 	setConnectionTypesData = (e, {options, value}) => {
 		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
@@ -84,7 +85,7 @@ class ArboniaRRVContainer extends React.PureComponent {
 						alert('some error')
 				)
 		}
-	}
+	};
 
 	render() {
 
@@ -107,7 +108,7 @@ let mapState = (state) => ({
 	extraOptionRRVDisplay: state.extraOptions.extraOptionRRVDisplay,
 	connectionSizeOptions: state.extraOptions.connectionSizeOptions,
 	connectionTypeOptions: state.extraOptions.connectionTypeOptions,
-})
+});
 
 export default connect(mapState, {
 	setValveType,
