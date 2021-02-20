@@ -42,12 +42,72 @@ import airCooler1 from '../../images/airLocation/airLocation-1.png';
 import airCooler3 from '../../images/airLocation/airLocation-3.png';
 import airCooler0 from '../../images/airLocation/airLocation-0.png';
 import airCooler5 from '../../images/airLocation/airLocation-5.png';
+import sizes12 from '../../images/sizes/Sizes12.png';
+import sizes67 from '../../images/sizes/Sizes67.png';
+import sizes57 from '../../images/sizes/Sizes57.png';
+import sizes68 from '../../images/sizes/Sizes68.png';
+import sizes69 from '../../images/sizes/Sizes69.png';
+import sizes69V from '../../images/sizes/Sizes69V.png';
+import sizes69V61 from '../../images/sizes/Sizes69V-61.png';
+import sizes99 from '../../images/sizes/Sizes99.png';
+import sizes99V from '../../images/sizes/Sizes99V.png';
+import sizes99V61 from '../../images/sizes/Sizes99V-61.png';
+import sizes50 from '../../images/sizes/Sizes50.png';
+import sizes50V from '../../images/sizes/Sizes50V.png';
+import sizes50V61 from '../../images/sizes/Sizes50V-61.png';
+import sizes07 from '../../images/sizes/Sizes07.png';
+import sizes07V61 from '../../images/sizes/Sizes07V-61.png';
 
 
 
 
 
 const getConnectionTypeImage = (value) => (
+		{
+			'12': { avatar: false, src: connectionImg12},
+			'34': { avatar: false, src: connectionImg34},
+			'14': { avatar: false, src: connectionImg14},
+			'32': { avatar: false, src: connectionImg32},
+			'24': { avatar: false, src: connectionImg24},
+			'42': { avatar: false, src: connectionImg42},
+			'13': { avatar: false, src: connectionImg13},
+			'31': { avatar: false, src: connectionImg31},
+			'23': { avatar: false, src: connectionImg23},
+			'41': { avatar: false, src: connectionImg41},
+			'68': { avatar: false, src: connectionImg68},
+			'86': { avatar: false, src: connectionImg86},
+			'58': { avatar: false, src: connectionImg58},
+			'76': { avatar: false, src: connectionImg76},
+			'69': { avatar: false, src: connectionImg69},
+			'89': { avatar: false, src: connectionImg89},
+			'50': { avatar: false, src: connectionImg50},
+			'70': { avatar: false, src: connectionImg70},
+			'67': { avatar: false, src: connectionImg67},
+			'85': { avatar: false, src: connectionImg85},
+			'57': { avatar: false, src: connectionImg57},
+			'75': { avatar: false, src: connectionImg75},
+			'96': { avatar: false, src: connectionImg96},
+			'98': { avatar: false, src: connectionImg98},
+			'107': { avatar: false, src: connectionImg07},
+			'105': { avatar: false, src: connectionImg05},
+			'69V': { avatar: false, src: connectionImg69V},
+			'89V': { avatar: false, src: connectionImg89V},
+			'98V': { avatar: false, src: connectionImg98V},
+			'96V': { avatar: false, src: connectionImg96V},
+			'50V': { avatar: false, src: connectionImg50V},
+			'70V': { avatar: false, src: connectionImg70V},
+			'69V61': { avatar: false, src: connectionImg69V61},
+			'89V61': { avatar: false, src: connectionImg89V61},
+			'98V61': { avatar: false, src: connectionImg98V61},
+			'96V61': { avatar: false, src: connectionImg96V61},
+			'70V61': { avatar: false, src: connectionImg70V61},
+			'50V61': { avatar: false, src: connectionImg50V61},
+			'105V61': { avatar: false, src: connectionImg05V61},
+			'107V61': { avatar: false, src: connectionImg07V61},
+		}[value] || { avatar: false, src: connectionImg12});
+
+
+const getSizeImage = (value) => (
 		{
 			'12': { avatar: false, src: connectionImg12},
 			'34': { avatar: false, src: connectionImg34},
