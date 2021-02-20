@@ -1,7 +1,9 @@
 import {
 	connectionTypeRRNData,
-	connectionTypeRRVData,
+	connectionTypeRRVData, getSizeImage,
 } from "../../DataBase/ExtraOptionsData/ExtraOptionsData";
+import {setRadiatorsHeightSuccess} from "./MainParamsReducer";
+import {getMainParamsHeightData} from "../../DataBase/MainParamsData/MainParamsData";
 
 const SET_CONNECTION_TYPE = 'ExtraOptions/SET_CONNECTION_TYPE';
 const SET_CONNECTION_SIZE = 'ExtraOptions/SET_CONNECTION_SIZE';
@@ -13,6 +15,7 @@ const SET_DRAIN = 'ExtraOptions/SET_DRAIN';
 const SET_VALVE_TYPE = 'ExtraOptions/SET_VALVE_TYPE';
 const SET_CONNECTION_SIZE_OPTIONS = 'ExtraOptions/SET_CONNECTION_SIZE_OPTIONS';
 const SET_CONNECTION_TYPE_OPTIONS = 'ExtraOptions/SET_CONNECTION_TYPE_OPTIONS';
+const SET_SIZES_IMAGE = 'ExtraOptions/SET_SIZES_IMAGE';
 
 let initialState = {
 	valve: {
@@ -67,7 +70,8 @@ let initialState = {
 			defaultChecked: true
 		}
 	],
-	connectionTypeOptions: []
+	connectionTypeOptions: [],
+	sizesImage: null,
 
 };
 
@@ -130,6 +134,11 @@ export const ExtraOptionsReducer = (state = initialState, action) => {
 				...state,
 				connectionTypeOptions: action.options
 			};
+			case SET_SIZES_IMAGE:
+			return {
+				...state,
+				sizesImage: action.image
+			};
 
 		default:
 			return state;
@@ -168,6 +177,16 @@ export const setDrain = (code, price = 0) => ({type: SET_DRAIN, payload: {code: 
 export const setConnectionSizeOptions = (options) => ({type: SET_CONNECTION_SIZE_OPTIONS, options});
 
 export const setConnectionTypeOptions = (options) => ({type: SET_CONNECTION_TYPE_OPTIONS, options});
+
+const setSizeImageSuccess = (image) => ({type: SET_SIZES_IMAGE, image});
+
+
+//Thunk creators:
+//Устанавливаем изображение с размерами в зависимости от типа подключения:
+export const setSizeImage = (value) => async (dispatch) => {
+	let image = await getSizeImage(value); // - получаем изображение по значение value
+	dispatch(setSizeImageSuccess(image));
+};
 
 
 export default ExtraOptionsReducer;
