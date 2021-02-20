@@ -1,6 +1,6 @@
 import {
 	connectionTypeRRNData,
-	connectionTypeRRVData, getSizeImage,
+	connectionTypeRRVData, getSizesImage,
 } from "../../DataBase/ExtraOptionsData/ExtraOptionsData";
 import {setRadiatorsHeightSuccess} from "./MainParamsReducer";
 import {getMainParamsHeightData} from "../../DataBase/MainParamsData/MainParamsData";
@@ -178,14 +178,14 @@ export const setConnectionSizeOptions = (options) => ({type: SET_CONNECTION_SIZE
 
 export const setConnectionTypeOptions = (options) => ({type: SET_CONNECTION_TYPE_OPTIONS, options});
 
-const setSizeImageSuccess = (image) => ({type: SET_SIZES_IMAGE, image});
+const setSizesImageSuccess = (image) => ({type: SET_SIZES_IMAGE, image});
 
 
 //Thunk creators:
 //Устанавливаем изображение с размерами в зависимости от типа подключения:
-export const setSizeImage = (value) => async (dispatch) => {
-	let image = await getSizeImage(value); // - получаем изображение по значение value
-	dispatch(setSizeImageSuccess(image));
+export const setSizesImage = (value) => async (dispatch) => {
+	let image = await getSizesImage(value); // - получаем изображение по значение value
+	dispatch(setSizesImageSuccess(image));
 };
 
 

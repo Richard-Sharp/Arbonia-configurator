@@ -107,7 +107,7 @@ const getConnectionTypeImage = (value) => (
 		}[value] || { avatar: false, src: connectionImg12});
 
 
-export const getSizeImage = (value) => (
+export const getSizesImage = (value) => (
 		{
 			'12': sizes12,
 			'34': sizes12,

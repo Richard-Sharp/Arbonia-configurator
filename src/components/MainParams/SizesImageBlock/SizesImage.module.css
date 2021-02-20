@@ -1,0 +1,19 @@
+.container {
+    width: 450px;
+    height: 350px;
+    display: flex;
+    align-items: left;
+    padding: 10px;
+
+}
+.wrap_image {
+    display: flex;
+    /*align-items: center;*/
+    width: 433px;
+    height: 266px;
+}
+
+/*.wrap_image image {*/
+    /*width: 162px;*/
+    /*height: 100px;*/
+/*}*/

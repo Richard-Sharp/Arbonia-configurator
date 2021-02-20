@@ -7,7 +7,7 @@ import {
 	setAirCoolerLocation,
 	setAirCoolerSize,
 	setPressure,
-	setDrain, setValveType, setConnectionSizeOptions, setConnectionTypeOptions
+	setDrain, setValveType, setConnectionSizeOptions, setConnectionTypeOptions, setSizesImage
 } from "../../../Redux/Reducers/ExtraOptionsReducer";
 import {connect} from "react-redux";
 
@@ -38,6 +38,7 @@ class ArboniaRRNContainer extends React.Component {
 		this.setConnectionSizeDefault(this.props.extraOptionRRNDisplay[0].connectionSize[0]);
 		this.setAirCoolerLocationDefault(this.props.extraOptionRRNDisplay[0].airCoolerLocation);
 		this.props.setConnectionTypeOptions([]);
+		this.props.setSizesImage(this.props.extraOptionRRNDisplay[0].value);
 	};
 
 	setConnectionTypesData = (e, {options, value}) => {
@@ -49,6 +50,7 @@ class ArboniaRRNContainer extends React.Component {
 		this.props.setConnectionType(value, +price, text);
 		setConnectionSizeOptions(connectionSize);
 		setAirCoolerLocation(airCoolerLocation.value, airCoolerLocation.image, airCoolerLocation.description);
+		this.props.setSizesImage(value);
 		console.log('connectionTypeOptions', this.props.connectionTypeOptions);
 	};
 
@@ -114,5 +116,6 @@ export default connect(mapState, {
 	setPressure,
 	setDrain,
 	setConnectionSizeOptions,
-	setConnectionTypeOptions
+	setConnectionTypeOptions,
+	setSizesImage
 })(ArboniaRRNContainer);

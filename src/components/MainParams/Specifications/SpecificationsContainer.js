@@ -34,7 +34,8 @@ let mapState = (state) => ({
 	quantitySections: state.mainParams.quantitySections,
 	totalLenght: state.mainParams.totalLenght,
 	totalPower: state.mainParams.totalPower,
-	specifications: state.mainParams.specifications
+	specifications: state.mainParams.specifications,
+	sizesImage: state.extraOptions.sizesImage,
 })
 
 export default connect(mapState, {setSpecificationsData, setTotalPower})(SpecificationsContainer);
