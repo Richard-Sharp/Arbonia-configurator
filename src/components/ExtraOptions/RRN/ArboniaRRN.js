@@ -53,26 +53,28 @@ const ArboniaRRN = (props) => {
 				{props.connectionTypeOptions.image &&
 				<div className={style.connection_img}>
 					<img src={image.src} alt="тип подключения"/>
+					<div>
+						<p>[7] Диаметр подключения:</p>
+						{props.connectionSizeOptions.map(el => {
+							return <>
+								<input onChange={(e) => {props.setExtraOptions(e)}}
+											 data-price={el.price} defaultChecked={el.defaultChecked}
+											 data-description={el.description}
+											 name={el.name} type="radio" value={el.value}/>{el.text}
+							</>
+						})}
+					</div>
 				</div>}
 
 				{props.connectionTypeOptions.image &&
 				<div className={style.cooler_img}>
 					<p>[9] Расположение развоздушника:</p>
 					<img src={props.airCoolerLocation.image} alt={props.airCoolerLocation.description}/>
+					<div>
+						{props.airCoolerLocation.description}
+					</div>
 				</div>}
 			</div>
-		</div>
-
-		<div>
-			<p>[7] Диаметр подключения:</p>
-				{props.connectionSizeOptions.map(el => {
-					return <>
-						<input onChange={(e) => {props.setExtraOptions(e)}}
-									 data-price={el.price} defaultChecked={el.defaultChecked}
-									 data-description={el.description}
-									 name={el.name} type="radio" value={el.value}/>{el.text}
-					</>
-				})}
 		</div>
 
 		<div>
@@ -92,16 +94,6 @@ const ArboniaRRN = (props) => {
 				}} data-price="0"
 							 name="airСooler" type="radio" value="3"/>Без выпуска воздуха (!при крайней необходимости);
 			</div>
-		</div>
-
-		<div>
-			<p>[9] Расположение развоздушника:</p>
-				<div className={style.cooler_img}>
-					<img src={props.airCoolerLocation.image} alt={props.airCoolerLocation.description}/>
-				</div>
-				<div>
-					{props.airCoolerLocation.description}
-				</div>
 		</div>
 
 		<div>

@@ -43,10 +43,10 @@ class ArboniaRRVContainer extends React.PureComponent {
 		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
 		let data = options.filter(el => el.value === value);
 		console.log(data[0]);
-		const {price, text, connectionSize, airCoolerLocation} = data[0];
+		const {price, text, dataValue, connectionSize, airCoolerLocation} = data[0];
 		const {valveExistence, valveValue, valvePrice, model, valveDescription, valveText} = data[0].valveTypeData;
 		this.props.setConnectionTypeOptions(data[0]);
-		this.props.setConnectionType(value, +price, text);
+		this.props.setConnectionType(dataValue, +price, text);
 		setConnectionSizeOptions(connectionSize);
 		setAirCoolerLocation(airCoolerLocation.value, airCoolerLocation.image, airCoolerLocation.description);
 		this.props.setValveType(valveExistence, valveValue, +valvePrice, model, valveDescription, valveText);
