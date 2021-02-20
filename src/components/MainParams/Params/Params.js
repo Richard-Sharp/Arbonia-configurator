@@ -25,7 +25,7 @@ const Params = (props) => {
 
 	return (
 			<div className={style.container}>
-				<h5>Основные параметры прибора</h5>
+				<h3>Основные параметры прибора</h3>
 				<div className={style.height}>
 					<p>Высота прибора:</p>
 					<select name="height" id="heightParam"
@@ -33,11 +33,10 @@ const Params = (props) => {
 									onChange={(e) => {
 										onChangeParamHeight(e)
 									}}>
-						<option value="0" selected disabled>Выберите высоту:</option>
+						<option value="0" selected disabled>Выберите высоту...</option>
 						{props.heightParamsDisplay.map(height => {
 							return <option key={height.value} value={height.value}>{height.description} мм</option>
 						})}
-						{/*<option value="030" >300 мм</option>*/}
 					</select>
 				</div>
 

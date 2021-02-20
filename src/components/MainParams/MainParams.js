@@ -4,17 +4,19 @@ import SpecificationsContainer from "./Specifications/SpecificationsContainer";
 import ParamsContainer from "./Params/ParamsContainer";
 import SizesImage from "./SizesImageBlock/SizesImage";
 
-
-
-
-
-
 const MainParams = () => {
 	return (
 			<div className = {style.main}>
-				<ParamsContainer />
-				<SpecificationsContainer />
-				<SizesImage/>
+				<div className = {style.header}>
+					<strong>Стандартные трубчатые радиаторы</strong>
+				</div>
+
+				<div className = {style.container}>
+					<ParamsContainer />
+					<SpecificationsContainer />
+					<SizesImage/>
+				</div>
+
 			</div>
 	);
 }
