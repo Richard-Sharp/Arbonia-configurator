@@ -6,7 +6,7 @@ import SizesImage from '../SizesImageBlock/SizesImage'
 
 //Компонент для настройки безвентильного исполнения:
 const ArboniaRRN = (props) => {
-	let drain = React.createRef();
+	const drain = React.createRef();
 
 	const onChangeDrain = () => {
 		let d;
@@ -20,9 +20,7 @@ const ArboniaRRN = (props) => {
 		}
 		props.setDrain(d, price);
 	};
-
 	const {image} = props.connectionTypeOptions;
-
 
 	return <div className={style.container}>
 

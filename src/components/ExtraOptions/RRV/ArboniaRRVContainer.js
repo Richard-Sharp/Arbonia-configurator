@@ -42,7 +42,7 @@ class ArboniaRRVContainer extends React.PureComponent {
 		this.setConnectionSizeDefault(this.props.extraOptionRRVDisplay[0].connectionSize[0]);
 		this.setAirCoolerLocationDefault(this.props.extraOptionRRVDisplay[0].airCoolerLocation);
 		this.props.setConnectionTypeOptions([]);
-		this.props.setSizesImage(this.props.extraOptionRRVDisplay[0].value);
+		// this.props.setSizesImage(this.props.extraOptionRRVDisplay[0].value);
 	};
 
 	setConnectionTypesData = (e, {options, value}) => {
@@ -114,6 +114,7 @@ let mapState = (state) => ({
 	extraOptionRRVDisplay: state.extraOptions.extraOptionRRVDisplay,
 	connectionSizeOptions: state.extraOptions.connectionSizeOptions,
 	connectionTypeOptions: state.extraOptions.connectionTypeOptions,
+	sizesImage: state.extraOptions.sizesImage,
 });
 
 export default connect(mapState, {
