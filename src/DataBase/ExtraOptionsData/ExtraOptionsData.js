@@ -157,7 +157,7 @@ const size12 = {
 	price: 0,
 	description: '1/2" внутренняя резьба',
 	name: 'connectionSize',
-	text: '1/2" - ВР; ',
+	text: ' 1/2" - Внутренняя резьба; ',
 	defaultChecked: true
 };
 
@@ -166,7 +166,7 @@ const size34 = {
 	price: 0,
 	description: '3/4" внутренняя резьба',
 	name: 'connectionSize',
-	text: '3/4" - ВР; ',
+	text: ' 3/4" - Внутренняя резьба; ',
 };
 
 const size38 = {
@@ -174,14 +174,14 @@ const size38 = {
 	price: 0,
 	description: '3/8" внутренняя резьба',
 	name: 'connectionSize',
-	text: '3/8" - ВР; ',
+	text: ' 3/8" - Внутренняя резьба; ',
 };
 const size10 = {
 	value: 10,
 	price: 0,
 	description: '1" внутренняя резьба',
 	name: 'connectionSize',
-	text: '1" - ВР; ',
+	text: '  1" - Внутренняя резьба; ',
 };
 
 const size84 = {
@@ -189,7 +189,7 @@ const size84 = {
 	price: 9.56,
 	description: '3/4" наружная резьба',
 	name: 'connectionSize',
-	text: '3/4" - НР; '
+	text: ' 3/4" - Наружная резьба; '
 };
 
 const airCoolerLocationValue1 = {
