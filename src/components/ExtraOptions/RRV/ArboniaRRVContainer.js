@@ -10,7 +10,7 @@ import {
 	setValveType,
 	setConnectionSizeOptions,
 	setConnectionTypeOptions,
-	setSizesImage
+	setSizesImage, setSizesImageSuccess
 } from "../../../Redux/Reducers/ExtraOptionsReducer";
 import {connect} from "react-redux";
 import ArboniaRRV from "./ArboniaRRV";
@@ -43,6 +43,7 @@ class ArboniaRRVContainer extends React.PureComponent {
 		this.setAirCoolerLocationDefault(this.props.extraOptionRRVDisplay[0].airCoolerLocation);
 		this.props.setConnectionTypeOptions([]);
 		// this.props.setSizesImage(this.props.extraOptionRRVDisplay[0].value);
+		this.props.setSizesImageSuccess(null);
 	};
 
 	setConnectionTypesData = (e, {options, value}) => {
@@ -57,7 +58,7 @@ class ArboniaRRVContainer extends React.PureComponent {
 		setAirCoolerLocation(airCoolerLocation.value, airCoolerLocation.image, airCoolerLocation.description);
 		this.props.setValveType(valveExistence, valveValue, +valvePrice, model, valveDescription, valveText);
 		this.props.setSizesImage(value);
-		console.log('connectionTypeOptions', this.props.connectionTypeOptions);
+		console.log('setSizesImage', value);
 	};
 
 
@@ -128,5 +129,6 @@ export default connect(mapState, {
 	setDrain,
 	setConnectionSizeOptions,
 	setConnectionTypeOptions,
-	setSizesImage
+	setSizesImage,
+	setSizesImageSuccess,
 })(ArboniaRRVContainer);

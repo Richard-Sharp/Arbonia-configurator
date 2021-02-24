@@ -178,7 +178,7 @@ export const setConnectionSizeOptions = (options) => ({type: SET_CONNECTION_SIZE
 
 export const setConnectionTypeOptions = (options) => ({type: SET_CONNECTION_TYPE_OPTIONS, options});
 
-const setSizesImageSuccess = (image) => ({type: SET_SIZES_IMAGE, image});
+export const setSizesImageSuccess = (image) => ({type: SET_SIZES_IMAGE, image});
 
 
 //Thunk creators:
