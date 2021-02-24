@@ -14,7 +14,7 @@ const MainParams = () => {
 				<div className = {style.container}>
 					<ParamsContainer />
 					<SpecificationsContainer />
-					<SizesImage/>
+					{/*<SizesImage/>*/}
 				</div>
 
 			</div>

@@ -1,5 +1,5 @@
 .container {
-    min-width: 490px;
+    min-width: 450px;
     height: 400px;
     padding: 10px;
     display: flex;
@@ -98,8 +98,8 @@
 }
 
 .radio_btn label img{
-    width: 72px;
-    height: 100px;
+    width: 65px;
+    height: 91px;
     cursor: pointer;
     user-select: none;
 }

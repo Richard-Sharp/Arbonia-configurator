@@ -2,15 +2,17 @@
     width: 450px;
     height: 350px;
     display: flex;
-    align-items: left;
+    /*align-items: ;*/
+    justify-content: center;
     padding: 10px;
 
 }
 .wrap_image {
     display: flex;
-    /*align-items: center;*/
-    width: 433px;
-    height: 266px;
+    width: 430px;
+    height: 270px;
+
+
 }
 
 /*.wrap_image image {*/
