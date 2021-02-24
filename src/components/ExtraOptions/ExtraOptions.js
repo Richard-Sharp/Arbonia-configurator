@@ -10,6 +10,7 @@ import ArboniaRRVContainer from "./RRV/ArboniaRRVContainer";
 const ExtraOptions = (props) => {
 	return <div className={style.container}>
 		<h3>Исполнение (наличие встроенного вентиля):</h3>
+
 		<div className={style.sideBar}>
 			<span className={style.button}>
           <NavLink to="/withoutVentil" activeClassName={style.active}>RRN</NavLink></span>

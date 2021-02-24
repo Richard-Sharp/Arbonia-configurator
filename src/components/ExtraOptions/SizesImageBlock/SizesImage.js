@@ -6,7 +6,7 @@ import {setSizesImage} from "../../../Redux/Reducers/ExtraOptionsReducer";
 
 class SizesImageContainer extends React.Component {
 	componentDidMount() {
-		this.props.setSizesImage(12);
+		// this.props.setSizesImage(12);
 	}
 	componentDidUpdate(prevProps) {
 		//Формирование кода модели прибора:

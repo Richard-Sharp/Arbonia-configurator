@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Main.module.css';
 import SpecificationsContainer from "./Specifications/SpecificationsContainer";
 import ParamsContainer from "./Params/ParamsContainer";
-import SizesImage from "./SizesImageBlock/SizesImage";
+
 
 const MainParams = () => {
 	return (
@@ -14,7 +14,6 @@ const MainParams = () => {
 				<div className = {style.container}>
 					<ParamsContainer />
 					<SpecificationsContainer />
-					{/*<SizesImage/>*/}
 				</div>
 
 			</div>

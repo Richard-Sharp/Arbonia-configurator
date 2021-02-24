@@ -1,11 +1,119 @@
 .container {
     width: 1200px;
-    border: black 1px solid;
+    border: 1px solid rgba(109, 110, 112, .5);
     text-align: center;
     margin: 0 auto;
-    padding-bottom: 20px;
+    padding: 20px 10px 20px 10px;
+    color: #6d6e70;
 }
 
+.main {
+display: flex;
+}
+
+
+.connection_image_block {
+
+}
+
+.connection_block {
+    width: 400px;
+    height: 430px;
+    padding: 15px;
+}
+.connection_block p {
+    font-weight: bold;
+}
+
+.dropdown {
+    margin-bottom: 20px;
+}
+.connection_wrapper {
+
+}
+
+.connection_img {
+    display: flex;
+    align-items: left;
+    /*padding: 20px;*/
+}
+/*base size: 600x450 px*/
+.connection_img img{
+    width: 240px;
+    height: 180px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.connection_size_block {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 5px;
+}
+.air_location_wrapper {
+    height: 430px;
+    width: 250px;
+}
+
+.air_location_wrapper p {
+    font-weight: bold;
+}
+
+.air_location_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+/*base size: 800x600 px*/
+.cooler_img img{
+    width: 200px;
+    height: 150px;
+}
+.cooler_img {
+    display: flex;
+    align-items: left;
+    padding: 20px;
+}
+
+.size_image_wrapper{
+    width: 550px;
+    height: 430px;
+    display: flex;
+    align-items: center;
+}
+
+
+.additional {
+    display: none;
+}
+.aircooler_block {
+    border: 1px solid green;
+}
+.air_conection_block {
+    border: 1px solid green;
+}
+.drain_block {
+    border: 1px solid green;
+}
+.pressure_block {
+    border: 1px solid green;
+}
+
+.item {
+    height: 100px;
+    width: 150px;
+}
+
+
+
+
+
+
+
+
+/*//////////////////////////*/
 .select {
     position: relative;
     display: inline-block;
@@ -46,37 +154,4 @@
 
 .show {
     display:block;
-}
-
-
-.item {
-    height: 100px;
-    width: 150px;
-}
-
-.test_div {
-    width: 400px;
-
-    padding: 15px;
-}
-
-.connection_img {
-    display: flex;
-    align-items: left;
-    padding: 20px;
-}
-/*base size: 600x450 px*/
-.connection_img img{
-    width: 240px;
-    height: 180px;
-}
-/*base size: 800x600 px*/
-.cooler_img img{
-    width: 200px;
-    height: 150px;
-}
-.cooler_img {
-    display: flex;
-    align-items: left;
-    padding: 20px;
 }
