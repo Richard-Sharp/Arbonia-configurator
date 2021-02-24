@@ -38,7 +38,7 @@ class ArboniaRRNContainer extends React.Component {
 		this.setConnectionSizeDefault(this.props.extraOptionRRNDisplay[0].connectionSize[0]);
 		this.setAirCoolerLocationDefault(this.props.extraOptionRRNDisplay[0].airCoolerLocation);
 		this.props.setConnectionTypeOptions([]);
-		this.props.setSizesImage(this.props.extraOptionRRNDisplay[0].value);
+		// this.props.setSizesImage(this.props.extraOptionRRNDisplay[0].value);
 	};
 
 	setConnectionTypesData = (e, {options, value}) => {
@@ -103,6 +103,7 @@ let mapState = (state) => ({
 	extraOptionRRNDisplay: state.extraOptions.extraOptionRRNDisplay,
 	connectionSizeOptions: state.extraOptions.connectionSizeOptions,
 	connectionTypeOptions: state.extraOptions.connectionTypeOptions,
+	sizesImage: state.extraOptions.sizesImage,
 
 });
 

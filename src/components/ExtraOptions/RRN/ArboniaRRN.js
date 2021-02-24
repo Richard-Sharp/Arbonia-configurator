@@ -80,9 +80,10 @@ const ArboniaRRN = (props) => {
 				</div>}
 			</div>
 
+			{props.sizesImage &&
 			<div className={style.size_image_wrapper}>
 				<SizesImage />
-			</div>
+			</div>}
 		</div>
 
 
