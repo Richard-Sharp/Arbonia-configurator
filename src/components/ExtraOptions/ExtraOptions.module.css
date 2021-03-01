@@ -11,19 +11,21 @@
 
 .sideBar_wrapper {
     width: 100%;
-    min-height: 150px;
-    border: 1px solid black;
+    min-height: 130px;
 }
 .sideBar_wrapper h3 {
-    border-bottom: 1px solid black;
+    width: 50%;
+    border-bottom: 2px solid rgba(245, 130, 31, .9);
     padding: 10px;
+    color: #6d6e70;
+    margin: 0 auto;
 }
 
 .sideBar {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0 20px 0;
+    padding: 10px 0 10px 0;
 }
 
 .sideBar a {
@@ -54,4 +56,20 @@ a.active {
     font-weight: bold;
     background-color: rgba(245, 130, 31, .9);
     border: 2px solid rgba(245, 130, 31, .9);
+}
+
+.btn_block {
+    width: 100%;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.btn_block button {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6d6e70;
 }

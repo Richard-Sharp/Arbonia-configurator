@@ -51,7 +51,7 @@ const ExtraOptions = (props) => {
 
 		</div>
 
-		<div className="btn_block">
+		<div className={style.btn_block}>
 			<button onClick={onShowConfigurator} disabled={btnDisable}>Рассчитать</button>
 		</div>
 
