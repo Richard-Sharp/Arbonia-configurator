@@ -21,21 +21,29 @@ const ExtraOptions = (props) => {
 		} else {
 			setBtnDisable(true);
 		}
-	})
+	}, [specifications, quantitySections, connectionTypeOptions]);
 	const onShowConfigurator = () => {
 		setConfiguratorMode(1);
 	}
 
 	return <div className={style.container}>
-		<h3>Исполнение (наличие встроенного вентиля):</h3>
+		<div className={style.sideBar_wrapper}>
+			<h3>Исполнение (наличие встроенного вентиля):</h3>
 
-		<div className={style.sideBar}>
-			<span className={style.button}>
-          <NavLink to="/withoutVentil" activeClassName={style.active}>RRN</NavLink></span>
-			<span className={style.button}>
-					<NavLink to="/withVentil" activeClassName={style.active}>RRV</NavLink>
-        </span>
+			<div className={style.sideBar}>
+				<NavLink to="/withoutVentil" activeClassName={style.active}>
+					<div className={style.button}>RRN</div>
+				</NavLink>
+
+				<NavLink to="/withVentil" activeClassName={style.active}>
+					<div className={style.button}>RRV</div>
+				</NavLink>
+
+			</div>
 		</div>
+
+
+
 
 		<div>
 			<Route exact path='/withoutVentil' render={() => <ArboniaRRNContainer/>}/>
