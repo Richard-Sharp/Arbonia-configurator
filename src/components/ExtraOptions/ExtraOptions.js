@@ -14,6 +14,7 @@ const ExtraOptions = (props) => {
 
 
 	const [configuratorMode, setConfiguratorMode] = useState(0);
+	const [displayBtn, setDisplayBtn] = useState(1);
 	const [btnDisable, setBtnDisable] = useState(true);
 	useEffect(() => {
 		if (specifications.modelCode && quantitySections && connectionTypeOptions.value) {
@@ -23,7 +24,9 @@ const ExtraOptions = (props) => {
 		}
 	}, [specifications, quantitySections, connectionTypeOptions]);
 	const onShowConfigurator = () => {
+		setDisplayBtn(0);
 		setConfiguratorMode(1);
+
 	}
 
 	return <div className={style.container}>
@@ -51,9 +54,10 @@ const ExtraOptions = (props) => {
 
 		</div>
 
+		{displayBtn === 1 &&
 		<div className={style.btn_block}>
 			<button onClick={onShowConfigurator} disabled={btnDisable}>Рассчитать</button>
-		</div>
+		</div>}
 
 		{configuratorMode === 1 &&
 		<div className="configurator_block">

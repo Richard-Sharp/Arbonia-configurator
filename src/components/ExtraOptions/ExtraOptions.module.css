@@ -59,9 +59,10 @@ a.active {
 }
 
 .btn_block {
-    width: 100%;
-    border: 1px solid;
+    width: 50%;
+    /*border-top: 1px solid rgba(109, 110, 112, .5);*/
     padding: 10px;
+    margin: 10px;
 }
 
 .btn_block button {
@@ -71,5 +72,19 @@ a.active {
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #6d6e70;
+    /*color: #6d6e70;*/
+    outline: none;
 }
+
+.btn_block button:hover {
+    cursor: pointer;
+    /*border: 2px solid rgba(245, 130, 31, .9);*/
+    /*color: rgba(245, 130, 31, .9);*/
+}
+.btn_block button:focus {
+      cursor: pointer;
+      border: 2px solid rgba(245, 130, 31, .9);
+      border-radius: 10px;
+      background-color: rgba(245, 130, 31, .9);
+      color: white;
+  }
