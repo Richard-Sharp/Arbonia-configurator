@@ -48,7 +48,7 @@ const ExtraOptions = (props) => {
 
 
 
-		<div>
+		<div className={style.extra_option_block}>
 			<Route exact path='/withoutVentil' render={() => <ArboniaRRNContainer/>}/>
 			<Route exact path='/withVentil' render={() => <ArboniaRRVContainer/>}/>
 

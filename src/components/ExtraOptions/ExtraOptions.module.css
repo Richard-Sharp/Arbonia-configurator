@@ -12,6 +12,7 @@
 .sideBar_wrapper {
     width: 100%;
     min-height: 130px;
+
 }
 .sideBar_wrapper h3 {
     width: 50%;
@@ -26,6 +27,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px 0 10px 0;
+
 }
 
 .sideBar a {
@@ -56,6 +58,10 @@ a.active {
     font-weight: bold;
     background-color: rgba(245, 130, 31, .9);
     border: 2px solid rgba(245, 130, 31, .9);
+}
+
+.extra_option_block {
+    margin-bottom: 20px;
 }
 
 .btn_block {
