@@ -3,7 +3,7 @@ import './App.css';
 import Header from "./components/Header/Header";
 import MainParams from "./components/MainParams/MainParams";
 import ExtraOptions from "./components/ExtraOptions/ExtraOptions";
-import Configurator from "./components/Configurator/Configurator";
+
 
 function App() {
 	return (
@@ -11,7 +11,6 @@ function App() {
 				<Header />
 				<MainParams />
 				<ExtraOptions />
-				<Configurator />
 			</div>
 	);
 }

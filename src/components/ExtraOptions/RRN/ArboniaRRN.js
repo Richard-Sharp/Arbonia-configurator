@@ -85,9 +85,7 @@ const ArboniaRRN = (props) => {
 		</div>
 
 
-
-
-
+	{/*Дополнительные параметры настройки => в разработке*/}
 		<div className={style.additional}>
 			<div className={style.aircooler_block}>
 				<p>[8] Исполнение развоздушника:</p>
@@ -108,7 +106,7 @@ const ArboniaRRN = (props) => {
 				</div>
 			</div>
 
-			<div className={style.air_conection_block}>
+			<div className={style.air_connection_block}>
 				<p>[10] Присоединительные размеры развоздушника:</p>
 				<div>
 					<input onChange={(e) => {

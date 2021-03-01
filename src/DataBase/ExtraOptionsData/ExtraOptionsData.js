@@ -221,7 +221,7 @@ const airCoolerLocationValue = {
 export const connectionTypeRRNData = [
 	{
 		name: 'connectionType',
-		price: '0',
+		price: 0,
 		text: 'боковое слева',
 		value: '12',
 		description: '[12]',
@@ -232,7 +232,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		price: '0',
+		price: 0,
 		text: 'боковое справа',
 		value: '34',
 		description: '[34]',
@@ -242,7 +242,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		price: '0',
+		price: 0,
 		text: 'боковое диагональное слева',
 		value: '14',
 		description: '[14]',
@@ -252,7 +252,7 @@ export const connectionTypeRRNData = [
 	},
 	{
 		name: 'connectionType',
-		price: '0',
+		price: 0,
 		text: 'боковое диагональное справа',
 		value: '32',
 		description: '[32]',

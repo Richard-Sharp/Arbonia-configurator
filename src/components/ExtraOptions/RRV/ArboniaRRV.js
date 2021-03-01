@@ -108,7 +108,7 @@ const ArboniaRRV = (props) => {
 				</div>
 			</div>
 
-			<div className={style.air_conection_block}>
+			<div className={style.air_connection_block}>
 				<p>[10] Присоединительные размеры развоздушника:</p>
 				<div>
 					<input onChange={(e) => {

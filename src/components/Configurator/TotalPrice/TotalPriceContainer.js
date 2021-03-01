@@ -10,6 +10,10 @@ class TotalPriceContainer extends React.Component {
 			this.props.setTotalPrice(totalPrice);
 		}
 	}
+	componentDidMount(){
+		let totalPrice = (this.props.arboniaModelPrice * this.props.quantitySections) + this.props.valve.price + this.props.connectionType.price + this.props.connectionSize.price + this.props.airCooler.price + this.props.pressure.price + this.props.drain.price;
+		this.props.setTotalPrice(totalPrice);
+	}
 	// onChangeTotalPrice = () => {
 // 	let totalPrice = (this.props.arboniaModelPrice * this.props.quantitySections) + this.props.valve.price + this.props.connectionType.price + this.props.connectionSize.price + this.props.airCooler.price + this.props.pressure.price + this.props.drain.price;
 	// 	this.props.setTotalPrice(totalPrice);

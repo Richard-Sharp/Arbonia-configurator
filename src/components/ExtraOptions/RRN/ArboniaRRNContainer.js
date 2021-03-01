@@ -40,19 +40,21 @@ class ArboniaRRNContainer extends React.Component {
 		this.props.setConnectionTypeOptions([]);
 		// this.props.setSizesImage(this.props.extraOptionRRNDisplay[0].value);
 		this.props.setSizesImageSuccess(null);
+		console.log(this.props.totalPrice);
 	};
 
 	setConnectionTypesData = (e, {options, value}) => {
 		const {setConnectionSizeOptions, setAirCoolerLocation} = this.props;
 		let data = options.filter(el => el.value === value);
-		console.log(data[0]);
+
 		const {price, text, connectionSize, airCoolerLocation} = data[0];
 		this.props.setConnectionTypeOptions(data[0]);
 		this.props.setConnectionType(value, +price, text);
 		setConnectionSizeOptions(connectionSize);
 		setAirCoolerLocation(airCoolerLocation.value, airCoolerLocation.image, airCoolerLocation.description);
 		this.props.setSizesImage(value);
-		console.log('connectionTypeOptions', this.props.connectionTypeOptions);
+		console.log(data[0]);
+
 	};
 
 	setExtraOptions = (e) => {
@@ -105,6 +107,7 @@ let mapState = (state) => ({
 	connectionSizeOptions: state.extraOptions.connectionSizeOptions,
 	connectionTypeOptions: state.extraOptions.connectionTypeOptions,
 	sizesImage: state.extraOptions.sizesImage,
+	totalPrice: state.mainParams.totalPrice,
 
 });
 
