@@ -10,13 +10,15 @@ const CodeConfigurator = ({arboniaModel, quantitySections, valve, connectionType
 	let name = `Радиатор Arbonia ${arboniaModel}${valve.model === 'RRV' ? 'V' : ''} ${quantitySections}/${valve.code}/${connectionType.code}/${connectionSize.code}/${airCooler.code}/${airCoolerLocation.code}/${airCoolerSize.code}/${drain.code} AF`;
 
 	return <div className={style.container}>
-		<h3>Артикул прибора:</h3>
-		<div>
-			<strong>Артикул: </strong>
+
+		<div className={style.article}>
+			<p>Артикул:</p>
 			<input type="text" value={article}/>
 		</div>
-		<div>
-			<strong>Наименование: </strong><input type="text" value={name}/>
+
+		<div className={style.name}>
+			<p>Наименование: </p>
+			<input type="text" value={name}/>
 		</div>
 	</div>
 };

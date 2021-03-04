@@ -5,8 +5,8 @@ import style from './TotalPrice.module.css';
 const TotalPrice = ({totalPrice}) => {
 
 	return <div className={style.container}>
-		<h3>Цена за прибор:</h3>
-		<div>
+		<p>Цена за прибор:</p>
+		<div className={style.price}>
 			{totalPrice.toFixed(2)} EUR
 		</div>
 

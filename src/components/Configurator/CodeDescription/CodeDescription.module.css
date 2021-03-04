@@ -1,3 +1,27 @@
 .container {
-    color: rebeccapurple;
+    width: 100%;
+    color: #6d6e70;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.container p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.description {
+
+}
+
+.description textarea {
+    border-radius: 5px;
+    border: 1px solid rgba(109, 110, 112, .5);
+    padding: 5px;
+    color: dimgray;
+    font-size: 14px;
+
 }

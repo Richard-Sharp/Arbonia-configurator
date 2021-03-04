@@ -1,6 +1,23 @@
 .container {
     width: 1200px;
-    border: black 1px solid;
-    text-align: center;
-    margin: 0 auto;
+    height: 190px;
+    border: 1px solid rgba(109, 110, 112, .5);
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    padding: 10px;
+}
+
+.code {
+    width: 35%;
+
+}
+
+.description {
+    width: 45%;
+    margin: 5px;
+}
+
+.price {
+    width: 20%;
 }

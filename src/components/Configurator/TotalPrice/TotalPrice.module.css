@@ -1,3 +1,27 @@
 .container {
-    color: darkgoldenrod;
+    width: 100%;
+    height: 100px;
+    color: #6d6e70;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.container p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price {
+    width: 70%;
+    border-top: 1px solid rgba(109, 110, 112, .5);
+    border-bottom: 1px solid rgba(109, 110, 112, .5);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(245, 130, 31, .9);
+
 }
