@@ -15,8 +15,8 @@ import {connect} from "react-redux";
 class ArboniaRRNContainer extends React.Component {
 
 	setConnectionTypeDefault = (option) => {
-		const {value, dataPrice, dataDescription} = option;
-		this.props.setConnectionType(value, +dataPrice, dataDescription);
+		const {value, price, text} = option;
+		this.props.setConnectionType(value, +price, text);
 	};
 	setConnectionSizeDefault = (option) => {
 		const {value, price, description} = option;
@@ -40,7 +40,7 @@ class ArboniaRRNContainer extends React.Component {
 		this.props.setConnectionTypeOptions([]);
 		// this.props.setSizesImage(this.props.extraOptionRRNDisplay[0].value);
 		this.props.setSizesImageSuccess(null);
-		console.log(this.props.totalPrice);
+
 	};
 
 	setConnectionTypesData = (e, {options, value}) => {

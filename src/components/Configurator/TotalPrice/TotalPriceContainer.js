@@ -6,7 +6,9 @@ import {setTotalPrice} from "../../../Redux/Reducers/MainParamsReducer";
 class TotalPriceContainer extends React.Component {
 	componentDidUpdate(prevProps) {
 		if(prevProps !== this.props) {
+
 			let totalPrice = (this.props.arboniaModelPrice * this.props.quantitySections) + this.props.valve.price + this.props.connectionType.price + this.props.connectionSize.price + this.props.airCooler.price + this.props.pressure.price + this.props.drain.price;
+
 			this.props.setTotalPrice(totalPrice);
 		}
 	}
