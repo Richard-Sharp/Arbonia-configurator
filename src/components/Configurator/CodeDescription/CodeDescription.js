@@ -10,7 +10,7 @@ const CodeDescription = ({arboniaModel, height, type, quantitySections, valve, c
 	return <div className={style.container}>
 		<p>Описание прибора:</p>
 		<div className={style.description}>
-			<textarea name="codeDescription" cols="65" rows="7" value={description}/>
+			<textarea name="codeDescription" cols="60" rows="7" value={description}/>
 		</div>
 	</div>
 };
