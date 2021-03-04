@@ -7,7 +7,7 @@ const TotalPrice = ({totalPrice}) => {
 	return <div className={style.container}>
 		<p>Цена за прибор:</p>
 		<div className={style.price}>
-			{totalPrice.toFixed(2)} EUR
+			{(totalPrice*1.07).toFixed(2)} EUR
 		</div>
 
 
