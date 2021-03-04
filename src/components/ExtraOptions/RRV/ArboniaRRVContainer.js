@@ -19,8 +19,8 @@ import ArboniaRRV from "./ArboniaRRV";
 class ArboniaRRVContainer extends React.PureComponent {
 
 	setConnectionTypeDefault = (option) => {
-		const {dataValue, dataPrice, dataDescription} = option;
-		this.props.setConnectionType(dataValue, +dataPrice, dataDescription);
+		const {dataValue, price, text} = option;
+		this.props.setConnectionType(dataValue, +price, text);
 	};
 	setConnectionSizeDefault = (option) => {
 		const {value, price, description} = option;
