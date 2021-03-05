@@ -108,8 +108,6 @@ export const setQuantitySections = (number = 4) => ({type: SET_QUANTITY_SECTIONS
 export const setTotalLenght = (lenght) => ({type: SET_TOTAL_LENGHT, lenght});
 export const setTotalPower = (power = 0) => ({type: SET_TOTAL_POWER, power});
 export const setTotalPrice = (price = 0) => ({type: SET_TOTAL_PRICE, price});
-
-export const setArboniaModelSuccess = (arboniaModel) => ({type: SET_ARBONIA_TYPE, arboniaModel});
 export const setSpecificationsDataSuccess = (specifications) => ({type: SET_SPECIFICATION_DATA, specifications});
 
 
