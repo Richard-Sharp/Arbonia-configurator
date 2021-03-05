@@ -8,7 +8,7 @@ import typeSize2 from '../../images/types/typeSize2-2.png';
 import typeSize3 from '../../images/types/typeSize3-2.png';
 import typeSize4 from '../../images/types/typeSize4-2.png';
 import typeSize5 from '../../images/types/typeSize5-2.png';
-import typeSize6 from '../../images/types/typeSize5-2.png';
+import typeSize6 from '../../images/types/typeSize6-2.png';
 
 
 export const getMainParamsHeightData = (value) => {
@@ -63,8 +63,8 @@ export const getMainParamsHeightData = (value) => {
 };
 
 export const heightParamsData = [
-	{description: '180', value: '018'},
-	{description: '190', value: '019'},
+	// {description: '180', value: '018'},
+	// {description: '190', value: '019'},
 	{description: '260', value: '026'},
 	{description: '300', value: '030'},
 	{description: '350', value: '035'},

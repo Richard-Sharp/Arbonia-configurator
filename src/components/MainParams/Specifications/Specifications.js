@@ -66,8 +66,9 @@ const Specifications = (props) => {
 
 				<div className={style.image_wrapper}>
 
-					{props.type.image &&
-					<img src={props.type.image} alt="size image"/>
+					{props.type.image && props.specifications.modelCode
+							? <img src={props.type.image} alt="size image"/>
+							: null
 					}
 
 
