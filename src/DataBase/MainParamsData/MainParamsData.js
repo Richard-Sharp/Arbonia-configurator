@@ -2,7 +2,13 @@ import type2 from '../../images/types/type2.png';
 import type3 from '../../images/types/type3.png';
 import type4 from '../../images/types/type4.png';
 import type5 from '../../images/types/type5.png';
-import type6 from '../../images/types/type6.png';
+import type6 from '../../images/types/type5.png';
+
+import typeSize2 from '../../images/types/typeSize2-2.png';
+import typeSize3 from '../../images/types/typeSize3-2.png';
+import typeSize4 from '../../images/types/typeSize4-2.png';
+import typeSize5 from '../../images/types/typeSize5-2.png';
+import typeSize6 from '../../images/types/typeSize5-2.png';
 
 
 export const getMainParamsHeightData = (value) => {
@@ -83,11 +89,11 @@ export const heightParamsData = [
 
 export const getMainParamsTypeData = (value) => (
 		{
-			'2': {value: '65', code: value},
-			'3': {value: '105', code: value},
-			'4': {value: '145', code: value},
-			'5': {value: '185', code: value},
-			'6': {value: '225', code: value}
+			'2': {value: '65', code: value, image: typeSize2},
+			'3': {value: '105', code: value, image: typeSize3},
+			'4': {value: '145', code: value, image: typeSize4},
+			'5': {value: '185', code: value, image: typeSize5},
+			'6': {value: '225', code: value, image: typeSize6}
 		}[value] || {value: '65', code: '2'});
 
 export const typeParamsData = [

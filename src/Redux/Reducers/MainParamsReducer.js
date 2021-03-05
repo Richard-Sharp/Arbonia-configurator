@@ -24,7 +24,8 @@ let initialState = {
 		},
 		typeParam: {
 			value: 0, // - 65
-			code: 0 // - 2
+			code: 0, // - 2
+			image: null
 		},
 	},
 	heightParamsDisplay: heightParamsData,
@@ -57,7 +58,7 @@ export const MainParamsReducer = (state = initialState, action) => {
 					...state.params,
 					typeParam: {
 						...state.params.typeParam,
-						value: action.value, code: action.code
+						value: action.value, code: action.code, image: action.image
 					}
 				}
 			};
@@ -102,7 +103,7 @@ export const MainParamsReducer = (state = initialState, action) => {
 
 //Action creators:
 export const setRadiatorsHeightSuccess = (value, code) => ({type: SET_RADIATORS_HEIGHT, value: value, code: code});
-export const setRadiatorsTypeSuccess = (value, code) => ({type: SET_RADIATORS_TYPE, value: value, code: code});
+export const setRadiatorsTypeSuccess = (value, code, image) => ({type: SET_RADIATORS_TYPE, value: value, code: code, image: image});
 export const setQuantitySections = (number = 4) => ({type: SET_QUANTITY_SECTIONS, number});
 export const setTotalLenght = (lenght) => ({type: SET_TOTAL_LENGHT, lenght});
 export const setTotalPower = (power = 0) => ({type: SET_TOTAL_POWER, power});
@@ -122,7 +123,7 @@ export const setRadiatorsHeight = (value) => async (dispatch) => {
 //Устанавливаем тип прибора:
 export const setRadiatorsType = (value) => async (dispatch) => {
 	let typeValue = await getMainParamsTypeData(value); // - Запрашиваем данные по типу
-	dispatch(setRadiatorsTypeSuccess(typeValue.value, typeValue.code));
+	dispatch(setRadiatorsTypeSuccess(typeValue.value, typeValue.code, typeValue.image));
 };
 
 //Запрашиваем данные по конкретной модели прибора:

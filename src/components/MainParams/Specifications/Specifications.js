@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Specifications.module.css';
-import image from '../../../images/types/typeSize6-2.png'
+import image from '../../../images/types/typeSize2-2.png'
 import TotalPriceContainer from "../../Configurator/TotalPrice/TotalPriceContainer";
 
 
@@ -65,7 +65,11 @@ const Specifications = (props) => {
 				</div>
 
 				<div className={style.image_wrapper}>
-					<img src={image} alt="size image"/>
+
+					{props.type.image &&
+					<img src={props.type.image} alt="size image"/>
+					}
+
 
 					{props.showPrice &&
 					<div className={style.price}>
