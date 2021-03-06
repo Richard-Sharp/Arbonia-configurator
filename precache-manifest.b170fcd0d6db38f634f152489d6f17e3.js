@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "19aa07f149fb25d645ac52717deba815",
+    "revision": "fa85f12cd56439e4b3381ed28d830a4a",
     "url": "/Arbonia-configurator/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Arbonia-configurator/static/css/2.7eac4e58.chunk.css"
   },
   {
-    "revision": "0abbcac410bfbb6c4ab2",
-    "url": "/Arbonia-configurator/static/css/main.2d93b57e.chunk.css"
+    "revision": "480a9383bab95a769119",
+    "url": "/Arbonia-configurator/static/css/main.7095eb7c.chunk.css"
   },
   {
     "revision": "03c9be662474a7181c28",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Arbonia-configurator/static/js/2.f4538220.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0abbcac410bfbb6c4ab2",
-    "url": "/Arbonia-configurator/static/js/main.b8d19b19.chunk.js"
+    "revision": "480a9383bab95a769119",
+    "url": "/Arbonia-configurator/static/js/main.ab93d36a.chunk.js"
   },
   {
     "revision": "f02c357cb55e9176a4e1",
