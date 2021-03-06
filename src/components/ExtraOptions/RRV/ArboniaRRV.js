@@ -47,6 +47,9 @@ const ArboniaRRV = (props) => {
 					<div className={style.connection_img}>
 						<img src={image.src} alt="тип подключения"/>
 					</div>
+					<div className={style.valve_description}>
+						{props.valve.text}
+					</div>
 
 					<div className={style.connection_size_block}>
 						<p>[7] Диаметр подключения:</p>
