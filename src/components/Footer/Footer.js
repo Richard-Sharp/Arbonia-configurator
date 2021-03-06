@@ -16,7 +16,7 @@ const Footer = () => {
 					</div>
 
 				<div className={style.name_block}>
-					<p>© RchSharp, 2021</p>
+					<p>© #RchSharp, 2021</p>
 					<p>+375-33-352 68 67</p>
 
 				</div>

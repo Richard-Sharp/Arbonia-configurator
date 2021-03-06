@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     border-top: 1px solid rgba(109, 110, 112, .5);
-    /*border-bottom: 2px solid rgba(109, 110, 112, .5);*/
+    border-bottom: 1px solid rgba(109, 110, 112, .5);
     /*margin: 10px 0 10px 0;*/
     background-color: rgba(109, 110, 112, .1);
 }
