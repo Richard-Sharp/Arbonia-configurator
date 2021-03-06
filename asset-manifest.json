@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Arbonia-configurator/static/css/main.34c6aa74.chunk.css",
-    "main.js": "/Arbonia-configurator/static/js/main.557bbb78.chunk.js",
-    "main.js.map": "/Arbonia-configurator/static/js/main.557bbb78.chunk.js.map",
+    "main.css": "/Arbonia-configurator/static/css/main.4c040bf6.chunk.css",
+    "main.js": "/Arbonia-configurator/static/js/main.2a0f2ddd.chunk.js",
+    "main.js.map": "/Arbonia-configurator/static/js/main.2a0f2ddd.chunk.js.map",
     "runtime-main.js": "/Arbonia-configurator/static/js/runtime-main.f72906e4.js",
     "runtime-main.js.map": "/Arbonia-configurator/static/js/runtime-main.f72906e4.js.map",
     "static/css/2.7eac4e58.chunk.css": "/Arbonia-configurator/static/css/2.7eac4e58.chunk.css",
     "static/js/2.b1acf655.chunk.js": "/Arbonia-configurator/static/js/2.b1acf655.chunk.js",
     "static/js/2.b1acf655.chunk.js.map": "/Arbonia-configurator/static/js/2.b1acf655.chunk.js.map",
     "index.html": "/Arbonia-configurator/index.html",
-    "precache-manifest.56dc9e38d29964ed23adb1381bc8df7e.js": "/Arbonia-configurator/precache-manifest.56dc9e38d29964ed23adb1381bc8df7e.js",
+    "precache-manifest.5a63dbc3673ea69e64ded4a4621b7f2c.js": "/Arbonia-configurator/precache-manifest.5a63dbc3673ea69e64ded4a4621b7f2c.js",
     "service-worker.js": "/Arbonia-configurator/service-worker.js",
     "static/css/2.7eac4e58.chunk.css.map": "/Arbonia-configurator/static/css/2.7eac4e58.chunk.css.map",
-    "static/css/main.34c6aa74.chunk.css.map": "/Arbonia-configurator/static/css/main.34c6aa74.chunk.css.map",
+    "static/css/main.4c040bf6.chunk.css.map": "/Arbonia-configurator/static/css/main.4c040bf6.chunk.css.map",
     "static/js/2.b1acf655.chunk.js.LICENSE.txt": "/Arbonia-configurator/static/js/2.b1acf655.chunk.js.LICENSE.txt",
     "static/media/Sizes07.png": "/Arbonia-configurator/static/media/Sizes07.f23288f1.png",
     "static/media/Sizes07V-61.png": "/Arbonia-configurator/static/media/Sizes07V-61.13c8e16e.png",
@@ -89,7 +89,7 @@
     "static/js/runtime-main.f72906e4.js",
     "static/css/2.7eac4e58.chunk.css",
     "static/js/2.b1acf655.chunk.js",
-    "static/css/main.34c6aa74.chunk.css",
-    "static/js/main.557bbb78.chunk.js"
+    "static/css/main.4c040bf6.chunk.css",
+    "static/js/main.2a0f2ddd.chunk.js"
   ]
 }
