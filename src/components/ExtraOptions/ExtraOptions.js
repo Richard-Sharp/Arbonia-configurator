@@ -30,21 +30,27 @@ const ExtraOptions = (props) => {
 
 	}
 
-	return <div className={style.container}>
+	return <div id="connectionType" className={style.container}>
 
 		<div className={style.sideBar_wrapper}>
 			<h3>Исполнение (наличие встроенного вентиля):</h3>
 
 
 			<div className={style.sideBar}>
+				<a href="#connectionType">
 					<button className={componentValveType === 'RRN'
 							? style.button_active
 							: style.button}
-							onClick={() => setComponentValveType('RRN')}>RRN</button>
+									onClick={() => setComponentValveType('RRN')}>RRN</button>
+				</a>
+
+				<a href="#connectionType">
 					<button className={componentValveType === 'RRV'
 							? style.button_active
 							: style.button}
-							onClick={() => setComponentValveType('RRV')}>RRV</button>
+									onClick={() => setComponentValveType('RRV')}>RRV</button>
+				</a>
+
 			</div>
 		</div>
 		{componentValveType === 'RRN' &&
@@ -78,11 +84,14 @@ const ExtraOptions = (props) => {
 
 		{displayBtn === 1 &&
 		<div className={style.btn_block}>
-			<button onClick={onShowConfigurator} disabled={btnDisable}>Рассчитать</button>
+			<a href="#configurator">
+				<button onClick={onShowConfigurator} disabled={btnDisable}>Рассчитать</button>
+			</a>
+
 		</div>}
 
 		{configuratorMode === 1 &&
-		<div className="configurator_block">
+		<div id="configurator" className="configurator_block">
 			<Configurator />
 		</div>
 		}
