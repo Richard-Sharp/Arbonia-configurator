@@ -42,7 +42,6 @@ class ArboniaRRVContainer extends React.PureComponent {
 		this.setConnectionSizeDefault(this.props.extraOptionRRVDisplay[0].connectionSize[0]);
 		this.setAirCoolerLocationDefault(this.props.extraOptionRRVDisplay[0].airCoolerLocation);
 		this.props.setConnectionTypeOptions([]);
-		// this.props.setSizesImage(this.props.extraOptionRRVDisplay[0].value);
 		this.props.setSizesImageSuccess(null);
 	};
 
@@ -69,7 +68,6 @@ class ArboniaRRVContainer extends React.PureComponent {
 		const price = +e.currentTarget.dataset.price;
 		const valueData = +e.currentTarget.value;
 		const descriptionData = e.currentTarget.dataset.description;
-		console.log(this.props.extraOptionRRVDisplay[elemIndex]);
 
 		switch (name) {
 			// case 'connectionType':

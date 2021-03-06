@@ -23,7 +23,6 @@ const ArboniaRRV = (props) => {
 	const {image} = props.connectionTypeOptions;
 
 	return <div className={style.container}>
-
 		<h3>Со встроенным термостатическим вентилем (RRV):</h3>
 
 		<div className={style.main}>
