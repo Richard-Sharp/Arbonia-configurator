@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Arbonia-configurator/precache-manifest.32ab03423bea9403e33f23b556e62c9b.js"
+  "/Arbonia-configurator/precache-manifest.e2040b20d91962155102ce2985d70213.js"
 );
 
 self.addEventListener('message', (event) => {
