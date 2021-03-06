@@ -89,8 +89,6 @@ const ArboniaRRV = (props) => {
 
 
 
-
-
 		<div className={style.additional}>
 			<div className={style.aircooler_block}>
 				<p>[8] Исполнение развоздушника:</p>
