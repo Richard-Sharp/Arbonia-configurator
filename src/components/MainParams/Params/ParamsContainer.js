@@ -7,6 +7,7 @@ import {setQuantitySections, setRadiatorsHeight, setRadiatorsType, setTotalLengh
 class ParamsContainer extends React.Component {
 
 	// componentDidMount() {
+	//
 	// }
 
 	componentDidUpdate(prevProps) {
@@ -23,6 +24,7 @@ class ParamsContainer extends React.Component {
 let mapState = (state) => ({
 	quantitySections: state.mainParams.quantitySections,
 	heightParamsDisplay: state.mainParams.heightParamsDisplay,
+	specifications: state.mainParams.specifications,
 	typeParamsDisplay: state.mainParams.typeParamsDisplay
 
 })

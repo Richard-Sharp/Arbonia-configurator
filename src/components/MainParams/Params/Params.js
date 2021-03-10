@@ -22,6 +22,8 @@ const Params = (props) => {
 			props.setQuantitySections(quantityRef.current.value);
 		}
 	};
+	// const {maxLength} = props.specifications.length;
+
 
 	return (
 			<div className={style.container}>
@@ -61,7 +63,7 @@ const Params = (props) => {
 					<input onChange={onChangeQuantitySections} ref={quantityRef}
 								defaultValue="0" id="sectionQuantity"
 								 type="number" name="sectionQuantity"
-								 min="4" max="60" step="1"/>
+								 min="4" max={props.specifications.maxLength ? props.specifications.maxLength : 66} step="1"/>
 				</div>
 			</div>
 	);
