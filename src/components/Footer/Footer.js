@@ -16,8 +16,9 @@ const Footer = () => {
 					</div>
 
 				<div className={style.name_block}>
-					<p>© #RchSharp, 2021</p>
+					<p><strong>© #RchSharp, 2021</strong></p>
 					<p>+375-33-352 68 67</p>
+					<p>artsiom.novitski@gmail.com</p>
 
 				</div>
 				</div>
