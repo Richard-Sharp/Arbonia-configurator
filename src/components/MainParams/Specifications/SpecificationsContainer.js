@@ -32,11 +32,6 @@ class SpecificationsContainer extends React.Component {
 						showPrice: false
 					});
 				}
-				console.log(this.props.specifications.modelCode);
-				console.log(this.props.quantitySections);
-				console.log(this.props.connectionTypeOptions.value);
-
-
 			} else {
 				this.props.setTotalPower(0);
 			}

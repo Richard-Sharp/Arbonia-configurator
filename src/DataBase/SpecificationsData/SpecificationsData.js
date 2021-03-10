@@ -219,59 +219,59 @@ const arb2100 = arboniaModel(2100, 74, 19.27, 4, 66);
 const arb3100 = arboniaModel(3100, 102, 22.94, 4, 66);
 const arb4100 = arboniaModel(4100, 129, 30.36, 4, 66);
 const arb5100 = arboniaModel(5100, 158, 35.46, 4, 66);
-const arb6100 = arboniaModel(6100, 185, 41.52, 4, 66);
+const arb6100 = arboniaModel(6100, 185, 41.52, 4, 58);
 //1100
 const arb2110 = arboniaModel(2110, 81, 20.03, 4, 66);
 const arb3110 = arboniaModel(3110, 111, 25.77, 4, 66);
 const arb4110 = arboniaModel(4110, 141, 33.55, 4, 66);
-const arb5110 = arboniaModel(5110, 172, 41.14, 4, 66);
-const arb6110 = arboniaModel(6110, 201, 48.95, 4, 66);
+const arb5110 = arboniaModel(5110, 172, 41.14, 4, 44);
+const arb6110 = arboniaModel(6110, 201, 48.95, 4, 44);
 //1200
 const arb2120 = arboniaModel(2120, 88, 21.38, 4, 66);
 const arb3120 = arboniaModel(3120, 120, 30.13, 4, 66);
 const arb4120 = arboniaModel(4120, 152, 37.91, 4, 66);
-const arb5120 = arboniaModel(5120, 186, 47.61, 4, 66);
-const arb6120 = arboniaModel(6120, 217, 55.46, 4, 66);
+const arb5120 = arboniaModel(5120, 186, 47.61, 4, 44);
+const arb6120 = arboniaModel(6120, 217, 55.46, 4, 44);
 //1500
 const arb2150 = arboniaModel(2150, 109, 27.34, 4, 66);
 const arb3150 = arboniaModel(3150, 147, 39.08, 4, 66);
-const arb4150 = arboniaModel(4150, 186, 51.07, 4, 66);
-const arb5150 = arboniaModel(5150, 225, 63.94, 4, 66);
-const arb6150 = arboniaModel(6150, 264, 76.17, 4, 66);
+const arb4150 = arboniaModel(4150, 186, 51.07, 4, 54);
+const arb5150 = arboniaModel(5150, 225, 63.94, 4, 30);
+const arb6150 = arboniaModel(6150, 264, 76.17, 4, 30);
 //1800
 const arb2180 = arboniaModel(2180, 130, 32.32, 4, 66);
 const arb3180 = arboniaModel(3180, 173, 48.20, 4, 66);
-const arb4180 = arboniaModel(4180, 219, 61.36, 4, 66);
-const arb5180 = arboniaModel(5180, 263, 75.23, 4, 66);
-const arb6180 = arboniaModel(6180, 309, 89.35, 4, 66);
+const arb4180 = arboniaModel(4180, 219, 61.36, 4, 54);
+const arb5180 = arboniaModel(5180, 263, 75.23, 4, 30);
+const arb6180 = arboniaModel(6180, 309, 89.35, 4, 30);
 //2000
 const arb2200 = arboniaModel(2200, 144, 36.17, 4, 66);
-const arb3200 = arboniaModel(3200, 190, 51.66, 4, 66);
-const arb4200 = arboniaModel(4200, 241, 67.96, 4, 66);
-const arb5200 = arboniaModel(5200, 287, 83.18, 4, 66);
-const arb6200 = arboniaModel(6200, 339, 98.50, 4, 66);
+const arb3200 = arboniaModel(3200, 190, 51.66, 4, 59);
+const arb4200 = arboniaModel(4200, 241, 67.96, 4, 44);
+const arb5200 = arboniaModel(5200, 287, 83.18, 4, 30);
+const arb6200 = arboniaModel(6200, 339, 98.50, 4, 30);
 //2200
-const arb2220 = arboniaModel(2220, 158, 40.59, 4, 66);
-const arb3220 = arboniaModel(3220, 207, 58.82, 4, 66);
-const arb4220 = arboniaModel(4220, 262, 76.37, 4, 66);
-const arb5220 = arboniaModel(5220, 310, 93.53, 4, 66);
-const arb6220 = arboniaModel(6220, 367, 110.96, 4, 66);
+const arb2220 = arboniaModel(2220, 158, 40.59, 4, 42);
+const arb3220 = arboniaModel(3220, 207, 58.82, 4, 59);
+const arb4220 = arboniaModel(4220, 262, 76.37, 4, 44);
+const arb5220 = arboniaModel(5220, 310, 93.53, 4, 30);
+const arb6220 = arboniaModel(6220, 367, 110.96, 4, 22);
 //2500
-const arb2250 = arboniaModel(2250, 179, 45.01, 4, 66);
-const arb3250 = arboniaModel(3250, 231, 65.98, 4, 66);
-const arb4250 = arboniaModel(4250, 293, 84.87, 4, 66);
-const arb5250 = arboniaModel(5250, 343, 103.79, 4, 66);
-const arb6250 = arboniaModel(6250, 408, 123.52, 4, 66);
+const arb2250 = arboniaModel(2250, 179, 45.01, 4, 42);
+const arb3250 = arboniaModel(3250, 231, 65.98, 4, 30);
+const arb4250 = arboniaModel(4250, 293, 84.87, 4, 30);
+const arb5250 = arboniaModel(5250, 343, 103.79, 4, 30);
+const arb6250 = arboniaModel(6250, 408, 123.52, 4, 22);
 //2800
-const arb2280 = arboniaModel(2280, 200, 50.66, 4, 66);
-const arb3280 = arboniaModel(3280, 255, 73.49, 4, 66);
-const arb4280 = arboniaModel(4280, 323, 96.03, 4, 66);
-const arb5280 = arboniaModel(5280, 374, 115.41, 4, 66);
-const arb6280 = arboniaModel(6280, 448, 138.73, 4, 66);
+const arb2280 = arboniaModel(2280, 200, 50.66, 4, 42);
+const arb3280 = arboniaModel(3280, 255, 73.49, 4, 30);
+const arb4280 = arboniaModel(4280, 323, 96.03, 4, 30);
+const arb5280 = arboniaModel(5280, 374, 115.41, 4, 26);
+const arb6280 = arboniaModel(6280, 448, 138.73, 4, 22);
 //3000
-const arb2300 = arboniaModel(2300, 214, 54.12, 4, 66);
-const arb3300 = arboniaModel(3300, 270, 79.55, 4, 66);
-const arb4300 = arboniaModel(4300, 343, 102.81, 4, 66);
-const arb5300 = arboniaModel(5300, 394, 123.52, 4, 66);
-const arb6300 = arboniaModel(6300, 474, 147.71, 4, 66);
+const arb2300 = arboniaModel(2300, 214, 54.12, 4, 42);
+const arb3300 = arboniaModel(3300, 270, 79.55, 4, 30);
+const arb4300 = arboniaModel(4300, 343, 102.81, 4, 30);
+const arb5300 = arboniaModel(5300, 394, 123.52, 4, 26);
+const arb6300 = arboniaModel(6300, 474, 147.71, 4, 22);
 
