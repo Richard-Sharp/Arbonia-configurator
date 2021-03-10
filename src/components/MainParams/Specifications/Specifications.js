@@ -58,7 +58,7 @@ const Specifications = (props) => {
 						<div className={style.item_pw}>
 							<span>Мощность прибора (<b>ΔT50</b>/ ΔT60/ ΔT70): </span>
 							<div className={style.item_option_pw}>
-								<b>{props.totalPower}</b>/ {props.totalPower}/ {props.totalPower} Вт
+								<b>{props.totalPower}</b>/ {(props.totalPower/0.8).toFixed(0)}/ {(props.totalPower/0.65).toFixed(0)} Вт
 							</div>
 						</div>
 					</div>
