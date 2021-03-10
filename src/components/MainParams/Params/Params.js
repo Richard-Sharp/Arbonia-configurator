@@ -15,9 +15,14 @@ const Params = (props) => {
 	};
 	const onChangeQuantitySections = () => {
 		if (quantityRef.current.value < 4) {
-			props.setQuantitySections(4);
-		} else if (quantityRef.current.value > 60) {
-			props.setQuantitySections(60);
+			if(props.specifications.minLength) {
+				props.setQuantitySections(props.specifications.minLength);
+			} else {
+				props.setQuantitySections(4);
+			}
+
+		} else if (quantityRef.current.value > props.specifications.maxLength) {
+			props.setQuantitySections(props.specifications.maxLength);
 		} else {
 			props.setQuantitySections(quantityRef.current.value);
 		}
@@ -63,7 +68,13 @@ const Params = (props) => {
 					<input onChange={onChangeQuantitySections} ref={quantityRef}
 								defaultValue="0" id="sectionQuantity"
 								 type="number" name="sectionQuantity"
-								 min="4" max={props.specifications.maxLength ? props.specifications.maxLength : 66} step="1"/>
+								 min={props.specifications.minLength
+										 ? props.specifications.minLength
+										 : 4}
+								 max={props.specifications.maxLength
+										 ? props.specifications.maxLength
+										 : 66}
+								 step="1"/>
 				</div>
 			</div>
 	);
