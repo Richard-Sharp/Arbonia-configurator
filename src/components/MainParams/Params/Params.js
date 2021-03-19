@@ -64,7 +64,7 @@ const Params = (props) => {
 				</div>
 
 				<div className={style.quantity}>
-					<p>Количество секций:</p>
+					<p>Выберите количество секций:</p>
 					<input onChange={onChangeQuantitySections} ref={quantityRef}
 								defaultValue="0" id="sectionQuantity"
 								 type="number" name="sectionQuantity"
