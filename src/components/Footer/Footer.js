@@ -12,7 +12,7 @@ const Footer = () => {
 						<img src={headerImg} alt="footer"/>
 					</div>
 					<div className={style.version_block}>
-						<p>Ver: 1.3.1 (beta)</p>
+						<p>Ver: 1.3.2 (beta)</p>
 					</div>
 
 				<div className={style.name_block}>
