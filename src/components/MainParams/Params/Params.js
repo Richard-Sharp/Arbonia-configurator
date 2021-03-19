@@ -34,7 +34,7 @@ const Params = (props) => {
 			<div className={style.container}>
 				<h3>Основные параметры прибора</h3>
 				<div className={style.height}>
-					<p>Высота прибора:</p>
+					<p>Выберите высоту прибора:</p>
 					<select name="height" id="heightParam"
 									required ref={heightRef}
 									onChange={(e) => {
