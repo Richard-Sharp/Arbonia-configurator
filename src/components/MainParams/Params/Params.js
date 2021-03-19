@@ -29,7 +29,6 @@ const Params = (props) => {
 	};
 	// const {maxLength} = props.specifications.length;
 
-
 	return (
 			<div className={style.container}>
 				<h3>Основные параметры прибора</h3>

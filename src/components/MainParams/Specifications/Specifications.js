@@ -71,7 +71,6 @@ const Specifications = (props) => {
 							: null
 					}
 
-
 					{props.showPrice &&
 					<div className={style.price}>
 						<TotalPriceContainer/>
