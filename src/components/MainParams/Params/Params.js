@@ -48,7 +48,7 @@ const Params = (props) => {
 				</div>
 
 				<div className={style.type}>
-					<p>Тип радиатора:</p>
+					<p>Выберите тип радиатора:</p>
 					<div>
 						{props.typeParamsDisplay.map(type => {
 							return <div className={style.radio_btn} key={type.value}>
