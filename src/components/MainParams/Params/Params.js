@@ -53,7 +53,7 @@ const Params = ({onChangeParamHeight, onChangeParamType, onChangeQuantitySection
 								 step="1"/>
 
 					{props.quantitySections > props.specifications.maxLength
-					&& <p style={{color: 'red'}}>Максимальное количество секций: {props.specifications.maxLength}</p>}
+					&& <p style={{color: 'red'}}>Максимально допустимое количество секций: {props.specifications.maxLength}</p>}
 				</div>
 			</div>
 	);
