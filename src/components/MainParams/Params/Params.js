@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Params.module.css';
 
 
-const Params = ({onChangeParamHeight, onChangeParamType, onChangeQuantitySections, ...props}) => {
+const Params = ({onChangeParamHeight, onChangeParamType, onChangeQuantitySections, quantitySectionsValidate, ...props}) => {
 
 
 	return (
@@ -51,6 +51,9 @@ const Params = ({onChangeParamHeight, onChangeParamType, onChangeQuantitySection
 										 ? props.specifications.maxLength
 										 : 66}
 								 step="1"/>
+
+					{props.quantitySections > props.specifications.maxLength
+					&& <p>Максимальное количество секций: {props.specifications.maxLength}</p>}
 				</div>
 			</div>
 	);

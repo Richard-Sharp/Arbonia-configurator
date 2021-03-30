@@ -5,14 +5,29 @@ import {setQuantitySections, setRadiatorsHeight, setRadiatorsType, setTotalLengh
 
 
 class ParamsContainer extends React.Component {
+	state = {
+		quantitySectionsValidate: true
+	}
 
 	// componentDidMount() {
 	//
 	// }
 
+
 	componentDidUpdate(prevProps) {
 		if(prevProps.quantitySections !== this.props.quantitySections) {
 			this.props.setTotalLenght(this.props.quantitySections * 45 + 24);
+		}
+		if(prevProps.params.typeParam !== this.props.params.typeParam) {
+			if(this.props.quantitySections > this.props.specifications.maxLength ) {
+				this.setState({
+					quantitySectionsValidate: false
+				})
+			} else {
+				this.setState({
+					quantitySectionsValidate: true
+				})
+			}
 		}
 	}
 
@@ -31,7 +46,6 @@ class ParamsContainer extends React.Component {
 			} else {
 				this.props.setQuantitySections(4);
 			}
-
 		} else if (quantitySections > this.props.specifications.maxLength) {
 			this.props.setQuantitySections(this.props.specifications.maxLength);
 		} else {
@@ -40,11 +54,11 @@ class ParamsContainer extends React.Component {
 	};
 
 
-
 	render() {
 		return <Params onChangeParamHeight={this.onChangeParamHeight}
 									 onChangeParamType={this.onChangeParamType}
 									 onChangeQuantitySections={this.onChangeQuantitySections}
+									 quantitySectionsValidate={this.state.quantitySectionsValidate}
 									 {...this.props} />
 	}
 }
@@ -53,6 +67,7 @@ let mapState = (state) => ({
 	quantitySections: state.mainParams.quantitySections,
 	heightParamsDisplay: state.mainParams.heightParamsDisplay,
 	specifications: state.mainParams.specifications,
+	params: state.mainParams.params,
 	typeParamsDisplay: state.mainParams.typeParamsDisplay
 
 });
