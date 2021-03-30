@@ -2,34 +2,8 @@ import React from 'react';
 import style from './Params.module.css';
 
 
-const Params = (props) => {
-	// let heightRef = React.createRef();
-	// let quantityRef = React.createRef();
+const Params = ({onChangeParamHeight, onChangeParamType, onChangeQuantitySections, ...props}) => {
 
-
-	const onChangeParamHeight = (e) => {
-		// props.setRadiatorsHeight(heightRef.current.value);
-		props.setRadiatorsHeight(e.currentTarget.value);
-	};
-	const onChangeParamType = (e) => {
-		props.setRadiatorsType(e.currentTarget.value, e.currentTarget.value);
-	};
-	const onChangeQuantitySections = (e) => {
-		const quantitySections = e.currentTarget.value;
-		if (quantitySections < 4) {
-			if(props.specifications.minLength) {
-				props.setQuantitySections(props.specifications.minLength);
-			} else {
-				props.setQuantitySections(4);
-			}
-
-		} else if (quantitySections > props.specifications.maxLength) {
-			props.setQuantitySections(props.specifications.maxLength);
-		} else {
-			props.setQuantitySections(quantitySections);
-		}
-	};
-	// const {maxLength} = props.specifications.length;
 
 	return (
 			<div className={style.container}>

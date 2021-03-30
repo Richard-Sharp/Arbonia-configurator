@@ -16,8 +16,36 @@ class ParamsContainer extends React.Component {
 		}
 	}
 
+	onChangeParamHeight = (e) => {
+		// props.setRadiatorsHeight(heightRef.current.value);
+		this.props.setRadiatorsHeight(e.currentTarget.value);
+	};
+	onChangeParamType = (e) => {
+		this.props.setRadiatorsType(e.currentTarget.value, e.currentTarget.value);
+	};
+	onChangeQuantitySections = (e) => {
+		const quantitySections = e.currentTarget.value;
+		if (quantitySections < 4) {
+			if(this.props.specifications.minLength) {
+				this.props.setQuantitySections(this.props.specifications.minLength);
+			} else {
+				this.props.setQuantitySections(4);
+			}
+
+		} else if (quantitySections > this.props.specifications.maxLength) {
+			this.props.setQuantitySections(this.props.specifications.maxLength);
+		} else {
+			this.props.setQuantitySections(quantitySections);
+		}
+	};
+
+
+
 	render() {
-		return <Params {...this.props} />
+		return <Params onChangeParamHeight={this.onChangeParamHeight}
+									 onChangeParamType={this.onChangeParamType}
+									 onChangeQuantitySections={this.onChangeQuantitySections}
+									 {...this.props} />
 	}
 }
 
@@ -27,6 +55,6 @@ let mapState = (state) => ({
 	specifications: state.mainParams.specifications,
 	typeParamsDisplay: state.mainParams.typeParamsDisplay
 
-})
+});
 
 export default connect(mapState, {setRadiatorsHeight, setRadiatorsType, setQuantitySections, setTotalLenght})(ParamsContainer);
