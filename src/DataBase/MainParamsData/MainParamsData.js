@@ -2,7 +2,7 @@ import type2 from '../../images/types/type2.png';
 import type3 from '../../images/types/type3.png';
 import type4 from '../../images/types/type4.png';
 import type5 from '../../images/types/type5.png';
-import type6 from '../../images/types/type5.png';
+import type6 from '../../images/types/type6.png';
 
 import typeSize2 from '../../images/types/typeSize2-2.png';
 import typeSize3 from '../../images/types/typeSize3-2.png';
