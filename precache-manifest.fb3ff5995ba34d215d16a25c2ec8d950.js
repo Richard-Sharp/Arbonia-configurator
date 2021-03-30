@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "38b8049cd03dfb2e14aebe09345b8aba",
+    "revision": "977198d3d514038141bea7a45133cb91",
     "url": "/Arbonia-configurator/index.html"
   },
   {
-    "revision": "66ccc51fe95eb6027dcd",
+    "revision": "f1ebf9775642c09afd90",
     "url": "/Arbonia-configurator/static/css/2.7eac4e58.chunk.css"
   },
   {
-    "revision": "4e74b2bfb647cfb0ea7f",
-    "url": "/Arbonia-configurator/static/css/main.aac4a19d.chunk.css"
+    "revision": "e6105cb8f8af3e31dc1f",
+    "url": "/Arbonia-configurator/static/css/main.8b644dc0.chunk.css"
   },
   {
-    "revision": "66ccc51fe95eb6027dcd",
-    "url": "/Arbonia-configurator/static/js/2.b1acf655.chunk.js"
+    "revision": "f1ebf9775642c09afd90",
+    "url": "/Arbonia-configurator/static/js/2.2826f9df.chunk.js"
   },
   {
     "revision": "5bd09eb7f2cf4d145d532d862be18942",
-    "url": "/Arbonia-configurator/static/js/2.b1acf655.chunk.js.LICENSE.txt"
+    "url": "/Arbonia-configurator/static/js/2.2826f9df.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4e74b2bfb647cfb0ea7f",
-    "url": "/Arbonia-configurator/static/js/main.734ef93f.chunk.js"
+    "revision": "e6105cb8f8af3e31dc1f",
+    "url": "/Arbonia-configurator/static/js/main.66208908.chunk.js"
   },
   {
     "revision": "f02c357cb55e9176a4e1",
@@ -332,20 +332,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Arbonia-configurator/static/media/outline-icons.ef60a4f6.woff"
   },
   {
-    "revision": "cea174486cf15569870b0be47fbb57c6",
-    "url": "/Arbonia-configurator/static/media/type2.cea17448.png"
+    "revision": "8c4e592620b47ed370793050db9b5ebe",
+    "url": "/Arbonia-configurator/static/media/type2.8c4e5926.png"
   },
   {
-    "revision": "c7a84b79faed286d70a19360dd3d6dfd",
-    "url": "/Arbonia-configurator/static/media/type3.c7a84b79.png"
+    "revision": "aef97b8a242c441f176aaeb864e851ca",
+    "url": "/Arbonia-configurator/static/media/type3.aef97b8a.png"
   },
   {
-    "revision": "01daa8bc929498d9474647230fcd22e4",
-    "url": "/Arbonia-configurator/static/media/type4.01daa8bc.png"
+    "revision": "f71c92ae8a8d8e4b8f7d5286b85baff6",
+    "url": "/Arbonia-configurator/static/media/type4.f71c92ae.png"
   },
   {
-    "revision": "8430b0304389e81508ad3961aff68fb1",
-    "url": "/Arbonia-configurator/static/media/type5.8430b030.png"
+    "revision": "d569dfabc3e15ab2f29337dbc30bd4e9",
+    "url": "/Arbonia-configurator/static/media/type5.d569dfab.png"
+  },
+  {
+    "revision": "a83c4fe881c8bc04e5693ca726a8d5ff",
+    "url": "/Arbonia-configurator/static/media/type6.a83c4fe8.png"
   },
   {
     "revision": "9f9d4e089b4c30cb4cf279bebad4dd4a",
