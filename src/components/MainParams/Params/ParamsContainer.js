@@ -5,30 +5,16 @@ import {setQuantitySections, setRadiatorsHeight, setRadiatorsType, setTotalLengh
 
 
 class ParamsContainer extends React.Component {
-	state = {
-		quantitySectionsValidate: true
-	}
-
-	// componentDidMount() {
-	//
-	// }
-
 
 	componentDidUpdate(prevProps) {
 		if(prevProps.quantitySections !== this.props.quantitySections) {
 			this.props.setTotalLenght(this.props.quantitySections * 45 + 24);
 		}
-		if(prevProps.params.typeParam !== this.props.params.typeParam) {
-			if(this.props.quantitySections > this.props.specifications.maxLength ) {
-				this.setState({
-					quantitySectionsValidate: false
-				})
-			} else {
-				this.setState({
-					quantitySectionsValidate: true
-				})
-			}
-		}
+		// if(prevProps.params.typeParam !== this.props.params.typeParam) {
+		// 	if(this.props.quantitySections > this.props.specifications.maxLength ) {
+		// 		this.props.setQuantitySections(this.props.specifications.maxLength);
+		// 	}
+		// }
 	}
 
 	onChangeParamHeight = (e) => {
@@ -58,7 +44,6 @@ class ParamsContainer extends React.Component {
 		return <Params onChangeParamHeight={this.onChangeParamHeight}
 									 onChangeParamType={this.onChangeParamType}
 									 onChangeQuantitySections={this.onChangeQuantitySections}
-									 quantitySectionsValidate={this.state.quantitySectionsValidate}
 									 {...this.props} />
 	}
 }
