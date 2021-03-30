@@ -3,28 +3,30 @@ import style from './Params.module.css';
 
 
 const Params = (props) => {
-	let heightRef = React.createRef();
-	let quantityRef = React.createRef();
+	// let heightRef = React.createRef();
+	// let quantityRef = React.createRef();
 
 
-	const onChangeParamHeight = () => {
-		props.setRadiatorsHeight(heightRef.current.value);
+	const onChangeParamHeight = (e) => {
+		// props.setRadiatorsHeight(heightRef.current.value);
+		props.setRadiatorsHeight(e.currentTarget.value);
 	};
 	const onChangeParamType = (e) => {
 		props.setRadiatorsType(e.currentTarget.value, e.currentTarget.value);
 	};
-	const onChangeQuantitySections = () => {
-		if (quantityRef.current.value < 4) {
+	const onChangeQuantitySections = (e) => {
+		const quantitySections = e.currentTarget.value;
+		if (quantitySections < 4) {
 			if(props.specifications.minLength) {
 				props.setQuantitySections(props.specifications.minLength);
 			} else {
 				props.setQuantitySections(4);
 			}
 
-		} else if (quantityRef.current.value > props.specifications.maxLength) {
+		} else if (quantitySections > props.specifications.maxLength) {
 			props.setQuantitySections(props.specifications.maxLength);
 		} else {
-			props.setQuantitySections(quantityRef.current.value);
+			props.setQuantitySections(quantitySections);
 		}
 	};
 	// const {maxLength} = props.specifications.length;
@@ -35,7 +37,7 @@ const Params = (props) => {
 				<div className={style.height}>
 					<p>Выберите высоту прибора:</p>
 					<select name="height" id="heightParam"
-									required ref={heightRef}
+									// required ref={heightRef}
 									onChange={(e) => {
 										onChangeParamHeight(e)
 									}}>
@@ -64,7 +66,8 @@ const Params = (props) => {
 
 				<div className={style.quantity}>
 					<p>Выберите количество секций:</p>
-					<input onChange={onChangeQuantitySections} ref={quantityRef}
+					<input onChange={(e) => {onChangeQuantitySections(e)}}
+								 // ref={quantityRef}
 								defaultValue="0" id="sectionQuantity"
 								 type="number" name="sectionQuantity"
 								 min={props.specifications.minLength
