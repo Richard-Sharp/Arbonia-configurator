@@ -5,7 +5,7 @@ import style from './CodeDescription.module.css';
 //Компонент для отображения описания прибора:
 const CodeDescription = ({arboniaModel, height, type, quantitySections, valve, connectionType, connectionSize, airCooler, airCoolerLocation, airCoolerSize, pressure, totalLenght, totalPower, drain}) => {
 
-	const [bracket, setBracket] = useState('комлпект коротких креплений: ZB0233');
+	const [bracket, setBracket] = useState('комплект коротких креплений: ZB0233');
 	useEffect(() => {
 
 		if(height.value > 295 && height.value < 495) {
