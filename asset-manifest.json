@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Arbonia-configurator/static/css/main.8b644dc0.chunk.css",
-    "main.js": "/Arbonia-configurator/static/js/main.66208908.chunk.js",
-    "main.js.map": "/Arbonia-configurator/static/js/main.66208908.chunk.js.map",
+    "main.js": "/Arbonia-configurator/static/js/main.847e6a5c.chunk.js",
+    "main.js.map": "/Arbonia-configurator/static/js/main.847e6a5c.chunk.js.map",
     "runtime-main.js": "/Arbonia-configurator/static/js/runtime-main.f72906e4.js",
     "runtime-main.js.map": "/Arbonia-configurator/static/js/runtime-main.f72906e4.js.map",
     "static/css/2.7eac4e58.chunk.css": "/Arbonia-configurator/static/css/2.7eac4e58.chunk.css",
     "static/js/2.2826f9df.chunk.js": "/Arbonia-configurator/static/js/2.2826f9df.chunk.js",
     "static/js/2.2826f9df.chunk.js.map": "/Arbonia-configurator/static/js/2.2826f9df.chunk.js.map",
     "index.html": "/Arbonia-configurator/index.html",
-    "precache-manifest.fb3ff5995ba34d215d16a25c2ec8d950.js": "/Arbonia-configurator/precache-manifest.fb3ff5995ba34d215d16a25c2ec8d950.js",
+    "precache-manifest.8487798414dd59204f333eec46910413.js": "/Arbonia-configurator/precache-manifest.8487798414dd59204f333eec46910413.js",
     "service-worker.js": "/Arbonia-configurator/service-worker.js",
     "static/css/2.7eac4e58.chunk.css.map": "/Arbonia-configurator/static/css/2.7eac4e58.chunk.css.map",
     "static/css/main.8b644dc0.chunk.css.map": "/Arbonia-configurator/static/css/main.8b644dc0.chunk.css.map",
@@ -91,6 +91,6 @@
     "static/css/2.7eac4e58.chunk.css",
     "static/js/2.2826f9df.chunk.js",
     "static/css/main.8b644dc0.chunk.css",
-    "static/js/main.66208908.chunk.js"
+    "static/js/main.847e6a5c.chunk.js"
   ]
 }
