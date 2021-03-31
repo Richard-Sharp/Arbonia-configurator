@@ -13,7 +13,7 @@ const CodeDescription = ({arboniaModel, height, type, quantitySections, valve, c
 		} else if (height.value > 495 && height.value < 695) {
 			setBracket('комплект длинных кронштейнов: ZB0235');
 		} else if (height.value > 695 && height.value < 3001) {
-			setBracket('комлпект кронштейнов: ZB0237');
+			setBracket('комплект кронштейнов: ZB0237');
 		} else {
 			setBracket('комлпект кронштейнов: по запросу');
 		}
