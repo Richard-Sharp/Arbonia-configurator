@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/Arbonia-configurator/static/css/main.8b644dc0.chunk.css",
-    "main.js": "/Arbonia-configurator/static/js/main.847e6a5c.chunk.js",
-    "main.js.map": "/Arbonia-configurator/static/js/main.847e6a5c.chunk.js.map",
-    "runtime-main.js": "/Arbonia-configurator/static/js/runtime-main.f72906e4.js",
-    "runtime-main.js.map": "/Arbonia-configurator/static/js/runtime-main.f72906e4.js.map",
-    "static/css/2.7eac4e58.chunk.css": "/Arbonia-configurator/static/css/2.7eac4e58.chunk.css",
-    "static/js/2.2826f9df.chunk.js": "/Arbonia-configurator/static/js/2.2826f9df.chunk.js",
-    "static/js/2.2826f9df.chunk.js.map": "/Arbonia-configurator/static/js/2.2826f9df.chunk.js.map",
+    "main.css": "/Arbonia-configurator/static/css/main.8135a634.chunk.css",
+    "main.js": "/Arbonia-configurator/static/js/main.6d56d405.chunk.js",
+    "main.js.map": "/Arbonia-configurator/static/js/main.6d56d405.chunk.js.map",
+    "runtime-main.js": "/Arbonia-configurator/static/js/runtime-main.ddb540b1.js",
+    "runtime-main.js.map": "/Arbonia-configurator/static/js/runtime-main.ddb540b1.js.map",
+    "static/css/2.5e32c51d.chunk.css": "/Arbonia-configurator/static/css/2.5e32c51d.chunk.css",
+    "static/js/2.abad4829.chunk.js": "/Arbonia-configurator/static/js/2.abad4829.chunk.js",
+    "static/js/2.abad4829.chunk.js.map": "/Arbonia-configurator/static/js/2.abad4829.chunk.js.map",
     "index.html": "/Arbonia-configurator/index.html",
-    "precache-manifest.8487798414dd59204f333eec46910413.js": "/Arbonia-configurator/precache-manifest.8487798414dd59204f333eec46910413.js",
+    "precache-manifest.9d98fda111be8b47d8ee08622dfba6a4.js": "/Arbonia-configurator/precache-manifest.9d98fda111be8b47d8ee08622dfba6a4.js",
     "service-worker.js": "/Arbonia-configurator/service-worker.js",
-    "static/css/2.7eac4e58.chunk.css.map": "/Arbonia-configurator/static/css/2.7eac4e58.chunk.css.map",
-    "static/css/main.8b644dc0.chunk.css.map": "/Arbonia-configurator/static/css/main.8b644dc0.chunk.css.map",
-    "static/js/2.2826f9df.chunk.js.LICENSE.txt": "/Arbonia-configurator/static/js/2.2826f9df.chunk.js.LICENSE.txt",
+    "static/css/2.5e32c51d.chunk.css.map": "/Arbonia-configurator/static/css/2.5e32c51d.chunk.css.map",
+    "static/css/main.8135a634.chunk.css.map": "/Arbonia-configurator/static/css/main.8135a634.chunk.css.map",
+    "static/js/2.abad4829.chunk.js.LICENSE.txt": "/Arbonia-configurator/static/js/2.abad4829.chunk.js.LICENSE.txt",
+    "static/js/main.6d56d405.chunk.js.LICENSE.txt": "/Arbonia-configurator/static/js/main.6d56d405.chunk.js.LICENSE.txt",
     "static/media/Sizes07.png": "/Arbonia-configurator/static/media/Sizes07.f23288f1.png",
     "static/media/Sizes07V-61.png": "/Arbonia-configurator/static/media/Sizes07V-61.13c8e16e.png",
     "static/media/Sizes12.png": "/Arbonia-configurator/static/media/Sizes12.3452d4ac.png",
@@ -87,10 +88,10 @@
     "static/media/typeSize6-2.png": "/Arbonia-configurator/static/media/typeSize6-2.aaeba193.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f72906e4.js",
-    "static/css/2.7eac4e58.chunk.css",
-    "static/js/2.2826f9df.chunk.js",
-    "static/css/main.8b644dc0.chunk.css",
-    "static/js/main.847e6a5c.chunk.js"
+    "static/js/runtime-main.ddb540b1.js",
+    "static/css/2.5e32c51d.chunk.css",
+    "static/js/2.abad4829.chunk.js",
+    "static/css/main.8135a634.chunk.css",
+    "static/js/main.6d56d405.chunk.js"
   ]
 }
